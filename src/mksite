@@ -39,6 +39,7 @@ for img in _images/*.png; do (
     img2webp -lossy -q 90 "$x2" -o "${x2%.png}.webp"
 ) & done
 
-mv _static/* _site/ 
+cd ..\..
+mv "_static"* _site/ 
 
 wait
