@@ -13,7 +13,7 @@ P&#x1FF;w&#x3F5;rsh&#x3F5;ll &#x3B1;&#x256;di&#x199;t &#xB7; Wi&#x377;&#x256;&#x
 - [pamirand](https://github.com/lptstr/pamirand) - a random-number generator implementing the Park-Miller algorithm
 - [conhonk](github.com/lptstr/conhonk) - make your console beep.
 - [meow](github.com/kiedtl/meow) - a `lolcat` clone for Windows 10 that actually works.
-- [invisitext](https://github.com/Kiedtl/InvisiText) - hide text with pure CSS. 
+- [invisitext](https://github.com/Kiedtl/InvisiText) - <ink data-type="blurred ease-in">hide text</ink> with pure CSS. 
 - [prace](https://github.com/Kiedtl/prace) - transform `pre` elements to mini Ace editors.
 - [psgenact](https://github.com/Kiedtl/psgenact) - a lightweight port of genact to PowerShell.
 
