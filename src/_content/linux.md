@@ -7,7 +7,7 @@
 - **Bar**: Polybar
 - **Terminal**: Alacritty v0.2.9
 - **Shell**: ZSH with Oh-My-ZSH.
-- **Dotfiles** : [here](https://github.com/Kiedtl/dotfiles)
+- **Dotfiles**: [here](https://github.com/Kiedtl/dotfiles)
 
 ---
 
@@ -22,3 +22,18 @@
   <source srcset="/images/screenshot-laptop-1.png" type="image/png">
   <img src="/images/screenshot-laptop-1.png" alt="desktop">
 </picture>
+
+---
+
+- **Content**
+    - **peaclock** (top right)
+    - **neofetch** (bottom right)
+    - **spacevim** (left)
+
+<picture>
+  <source srcset="/images/screenshot-laptop-2.webp" type="image/webp">
+  <source srcset="/images/screenshot-laptop-2.png" type="image/png">
+  <img src="/images/screenshot-laptop-2.png" alt="desktop">
+</picture>
+
+###### &#xA9; Kied Llaentenn (@kiedtl) 2019
