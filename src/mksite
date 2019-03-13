@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+template='<!DOCTYPE html><html lang=en><head><link href="data:image/png;base64," rel=icon type="image/png"><title>Kied Llaentenn</title><meta name=viewport content="width=device-width"><style>body{overflow-y:scroll;font-family:sans-serif}img,main{display:block;margin:25px auto}main{padding:20px;max-width:600px;line-height:1.6;word-wrap:break-word}img{max-width:100%}pre>code{display:block;padding:20px;white-space:pre-line}code{background:#eee;padding:2px}blockquote{border-left:7px solid #ddd;padding-left:14px;color:#666;margin:0}h1,h2,h3,h4{line-height:1.2}</style></head><body><main>{{content}}</main></body></html>'
+
+[[ -z $1 ]] &&
+    rm -rf src/_site
+
+mkdir -p src/_site/images
+
+for md in src/_content/*.md; do
+    file_name=${md##*/}
+
+    [[ $file_name != index.md ]] &&
+        home="<a href='/'>Home</a>"
+
+
+    minify --type html \
+        <<< "${template/'{{content}}'/${home}$(pandoc "$md")}" \
+        > "src/_site/${file_name/%.md/.html}"
+
+    home=
+done
+
+[[ $1 ]] &&
+    exit
+
+cd src/_site/images || exit
+
+for img in src/_images/*.jpg; do (
+    file_name=${img##*/}
+    x2=${file_name/%.jpg/-2x.jpg}
+
+    convert "$img" -resize 600x\>  "$file_name"
+    convert "$img" -resize 1200x\> "$x2"
+
+    jpegoptim -s "$file_name" "$x2"
+
+    img2webp -lossy -q 90 "$file_name" -o "${file_name%.jpg}.webp"
+    img2webp -lossy -q 90 "$x2" -o "${x2%.jpg}.webp"
+) & done
+
+wait
