@@ -4,9 +4,6 @@ P&#x1FF;w&#x3F5;rsh&#x3F5;ll &#x3B1;&#x256;di&#x199;t &#xB7; Wi&#x377;&#x256;&#x
 
 [GitHub](https://github.com/kiedtl) &#8226; [CodePen](https://codepen.io/kiedtl)
 
-**computers**
-- [Linux](/linux)
-
 **projects**
 
 - [sultan](https://github.com/lptstr/sultan) - a fast, lightweight utility to stress-test your server
@@ -19,5 +16,8 @@ P&#x1FF;w&#x3F5;rsh&#x3F5;ll &#x3B1;&#x256;di&#x199;t &#xB7; Wi&#x377;&#x256;&#x
 - [invisitext](https://github.com/Kiedtl/InvisiText) - hide text with pure CSS. 
 - [prace](https://github.com/Kiedtl/prace) - transform `pre` elements to mini Ace editors.
 - [psgenact](https://github.com/Kiedtl/psgenact) - a lightweight port of genact to PowerShell.
+
+**computers**
+- [Linux](/linux)
 
 ###### &#xA9; Kied Llaentenn (@kiedtl) 2019
