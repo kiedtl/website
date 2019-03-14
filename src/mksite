@@ -89,7 +89,8 @@ for post in posts; do
     post_links+="- [${post}]($($posts_addr[$i]))\n"
 done
 
-post_html=pandoc <<< "# Blog\n**posts**\n\n${post_links}\n###### &#xA9; Kied Llaentenn (@kiedtl) 2019"
+post_html=$(pandoc <<< "# Blog\n**posts**\n\n${post_links}\n###### &#xA9; Kied Llaentenn (@kiedtl) 2019")
+printf $post_html
 home="<a href='/'>Home</a>"
 
 minify --type html \
