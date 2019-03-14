@@ -1,4 +1,5 @@
 # Crash your shell
+*2019-3-14*
 
 Is someone annoying you? Crash their shell with just a few lines of code.
 
