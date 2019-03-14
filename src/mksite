@@ -73,7 +73,6 @@ for md in _content/_posts/*.md; do
 
     home=
     unpost_name=$(echo $file_name | tr "-" "\n")
-    unpost_name[0]="$(($unpost_name + 0)). "
     postname=""
     for item in unpost_name; do 
         postname+=" $item"
@@ -89,7 +88,7 @@ for post in posts; do
     post_links+="- [${post}]($($posts_addr[$i]))\n"
 done
 
-post_html=$(pandoc <<< "# Blog\n**posts**\n\n${post_links}\n###### &#xA9; Kied Llaentenn (@kiedtl) 2019")
+post_html=$(pandoc <<< "# Blog<br>**posts**<br>${post_links}<br>###### &#xA9; Kied Llaentenn (@kiedtl) 2019")
 printf $post_html
 home="<a href='/'>Home</a>"
 
