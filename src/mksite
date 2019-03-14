@@ -16,7 +16,7 @@ invisitext='<link rel="stylesheet" href="http://invisi-text.surge.sh/cdn/product
 
 template="${html1}${favicon}${html2}${style}${html3}${invisitext}${html4}"
 
-if [[ -z $1 ]] then
+if [[ -z $1 ]]; then
     rm -rf _website
     printf "[${name}] cleaning out _website/*\n"
 fi
