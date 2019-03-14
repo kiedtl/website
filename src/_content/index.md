@@ -2,7 +2,7 @@
 
 P&#x1FF;w&#x3F5;rsh&#x3F5;ll &#x3B1;&#x256;di&#x199;t &#xB7; Wi&#x377;&#x256;&#x1FF;ws &#x284;&#x3B1;&#x377;&#x3B1;ti&#x199; &#xB7; D&#x1FF;t&#x377;&#x3F5;t pr&#x1FF;gr&#x3B1;&#x3FB;&#x3FB;&#x3F5;r
 
-[GitHub](https://github.com/kiedtl) &nbsp; &#8226; &nbsp; [CodePen](https://codepen.io/kiedtl) &nbsp; &#8226; &nbsp; [Blog](/blog/)
+[GitHub](https://github.com/kiedtl) &#8226; [CodePen](https://codepen.io/kiedtl) &#8226; [Blog](/blog/)
 
 **projects**
 
