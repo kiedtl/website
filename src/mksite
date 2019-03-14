@@ -88,7 +88,11 @@ for post in posts; do
     post_links+="- [${post}]($($posts_addr[$i]))\n"
 done
 
-post_html=$(pandoc <<< "# Blog<br>**posts**<br>${post_links}<br>###### &#xA9; Kied Llaentenn (@kiedtl) 2019")
+post_html=$(pandoc <<< "# Blog
+**posts**
+${post_links}
+###### &#xA9; Kied Llaentenn (@kiedtl) 2019
+")
 printf $post_html
 home="<a href='/'>Home</a>"
 
