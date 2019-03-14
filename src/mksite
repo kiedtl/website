@@ -4,7 +4,7 @@
 site_name="./kiedtl"
 
 # -------- DO NOT EDIT BELOW ----------
-name="arial"
+name="ariel"
 html1='<!DOCTYPE html><html lang=en><head><link href="'
 html2="\" rel=icon type=\"image/png\"><title>${site_name}</title><meta name=viewport content=\"width=device-width\"><style>"
 html3='</style>'
@@ -57,11 +57,28 @@ done
 
 cd _website/images || exit
 
-for img in ../../_content/_images/*; do (
+png_flags=(--speed 1 --skip-if-larger --strip -f --verbose --output)
+
+for img in ../../_content/_images/*.{jpg,png}; do (
     file_name=${img##*/}
+    suffix=${file_name/*.}
+    
     printf "[${name}] processing image ${img}\n"
-    convert "$img" -resize 1200x\>  "$file_name"    
-    img2webp -lossy -q 90 "$file_name" -o "${file_name%.png}.webp"
+    x2=${file_name/%.${suffix}/-2x.${suffix}}
+
+    convert "$img" -resize 600x\>  "$file_name"
+    convert "$img" -resize 1200x\> "$x2"
+
+    case $suffix in
+        jpg) jpegoptim -s "$file_name" "$x2" ;;
+        png)
+            pngquant "$file_name" "${png_flags[@]}" "$file_name"
+            pngquant "$x2" "${png_flags[@]}" "$x2"
+        ;;
+    esac
+
+    img2webp -lossy -q 90 "$file_name" -o "${file_name%.${suffix}}.webp"
+    img2webp -lossy -q 90 "$x2" -o "${x2%.${suffix}}.webp"
 ) & done
 
 cd ../..
