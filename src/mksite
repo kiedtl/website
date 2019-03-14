@@ -41,7 +41,7 @@ for md in _content/*.md; do
 done
 
 for folder in $folders; do 
-    if [[ ! -d "_website/$folder" ]]
+    if [[ ! -d "_website/$folder" ]]; then
         mkdir -p "_website/$folder"
     fi
     
