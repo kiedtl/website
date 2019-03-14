@@ -6,8 +6,6 @@ folders=("computers")
 
 # -------- DO NOT EDIT BELOW ----------
 name="ariel"
-posts=()
-posts_addr=()
 html1='<!DOCTYPE html><html lang=en><head><link href="'
 html2="\" rel=icon type=\"image/png\"><title>${site_name}</title><meta name=viewport content=\"width=device-width\"><style>"
 html3='</style>'
@@ -72,33 +70,8 @@ for md in _content/_posts/*.md; do
         > "_website/blog/${file_name/%.md/.html}"
 
     home=
-    unpost_name=$(echo $file_name | tr "-" "\n")
-    postname=""
-    for item in unpost_name; do 
-        postname+=" $item"
-    done
-    posts+=$postname
-    posts_addr+=$file_name
 done
 
-post_links=""
-i=0
-
-for post in posts; do
-    post_links+="- [${post}]($($posts_addr[$i]))\n"
-done
-
-post_html=$(pandoc <<< "# Blog
-**posts**
-${post_links}
-###### &#xA9; Kied Llaentenn (@kiedtl) 2019
-")
-printf $post_html
-home="<a href='/'>Home</a>"
-
-minify --type html \
-    <<< "${template/'{{content}}'/${home}${post_html}}" \
-    > "_website/blog/index.html"
 
 [[ $1 ]] &&
     exit
