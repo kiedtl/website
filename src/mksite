@@ -23,7 +23,7 @@ if [[ -z $1 ]]; then
 fi
 
 mkdir -p _website/images
-mkdir -p _website/posts
+mkdir -p _website/blog
 
 for md in _content/*.md; do
     file_name=${md##*/}
