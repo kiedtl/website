@@ -6,7 +6,7 @@ site_name="Kied Llaentenn"
 # -------- DO NOT EDIT BELOW ----------
 name="arial"
 html1='<!DOCTYPE html><html lang=en><head><link href="'
-html2='" rel=icon type="image/png"><title>${site_name}</title><meta name=viewport content="width=device-width"><style>'
+html2="\" rel=icon type=\"image/png\"><title>${site_name}</title><meta name=viewport content=\"width=device-width\"><style>"
 html3='</style>'
 html4='</head><body><main>{{content}}</main></body></html>'
 
