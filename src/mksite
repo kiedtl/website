@@ -1,5 +1,7 @@
 #!/bin/bash
 
+name="arial"
+
 html1='<!DOCTYPE html><html lang=en><head><link href="'
 html2='" rel=icon type="image/png"><title>Kied Llaentenn</title><meta name=viewport content="width=device-width"><style>'
 html3='</style>'
@@ -11,13 +13,16 @@ invisitext='<link rel="stylesheet" href="http://invisi-text.surge.sh/cdn/product
 
 template="${html1}${favicon}${html2}${style}${html3}${invisitext}${html4}"
 
-[[ -z $1 ]] &&
-    rm -rf _site
+if [[ -z $1 ]] then
+    rm -rf _website
+    printf "[${name}] cleaning out _website/*\n"
 
-mkdir -p _site/images
+mkdir -p _website/images
+mkdir -p _website/posts
 
 for md in _content/*.md; do
     file_name=${md##*/}
+    printf "[${name}] processing markdown file ${md}\n"
 
     [[ $file_name != index.md ]] &&
         home="<a href='/'>Home</a>"
@@ -25,7 +30,20 @@ for md in _content/*.md; do
 
     minify --type html \
         <<< "${template/'{{content}}'/${home}$(pandoc "$md")}" \
-        > "_site/${file_name/%.md/.html}"
+        > "_website/${file_name/%.md/.html}"
+
+    home=
+done
+
+for md in _content/_posts/*.md; do
+    file_name=${md##*/}
+    printf "[${name}] processing markdown post ${md}\n"
+
+    home="<a href='/'>Home</a>"
+
+    minify --type html \
+        <<< "${template/'{{content}}'/${home}$(pandoc "$md")}" \
+        > "_website/blog/${file_name/%.md/.html}"
 
     home=
 done
@@ -33,19 +51,20 @@ done
 [[ $1 ]] &&
     exit
 
-cd _site/images || exit
+cd _website/images || exit
 
-for img in ../../_images/*; do (
+for img in ../../_content/_images/*; do (
     file_name=${img##*/}
+    printf "[${name}] processing image ${img}\n"
     convert "$img" -resize 1200x\>  "$file_name"    
     img2webp -lossy -q 90 "$file_name" -o "${file_name%.png}.webp"
 ) & done
 
 cd ../..
 
-for file in _static/*; do (
-  printf "moving static file $file to _site/\n"
-  cp -r "$file" _site/
+for file in _content/_files/*; do (
+  printf "[${name}] moving static file $file to _site/\n"
+  cp -r "$file" _website/
 ) & done
 
 wait
