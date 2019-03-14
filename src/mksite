@@ -2,6 +2,7 @@
 
 # ------- EDIT THESE VARIABLES --------
 site_name="./kiedtl"
+folders=("computers")
 
 # -------- DO NOT EDIT BELOW ----------
 name="ariel"
@@ -37,6 +38,25 @@ for md in _content/*.md; do
         > "_website/${file_name/%.md/.html}"
 
     home=
+done
+
+for folder in $folders; do 
+    if [[ ! -d "_website/$folder" ]]
+        mkdir -p "_website/$folder"
+    fi
+    
+    for md in _content/$folder/*.md; do
+        file_name=${md##*/}
+        printf "[${name}] processing markdown file ${md} in directory ${folder}\n"
+
+        home="<a href='/'>Home</a>"
+
+        minify --type html \
+            <<< "${template/'{{content}}'/${home}$(pandoc "$md")}" \
+            > "_website/$folder/${file_name/%.md/.html}"
+
+        home=
+    done
 done
 
 for md in _content/_posts/*.md; do
