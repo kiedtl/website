@@ -1,4 +1,4 @@
 #!/usr/bin/env pwsh
 
-cd _site
+cd _website
 surge
