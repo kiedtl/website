@@ -19,6 +19,6 @@ P&#x1FF;w&#x3F5;rsh&#x3F5;ll &#x3B1;&#x256;di&#x199;t &#xB7; Wi&#x377;&#x256;&#x
 
 **computers**
 
-- [Linux](/computers/linux)
+- [Linux](/linux)
 
 ###### &#xA9; Kied Llaentenn (@kiedtl) 2019
