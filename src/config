@@ -5,7 +5,7 @@ folders=("projects" "computers")
 
 # Advanced configuration
 # headers - stuff to go into the <head> tag on every HTML page
-headers="<link rel='stylesheet' href='http://invisi-text.surge.sh/cdn/production/0.2.0/invisi-text.min.css' /><!-- Global site tag (gtag.js) - Google Analytics --><script async src='https://www.googletagmanager.com/gtag/js?id=UA-98707492-3'></script><script>  window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-98707492-3');</script>"
+headers="<meta name="google-site-verification" content="_Wt6XNMQUlHbi_wkIVeSwhekdKjuG3rmB1tYec-zu1c" /><link rel='stylesheet' href='http://invisi-text.surge.sh/cdn/production/0.2.0/invisi-text.min.css' /><!-- Global site tag (gtag.js) - Google Analytics --><script async src='https://www.googletagmanager.com/gtag/js?id=UA-98707492-3'></script><script>  window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-98707492-3');</script>"
 
 # favicon - the url to your favicon. default = empty.
 favicon=""
