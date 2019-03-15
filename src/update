@@ -6,21 +6,11 @@ oldsum=$(shasum -U ./mksite)
 printf "[donsk update] New SHA: $newsum\n"
 printf "[donsk update] Old SHA: $oldsum\n"
 
-data=$(curl -sSL "https://raw.githubusercontent.com/lptstr/donsk/master/src/mksite") &
-pid=$!
+data=$(curl -sSL "https://raw.githubusercontent.com/lptstr/donsk/master/src/mksite")
 
-i=1
-spin[0]="-"
-spin[1]="\\"
-spin[2]="|"
-spin[3]="/"
+printf "[donsk update] downloading...\n"
 
-printf "[donsk update] ${spin[0]} downloading..."
-while [ -d /proc/$pid ]
-do
-    printf "\r[donsk update] ${spin:i++%${#spin}:1} downloading..."
-    sleep 0.1
-done
 rm -f ./mksite
 printf "$data" > ./mksite
 chmod +x ./mksite
+printf "[donsk update] completed."
