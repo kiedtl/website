@@ -6,7 +6,7 @@
   function init() {
       praceInit("pre");
   }
-  windows.onload = init;
+  window.onload = init;
 </script>
 
 # PraceJS
