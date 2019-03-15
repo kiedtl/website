@@ -3,3 +3,6 @@
 site_name="./kiedtl"
 folders=("projects" "computers")
 
+# Advanced configuration
+# headers - stuff to go into the <head> tag on every HTML page
+headers="<link rel="stylesheet" href="http://invisi-text.surge.sh/cdn/production/0.2.0/invisi-text.min.css" />"
