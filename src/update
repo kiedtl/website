@@ -11,6 +11,6 @@ data=$(curl -sSL "https://raw.githubusercontent.com/lptstr/donsk/master/src/mksi
 printf "[donsk update] downloading...\n"
 
 rm -f ./mksite
-printf "$data" > ./mksite
+echo "$data" > ./mksite
 chmod +x ./mksite
 printf "[donsk update] completed."
