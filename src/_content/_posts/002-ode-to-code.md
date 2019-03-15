@@ -3,7 +3,7 @@
 I look at your screen, and what I see
     Does not bode well for me or thee,
 Thousands of lines, scripted and slow,
-    The wind of complexity now shal blow.
+    The wind of complexity now shall blow.
     
 And on that wind, I see the Studio's rise,
     Followed closely by Emacs' sad demise;
