@@ -3,7 +3,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.3/mode-javascript.js"></script>
 <script src="https://kiedtl.surge.sh/js/prace/prace.js"></script>
 <script>
-  praceInit("pre");
+  function init() {
+      praceInit("pre");
+  }
+  windows.onload = init;
 </script>
 
 # PraceJS
