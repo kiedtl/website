@@ -1,4 +1,5 @@
 #!/bin/bash
 
 site_name="./kiedtl"
-folders=("computers" "projects")
+folders=("projects" "computers")
+

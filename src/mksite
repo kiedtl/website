@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# mksite - a simple script to build a site
+
+# Load configuration
 source ./config
 
 name="donsk"
@@ -10,9 +13,8 @@ html4='</head><body><main>{{content}}</main></body></html>'
 
 style='a{background:linear-gradient(to bottom,#cdcdcd,#cdcdcd) 50% calc(100% - 2px)/50% 2px no-repeat;color:#333;margin:-1px;text-decoration:none!important;-webkit-transition:all .35s ease-in-out;transition:all .35s ease-in-out}a:focus,a:hover{background-image:linear-gradient(to bottom,#777,#777);background-size:100% 3px;color:#111;-webkit-transition:all .35s ease-in-out!important;transition:all .35s ease-in-out!important}body{overflow-y:scroll;font-family:sans-serif}img,main{display:block;margin:25px auto}main{padding:20px;max-width:600px;line-height:1.6;word-wrap:break-word}img{max-width:100%}pre>code{display:block;padding:20px;white-space:pre-line}code{background:#eee;padding:2px}blockquote{border-left:7px solid #ddd;padding-left:14px;color:#666;margin:0}h1,h2,h3,h4{line-height:1.2}h1{font-family:monospace}'
 favicon=''
-invisitext='<link rel="stylesheet" href="https://invisi-text.surge.sh/cdn/production/0.2.0/invisi-text.min.css" />'
 
-template="${html1}${favicon}${html2}${style}${html3}${invisitext}${html4}"
+template="${html1}${favicon}${html2}${style}${html3}${headers}${html4}"
 
 if [[ -z $1 ]]; then
     rm -rf _website
@@ -37,12 +39,20 @@ for md in _content/*.md; do
     home=
 done
 
-for folder in $folders; do 
+ctr=0
+until [[ $ctr -eq "${#folders[@]}" ]]; do
+    printf "[${name}] preparing to process folder ${folders[$ctr]}\n"
+    let ctr+=1
+done
+
+ctr=0
+until [[ $ctr -eq "${#folders[@]}" ]]; do
+    folder="${folders[$ctr]}"
     if [[ ! -d "_website/$folder" ]]; then
         mkdir -p "_website/$folder"
     fi
     
-    for md in _content/$folder/*.md; do
+    for md in "_content/${folder}"/*.md; do
         file_name=${md##*/}
         printf "[${name}] processing markdown file ${md} in directory ${folder}\n"
 
@@ -54,6 +64,7 @@ for folder in $folders; do
 
         home=
     done
+    let ctr+=1
 done
 
 for md in _content/_posts/*.md; do
