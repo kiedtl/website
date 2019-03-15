@@ -15,7 +15,7 @@ P&#x1FF;w&#x3F5;rsh&#x3F5;ll &#x3B1;&#x256;di&#x199;t &#xB7; Wi&#x377;&#x256;&#x
 - [meow](github.com/kiedtl/meow) - a `lolcat` clone for Windows
 - [invisitext](https://github.com/Kiedtl/InvisiText) - <ink data-type="blurred ease-in">hide text</ink> with pure CSS. 
 - [prace](https://kiedtl.surge.sh/projects/prace) - transform `pre` elements to mini Ace editors.
-- [psgenact](https://kiedtl.surge.sh/projects/autoeureka) - a lightweight port of genact to PowerShell.
+- [psgenact](https://github.com/kiedtl/psgenact) - a lightweight port of genact to PowerShell.
 
 **computers**
 
