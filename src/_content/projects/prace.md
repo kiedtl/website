@@ -14,16 +14,26 @@ A piece of Javascript code thst you can add to any webpage that transforms all t
 
 ## Usage
 Start by downloading prace.js and adding it and the Ace editor to your project:
-```html
-<script src="path/to/the/ace/editor.js" async></script>
-<script src="path/to/the/script/prace.js" async></script>
-```
+<pre lang="html" theme="tomorrow">
+&lt;script src=&quot;path/to/the/ace/editor.js&quot; async&gt;&lt;/script&gt;
+&lt;script src=&quot;path/to/the/script/prace.js&quot; async&gt;&lt;/script&gt;
+</pre>
 
 Then, initialize PraceJS on document load with the Javascript code:
-```javascript
-praceInit("pre");
-```
-...where the first arguement of the `praceInit()` function is the element to transform. I personally recommend the `pre` element, because if something goes wrong or Javascript is disabled, the pre element will still render as a code block.
+<pre lang="javascript" theme="tomorrow">
+function init() {
+    praceInit("pre");
+}
+window.onload = init;
+</pre>
+...where the first argument of the `praceInit()` function is the element to transform. I personally recommend the `pre` element, because if something goes wrong or Javascript is disabled, the pre element will still render as a code block.
+
+Then, you can define your `pre` elements:
+<pre lang="html" theme="tomorrow">
+&lt;pre lang=&quot;html&quot; theme=&quot;tomorrow&quot;&gt;
+...
+&lt;/pre&gt;
+</pre>
 
 ## Demo
 The demo is on this page. Notice how all code blocks became Ace editors.
