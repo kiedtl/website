@@ -2,7 +2,7 @@
 
 *2019-03-16*
 
-One of the first things to think about when starting a new project is deciding what language to use. There are thousands, from the latest [V-lang](https://v-lang.io) to the decades-old C. The decision is complex one.
+One of the first things to think about when starting a new project is deciding what language to use. There are thousands, from the latest [V-lang](https://vlang.io) to the decades-old C. The decision is complex one.
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/C_Hello_World_Program.png" alt="coding in c image" align="right" width="50%">
 
