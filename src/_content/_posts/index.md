@@ -1,5 +1,5 @@
 # Blog
-<img src="https://img.shields.io/badge/posts-2-blueviolet.svg" style="display:inline;">
+<img src="https://img.shields.io/badge/posts-3-blueviolet.svg" style="display:inline;">
 
 **posts**
 
