@@ -15,7 +15,7 @@ Most of the time, the process of choosing a development environment can be broke
 ### 1. Consider your choices
 What languages are you capable of? Make a list of all the possible languages you can this in. If the project is a non-trivial one, don't bother adding languages that you don't have any experience in. If you have been programming in imperative languages<sup>[1]</sup> all your life, you probably don't want to add F# untill you can warp your brain around functional programming and can get used to coding without loops and variables (yes, without variables).
 
-<img src="https://d2slcw3kip6qmk.cloudfront.net/marketing/techblog/functional-programming-principles/xkcd1312.png" alt="coding in c image" align="left" width="25%">
+<img src="https://d2slcw3kip6qmk.cloudfront.net/marketing/techblog/functional-programming-principles/xkcd1312.png" alt="coding in c image" align="left" width="20%">
 
 ### 2. Filter out languages
 Now, decide exactly what you want. Does your project need to be fast? Try Rust, Nim, Crystal, or C. Does it need to be tiny? Crystal, Nim, C, or V will give you that. Do you need rapid development, and you don't care how slow the program itself is? Ruby, PowerShell<sup>[2]</sup>, or Python will do the job. Or do you need a happy compromise between speed, rapid development, and superb documentation? Try Go, or C#. And if you want your app to be really slick and attractive, ElectronJS with HTML, CSS, and JavaScript will do the trick. For a server-side application, you are pretty much limited to ASP.NET, PHP, Python, and NodeJS. Of course, for a web app, HTML, CSS, and JavaScript are the only choices.
