@@ -11,8 +11,6 @@ html2="\" rel=icon type=\"image/png\"><title>${site_name}</title><meta name=view
 html3='</style>'
 html4='</head><body><main>{{content}}</main></body></html>'
 
-style='a{background:linear-gradient(to bottom,#cdcdcd,#cdcdcd) 50% calc(100% - 2px)/50% 2px no-repeat;color:#333;margin:-1px;text-decoration:none!important;-webkit-transition:all .35s ease-in-out;transition:all .35s ease-in-out}a:focus,a:hover{background-image:linear-gradient(to bottom,#777,#777);background-size:100% 3px;color:#111;-webkit-transition:all .35s ease-in-out!important;transition:all .35s ease-in-out!important}body{overflow-y:scroll;font-family:sans-serif}img,main{display:block;margin:25px auto}main{padding:20px;max-width:600px;line-height:1.6;word-wrap:break-word}img{max-width:100%}pre>code{display:block;padding:20px;white-space:pre-line}code{background:#eee;padding:2px}blockquote{border-left:7px solid #ddd;padding-left:14px;color:#666;margin:0}h1,h2,h3,h4{line-height:1.2}h1{font-family:monospace}'
-
 template="${html1}${favicon}${html2}${style}${html3}${headers}${html4}"
 
 if [[ -z $1 ]]; then
