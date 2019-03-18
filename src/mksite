@@ -9,9 +9,11 @@ name="donsk"
 html1='<!DOCTYPE html><html lang=en><head><link href="'
 html2="\" rel=icon type=\"image/png\"><title>${site_name}</title><meta name=viewport content=\"width=device-width\"><style>"
 html3='</style>'
-html4='</head><body><main>{{content}}</main></body></html>'
+html4='</head><body><main>{{content}}</main>'
+html5='</body></html>'
 
-template="${html1}${favicon}${html2}${style}${html3}${headers}${html4}"
+template="${html1}${favicon}${html2}${style}${html3}${headers}${html4}${footer}${html5}"
+template_blog="${html1}${favicon}${html2}${style}${html3}${headers}${html4}${footer_blog}${html5}"
 
 if [[ -z $1 ]]; then
     rm -rf _website
@@ -26,7 +28,7 @@ for md in _content/*.md; do
     printf "[${name}] processing markdown file ${md}\n"
 
     [[ $file_name != index.md ]] &&
-        home="<a href='/'>Home</a>"
+        home=homelink
 
 
     minify --type html \
@@ -53,7 +55,7 @@ until [[ $ctr -eq "${#folders[@]}" ]]; do
         file_name=${md##*/}
         printf "[${name}] processing markdown file ${md} in directory ${folder}\n"
 
-        home="<a href='/'>Home</a>"
+        home=homelink
 
         minify --type html \
             <<< "${template/'{{content}}'/${home}$(pandoc "$md")}" \
@@ -68,10 +70,10 @@ for md in _content/_posts/*.md; do
     file_name=${md##*/}
     printf "[${name}] processing markdown post ${md}\n"
 
-    home="<a href='/'>Home</a>"
+    home=homelink_blog
 
     minify --type html \
-        <<< "${template/'{{content}}'/${home}$(pandoc "$md")}" \
+        <<< "${template_blog/'{{content}}'/${home}$(pandoc "$md")}" \
         > "_website/blog/${file_name/%.md/.html}"
 
     home=
