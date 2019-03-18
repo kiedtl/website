@@ -45,6 +45,14 @@ It sounds strange, but I use three different text editors, depending on what I a
   <img src="/images/screenshot-editors-1.jpg" alt="desktop">
 </picture>
 
+I've also configured i3-gaps to automatically set the wallpaper and terminal colors on startup. I have a directory of wallpapers and use [pywal](https://github.com/dylanaraps/pywal) to do the job.
+
+<picture>
+  <source srcset="/images/screenshot-laptop-3.webp" type="image/webp">
+  <source srcset="/images/screenshot-laptop-3.jpg" type="image/png">
+  <img src="/images/screenshot-laptop-3.jpg" alt="desktop">
+</picture>
+
 ---
 
 ### Other Screenshots
@@ -72,6 +80,18 @@ It sounds strange, but I use three different text editors, depending on what I a
   <source srcset="/images/screenshot-laptop-2.webp" type="image/webp">
   <source srcset="/images/screenshot-laptop-2.png" type="image/png">
   <img src="/images/screenshot-laptop-2.png" alt="desktop">
+</picture>
+
+---
+
+- **Content**
+    - **alacritty**
+    - **cmatrix** (all windows)
+    
+<picture>
+  <source srcset="/images/screenshot-laptop-4.webp" type="image/webp">
+  <source srcset="/images/screenshot-laptop-4.jpg" type="image/png">
+  <img src="/images/screenshot-laptop-4.jpg" alt="desktop">
 </picture>
 
 ### Sources
