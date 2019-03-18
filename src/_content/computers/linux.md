@@ -1,4 +1,4 @@
-# Manjaro @ kmach
+# linux @ kmach
 
 My system is [Manjaro](https://manjaro.org) v18.0, a user-friendly version of Arch Linux. It uses i3-gaps with a custom configuration and i3locks-fancy as its lock mechanism. For the terminal, I use [Alacritty](https://github.com/jwilm/alacritty) with ZSH and sometimes PowerShell. For the shell prompts, I use Oh-My-ZSH for ZSH and [Pshazz](https://github.com/lukesampson/pshazz) for PowerShell.
 
