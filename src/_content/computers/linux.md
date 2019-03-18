@@ -1,6 +1,6 @@
 # linux @ kmach
 
-My system is [Manjaro](https://manjaro.org) v18.0, a user-friendly version of Arch Linux. It uses i3-gaps with a custom configuration and i3locks-fancy as its lock mechanism. For the terminal, I use [Alacritty](https://github.com/jwilm/alacritty) with ZSH and sometimes PowerShell. For the shell prompts, I use Oh-My-ZSH for ZSH and [Pshazz](https://github.com/lukesampson/pshazz) for PowerShell.
+My laptop currently runs [Manjaro](https://manjaro.org), a user-friendly version of Arch Linux. It uses i3-gaps with a custom configuration and i3locks-fancy as its lock mechanism. For the terminal, I use [Alacritty](https://github.com/jwilm/alacritty) with ZSH and sometimes PowerShell. For the shell prompts, I use Oh-My-ZSH for ZSH and [Pshazz](https://github.com/lukesampson/pshazz) for PowerShell.
 
 ```
 kiedtl@kmach
@@ -35,9 +35,9 @@ I use [polybar](https://polybar.github.io) for the status bar and [Vivaldi Snaps
   <img src="/images/vivaldi-scr.jpg" alt="desktop">
 </picture>
 
-Running three instances of Vivaldi and one instance of Dolphin and Alacritty each, my CPU usaage is surprisingly light - a maximum of 25% usage and a minimum of 15% usage. RAM usage is around 5500 MB and the core temperature is less than 40&#176;C.
+Running three instances of Vivaldi and one instance of Dolphin and Alacritty each, my CPU usage is surprisingly light - a maximum of 25% usage and a minimum of 15% usage. RAM usage is around 5500 MB and the core temperature is less than 40&#176;C.
 
-It sounds strange, but I use three different text editors, depending on what I am editing. For .NET code HTML, CSS, JavaScript, and other miscellaeneous tasks, I use Visual Studio Code. For Rust, Shell scripts, PowerShell, I use Spacemacs. For very quick tasks where I don't like to waste time starting up the editor, I use SpaceVim.
+It sounds strange, but I use three different text editors, depending on what I am editing. For .NET, HTML, CSS, JavaScript, and other miscellaeneous tasks, I use Visual Studio Code. For Rust, shell scripts, PowerShell, I use Spacemacs. For very quick tasks where I don't like to waste time starting up the editor, I use SpaceVim.
 
 <picture>
   <source srcset="/images/screenshot-editors-1.webp" type="image/webp">
@@ -45,7 +45,7 @@ It sounds strange, but I use three different text editors, depending on what I a
   <img src="/images/screenshot-editors-1.jpg" alt="desktop">
 </picture>
 
-I've also configured i3-gaps to automatically set the wallpaper and terminal colors on startup. I have a directory of wallpapers and use [pywal](https://github.com/dylanaraps/pywal) to do the job.
+I've also configured i3-gaps to automatically set the wallpaper and terminal colors on startup. I have a directory of favourite wallpapers and use [pywal](https://github.com/dylanaraps/pywal) to do the job.
 
 <picture>
   <source srcset="/images/screenshot-laptop-3.webp" type="image/webp">
