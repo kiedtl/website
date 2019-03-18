@@ -28,7 +28,7 @@ for md in _content/*.md; do
     printf "[${name}] processing markdown file ${md}\n"
 
     [[ $file_name != index.md ]] &&
-        home=homelink
+        home=$homelink
 
 
     minify --type html \
@@ -55,7 +55,7 @@ until [[ $ctr -eq "${#folders[@]}" ]]; do
         file_name=${md##*/}
         printf "[${name}] processing markdown file ${md} in directory ${folder}\n"
 
-        home=homelink
+        home=$homelink
 
         minify --type html \
             <<< "${template/'{{content}}'/${home}$(pandoc "$md")}" \
@@ -69,8 +69,9 @@ done
 for md in _content/_posts/*.md; do
     file_name=${md##*/}
     printf "[${name}] processing markdown post ${md}\n"
-
-    home=homelink_blog
+    
+    [[ $file_name != index.md ]] &&
+        home=$homelink_blog
 
     minify --type html \
         <<< "${template_blog/'{{content}}'/${home}$(pandoc "$md")}" \
