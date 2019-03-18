@@ -3,22 +3,22 @@
 My system is [Manjaro](https://manjaro.org) v18.0, a user-friendly version of Arch Linux. It uses i3-gaps with a custom configuration and i3locks-fancy as its lock mechanism. For the terminal, I use [Alacritty](https://github.com/jwilm/alacritty) with ZSH and sometimes PowerShell. For the shell prompts, I use Oh-My-ZSH for ZSH and [Pshazz](https://github.com/lukesampson/pshazz) for PowerShell.
 
 ```
-██████████████████████  ██████████   kiedtl@kmach
-██████████████████████  ██████████   ------------
-██████████████████████  ██████████   OS: Manjaro Linux x86_64
-██████████████████████  ██████████   Host: ************
-██████████              ██████████   Kernel: 4.19.28-1-MANJARO
-██████████  ██████████  ██████████   Uptime: 2 days, 5 hours, 27 mins
-██████████  ██████████  ██████████   Packages: 1472 (pacman), 15 (snap)
-██████████  ██████████  ██████████   Shell: zsh 5.7.1
-██████████  ██████████  ██████████   Resolution: 1920x1080, 1920x1080
-██████████  ██████████  ██████████   WM: i3-gaps
-██████████  ██████████  ██████████   Theme: Flat-Remix-GTK [GTK2/3]
-██████████  ██████████  ██████████   Icons: Adwaita [GTK2/3]
-██████████  ██████████  ██████████   Terminal: alacritty
-██████████  ██████████  ██████████   CPU: Intel i3-8130U (4) @ 3.400GHz
-██████████  ██████████  ██████████   GPU: Intel UHD Graphics 620
-██████████  ██████████  ██████████   Memory: 5417MiB / 15916MiB
+kiedtl@kmach
+------------
+OS: Manjaro Linux x86_64
+Host: ************
+Kernel: 4.19.28-1-MANJARO
+Uptime: 2 days, 5 hours, 27 mins
+Packages: 1472 (pacman), 15 (snap)
+Shell: zsh 5.7.1
+Resolution: 1920x1080, 1920x1080
+WM: i3-gaps
+Theme: Flat-Remix-GTK [GTK2/3]
+Icons: Adwaita [GTK2/3]
+Terminal: alacritty
+CPU: Intel i3-8130U (4) @ 3.400GHz
+GPU: Intel UHD Graphics 620
+Memory: 5417MiB / 15916MiB
 ```
 
 I use [polybar](https://polybar.github.io) for the status bar and [Vivaldi Snapshot](https://vivaldi.com) as my browser.
