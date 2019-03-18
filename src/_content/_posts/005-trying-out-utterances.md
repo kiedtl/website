@@ -1,6 +1,7 @@
 # Trying out Utterances
 
-Recently, I stumbled on [utterances](https://utteranc.es/). According to the README, utterances is a 
+Recently, I stumbled on [utterances](https://utteranc.es/). According to the README, utterances is:
+
 > A lightweight comments widget built on GitHub issues. Use GitHub issues for blog comments, wiki pages and more!
 
 Well, being the person I am, the first thing I did was install it. I've installed it on this website, so you can preview it at the bottom.
@@ -30,3 +31,7 @@ Reloading the page fixed the issue:
   <source srcset="/images/utterences-screenshot-2.png" type="image/png">
   <img src="/images/utterences-screenshot-2.png" alt="desktop">
 </picture>
+
+I reported the issue on their repository as issue [#133](github.com/utterance/utterances/issues/133).
+
+Considering how useful this utility is, I'm surprised that is has less that 760 stars (757 at the time of writing this). If you are reading this, I highly recommend you try it out.
