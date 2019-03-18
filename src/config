@@ -16,7 +16,7 @@ footer_blog='<script src="https://utteranc.es/client.js" repo="kiedtl/website" i
 homelink="<a href='/'>Home</a>"
 
 # homelink_blog - the content at the top of every blog post (default: "<a href='/'>Home</a> <a href='/blog/'>Blog</a>")
-homelink_blog="<a href='/'>Home</a> <a href='/blog/'>Blog</a>"
+homelink_blog="<a href='/'>Home</a> &#8226; <a href='/blog/'>Blog</a>"
 
 # favicon - the url to your favicon. default = empty.
 favicon=""
