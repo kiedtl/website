@@ -6,7 +6,10 @@ os:
 before_script:
     - sudo npm install --global surge
     - sudo apt-get update
-    - sudo apt-get install imagemagick pngquant jpegoptim webp
+    - sudo apt-get install curl webp jpegoptim
+    - sudo apt-get install imagemagick pngquant
+    - curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
+    - sudo apt-get install nodejs
 
 script:
     - chmod +x src/mksite
