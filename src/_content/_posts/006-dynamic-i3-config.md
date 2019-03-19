@@ -1,5 +1,7 @@
 # Dynamic `i3` Configurations
 
+*2019-03-19*
+
 I've started using with Linux a weeks ago, and since then I've switched from KDE to GNOME to finally i3-gaps. I've customized and re-customized my bars and configs until it actually looks really nice. By dynamic, I mean that I use `pywal` to change the wallpaper/colors to something random on startup.
 
 ![current](https://user-images.githubusercontent.com/32681240/54638932-96470d00-4a62-11e9-8ea3-65d2fcafa72e.jpg)
