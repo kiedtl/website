@@ -3,7 +3,7 @@ language: bash
 os:
     - linux
 
-before_script:
+before_install:
     - sudo npm install --global surge
     - sudo apt-get update
     - sudo apt-get install curl webp jpegoptim
