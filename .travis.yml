@@ -5,8 +5,9 @@ os:
     - linux
 
 before_install:
+  - sudo apt-get update
   - sudo apt-get install imagemagick pngquant jpegoptim webp
-  - sudo apt-get install powershell -y
+  - sudo apt-get install -y powershell
 
 script:
     - chmod +x src/mksite
