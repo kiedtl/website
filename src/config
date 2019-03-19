@@ -8,7 +8,7 @@ folders=("projects" "computers")
 headers="<meta name="google-site-verification" content="_Wt6XNMQUlHbi_wkIVeSwhekdKjuG3rmB1tYec-zu1c" /><link rel='stylesheet' href='https://invisi-text.surge.sh/cdn/production/0.2.0/invisi-text.min.css' /><!-- Global site tag (gtag.js) - Google Analytics --><script async src='https://www.googletagmanager.com/gtag/js?id=UA-98707492-3'></script><script>  window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-98707492-3');</script>"
 
 # footer - Stuff to go into the bottom of every page (default: empty)
-footer='<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="display:inline;border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a>'
+footer='<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a>'
 
 # footer_blog - Stuff to go into the bottom of every blog post (default: empty)
 footer_blog="${footer}<script src=\"https://utteranc.es/client.js\" repo=\"kiedtl/website\" issue-term=\"pathname\" label=\"comment\" theme=\"github-light\" crossorigin=\"anonymous\" async></script>"
