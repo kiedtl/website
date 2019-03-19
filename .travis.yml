@@ -14,5 +14,5 @@ before_install:
 script:
     - chmod +x src/mksite
     - chmod +x src/deploy
-    - src/mksite
-    - src/deploy
+    - cd src
+    - ./mksite && ./deploy
