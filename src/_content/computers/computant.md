@@ -46,6 +46,7 @@ One thing that bothers me on Windows is the high CPU && RAM/Disk usage compared 
 (On Linux, my CPU usage was about 10-20% lower than Windows, with quite a few applications open including several instances of Vivaldi running. My RAM usage was also much lower.)
 
 ---
+
 ### Other Screenshots
 
 - **Content**
