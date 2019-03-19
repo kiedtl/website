@@ -94,7 +94,25 @@ I've also configured i3-gaps to automatically set the wallpaper and terminal col
   <img src="/images/screenshot-laptop-4.jpg" alt="desktop">
 </picture>
 
+---
+
+- **Content**
+    - **alacritty**
+    - **neofetch**
+
+![](https://user-images.githubusercontent.com/32681240/54638932-96470d00-4a62-11e9-8ea3-65d2fcafa72e.jpg)
+
+![](https://user-images.githubusercontent.com/32681240/54639089-ed4ce200-4a62-11e9-8fed-0e91083718dd.jpg)
+
+![](https://user-images.githubusercontent.com/32681240/54638592-cc37c180-4a61-11e9-88d6-d682bb32e8ff.jpg)
+
+![](https://user-images.githubusercontent.com/32681240/54638826-41a39200-4a62-11e9-8e19-2319567c41f3.jpg)
+
+![](https://user-images.githubusercontent.com/32681240/54639036-ce4e5000-4a62-11e9-9ad9-216674d05863.jpg)
+
+
 ### Sources
 - **`dotfiles`**: [https://github.com/kiedtl/dotfiles](https://github.com/kiedtl/dotfiles)
+- **tutorial**: [right here](http://kiedtl.surge.sh/blog/006-dynamic-i3-config)
 
 ###### &#xA9; Kied Llaentenn (@kiedtl) 2019
