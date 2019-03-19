@@ -1,1 +1,16 @@
-
+{
+  "name": "@kiedtl/website",
+  "version": "0.1.0",
+  "description": "An experimental website, built on donsk",
+  "homepage": "https://kiedtl.surge.sh",
+  "repository": "https://github.com/kiedtl/website.git",
+  "license": "AGPL-v3.0",
+  "private": true,
+  "author": "Kied Llaentenn @kiedtl (+https://kiedtl.surge.sh)",
+  "devDependencies": {
+    "surge": "latest"
+  },
+  "scripts": {
+    "test": "echo 'No test available.'"
+  }
+}
