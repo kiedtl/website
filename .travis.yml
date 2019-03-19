@@ -1,0 +1,15 @@
+language: bash
+sudo: required
+
+os:
+    - linux
+
+before_install:
+  - sudo apt-get install imagemagick pngquant jpegoptim img2webp
+  - sudo apt-get install powershell -y
+
+script:
+    - chmod +x src/mksite
+    - chmod +x src/deploy
+    - src/mksite
+    - src/deploy
