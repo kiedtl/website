@@ -3,9 +3,10 @@ language: bash
 os:
     - linux
 
-before_install:
-  - sudo apt-get update
-  - sudo apt-get install imagemagick pngquant jpegoptim webp
+before_script:
+    - sudo npm install --global surge
+    - sudo apt-get update
+    - sudo apt-get install imagemagick pngquant jpegoptim webp
 
 script:
     - chmod +x src/mksite
