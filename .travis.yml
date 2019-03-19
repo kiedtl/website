@@ -5,7 +5,7 @@ os:
     - linux
 
 before_install:
-  - sudo apt-get install imagemagick pngquant jpegoptim img2webp
+  - sudo apt-get install imagemagick pngquant jpegoptim webp
   - sudo apt-get install powershell -y
 
 script:
