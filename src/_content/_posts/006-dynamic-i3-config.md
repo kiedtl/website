@@ -4,9 +4,9 @@
 
 I've started using with Linux a weeks ago, and since then I've switched from KDE to GNOME to finally i3-gaps. I've customized and re-customized my bars and configs until it actually looks really nice. By dynamic, I mean that I use `pywal` to change the wallpaper/colors to something random on startup.
 
-![current](https://user-images.githubusercontent.com/32681240/54638932-96470d00-4a62-11e9-8ea3-65d2fcafa72e.jpg)
+![](https://user-images.githubusercontent.com/32681240/54638932-96470d00-4a62-11e9-8ea3-65d2fcafa72e.jpg)
 
-![current](https://user-images.githubusercontent.com/32681240/54639089-ed4ce200-4a62-11e9-8fed-0e91083718dd.jpg)
+![](https://user-images.githubusercontent.com/32681240/54639089-ed4ce200-4a62-11e9-8fed-0e91083718dd.jpg)
 
 ### Requirements
 - admin rights
@@ -106,11 +106,11 @@ $ wal -i /path/to/wallpapers/
 ```
 Ahhhhh......
 
-![current](https://user-images.githubusercontent.com/32681240/54638592-cc37c180-4a61-11e9-88d6-d682bb32e8ff.jpg)
+![](https://user-images.githubusercontent.com/32681240/54638592-cc37c180-4a61-11e9-88d6-d682bb32e8ff.jpg)
 
-![current](https://user-images.githubusercontent.com/32681240/54638826-41a39200-4a62-11e9-8e19-2319567c41f3.jpg)
+![](https://user-images.githubusercontent.com/32681240/54638826-41a39200-4a62-11e9-8e19-2319567c41f3.jpg)
 
-![current](https://user-images.githubusercontent.com/32681240/54639036-ce4e5000-4a62-11e9-9ad9-216674d05863.jpg)
+![](https://user-images.githubusercontent.com/32681240/54639036-ce4e5000-4a62-11e9-9ad9-216674d05863.jpg)
 
 ---
 
