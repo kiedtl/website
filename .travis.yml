@@ -4,12 +4,12 @@ os:
     - linux
 
 before_install:
-    - sudo npm install --global surge
     - sudo apt-get update
     - sudo apt-get install curl webp jpegoptim
     - sudo apt-get install imagemagick pngquant
     - curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
     - sudo apt-get install nodejs
+    - sudo npm install --global surge
 
 script:
     - chmod +x src/mksite
