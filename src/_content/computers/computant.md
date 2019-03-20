@@ -45,6 +45,12 @@ One thing that bothers me on Windows is the high CPU && RAM/Disk usage compared 
 
 (On Linux, my CPU usage was about 10-20% lower than Windows, with quite a few applications open including several instances of Vivaldi running. My RAM usage was also much lower.)
 
+I used [TranslucentTB](https://github.com/TranslucentTB/TranslucentTB) for the transparent taskbar. Although you can't see it, I also use [AltDrag](https://stefansundin.github.io/altdrag/) to move and resize windows with the <kbd>Alt</kbd> key.
+
+In addition to the usual PowerShell `pshazz` prompt, I also coded a quirky prompt that looks really nice. It's a pain to use, though :)
+
+![](https://user-images.githubusercontent.com/32681240/54652367-09fe0f80-4a8d-11e9-8d1a-1f1d05a015f9.gif)
+
 ---
 
 ### Other Screenshots
