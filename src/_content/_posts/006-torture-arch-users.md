@@ -28,3 +28,7 @@
     ```
     eval "$BASH_COMMAND"
     ```
+4. Add to their shell's profile if they use `i3` or `i3-gaps`:
+    ```bash
+    killall -q compton
+    ```
