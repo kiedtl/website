@@ -1,10 +1,10 @@
-# Ways to torture Arch Linux users
+# Ways to torture Linux users (WIP)
 
-*2019-03-23*
+*started 2019-03-23*
 
-> BTW I use Manjaro
+> BTW I use Arch
 
-1. Add this script to their `bin/` folder and name it `pacman`:
+1. (**Arch-only**) Add this script to their `bin/` folder and name it `pacman`:
     ```bash
     #!/bin/bash
     printf "bash: pacman: command not found\n"
