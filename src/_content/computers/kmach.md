@@ -28,12 +28,6 @@ Memory: 2256MiB / 15916MiB
 I use [polybar](https://polybar.github.io) for the status bar and [Vivaldi](https://vivaldi.com) as my browser.
 
 <picture>
-  <source srcset="/images/linux.webp" type="image/webp">
-  <source srcset="/images/linux.jpg" type="image/png">
-  <img src="/images/linux.jpg" alt="desktop">
-</picture>
-
-<picture>
   <source srcset="/images/vivaldi-scr.webp" type="image/webp">
   <source srcset="/images/vivaldi-scr.jpg" type="image/png">
   <img src="/images/vivaldi-scr.jpg" alt="desktop">
