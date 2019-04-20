@@ -1,5 +1,7 @@
 # linux @ kmach
 
+![](https://i.redd.it/1frxqfwm6os21.jpg)
+
 My laptop currently runs <s>BTW</s> Arch Linux with GNOME/i3-gaps. For the terminal, I use [Alacritty](https://github.com/jwilm/alacritty) or [mistty](https://github.com/lptstr/mistty) with ZSH and sometimes PowerShell.
 
 ```
@@ -20,6 +22,9 @@ GPU: Intel UHD Graphics 620
 Memory: 2256MiB / 15916MiB
 ```
 
+<blockquote class="reddit-card" data-card-created="1555796605"><a href="https://www.reddit.com/r/unixporn/comments/bdxen7/i3gaps_rising_moon/">[i3-gaps] Rising moon</a> from <a href="http://www.reddit.com/r/unixporn">r/unixporn</a></blockquote>
+<script async src="//embed.redditmedia.com/widgets/platform.js" charset="UTF-8"></script>
+
 I use [polybar](https://polybar.github.io) for the status bar and [Vivaldi](https://vivaldi.com) as my browser.
 
 <picture>
@@ -34,9 +39,9 @@ I use [polybar](https://polybar.github.io) for the status bar and [Vivaldi](http
   <img src="/images/vivaldi-scr.jpg" alt="desktop">
 </picture>
 
-Running three instances of Vivaldi and one instance of Dolphin and Alacritty each, my CPU usage is surprisingly light - a maximum of 25% usage and a minimum of 15% usage. RAM usage is around 5500 MB and the core temperature is less than 40&#176;C.
+Running three instances of Vivaldi and one instance of Dolphin/Nautilus and Alacritty each, my CPU usage is surprisingly light - a maximum of 25% usage and a minimum of 5% usage. RAM usage is around 5500 MB and the core temperature is less than 40&#176;C.
 
-It sounds strange, but I use three different text editors, depending on what I am editing. For .NET, HTML, CSS, JavaScript, and other miscellaeneous tasks, I use Visual Studio Code. For Rust, shell scripts, PowerShell, I use Spacemacs. For very quick tasks where I don't like to waste time starting up the editor, I use SpaceVim.
+It sounds strange, but I use three different text editors, depending on what I am editing. For .NET, HTML, CSS, JavaScript, and other miscellaeneous tasks, I use Visual Studio Code. For Rust, shell scripts, PowerShell, I use Spacemacs. For quick tasks where I don't like to waste time starting up the editor, I use nano.
 
 <picture>
   <source srcset="/images/screenshot-editors-1.webp" type="image/webp">
@@ -55,6 +60,7 @@ I've also configured i3-gaps to automatically set the wallpaper and terminal col
 ---
 
 ### Other Screenshots
+**NOTE:** These screenshots were made before I made the switch from Manjaro to Arch and may be outdated.
 
 - **Content**
     - **gotop** (far left)
@@ -112,6 +118,5 @@ I've also configured i3-gaps to automatically set the wallpaper and terminal col
 
 ### Sources
 - **`dotfiles`**: [https://github.com/kiedtl/dotfiles](https://github.com/kiedtl/dotfiles)
-- **tutorial**: [right here](http://kiedtl.surge.sh/blog/006-dynamic-i3-config)
 
 ###### &#xA9; Kied Llaentenn (@kiedtl) 2019
