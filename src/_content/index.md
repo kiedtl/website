@@ -6,8 +6,8 @@ P&#x1FF;w&#x3F5;rsh&#x3F5;ll &#x3B1;&#x256;di&#x199;t &#xB7; Wi&#x377;&#x256;&#x
 
 **projects**
 
-- [sultan](https://github.com/lptstr/sultan) - a fast, lightweight utility to stress-test your server
-- [mouse](https://github.com/lptstr/mouse) - a simple, cross-platform app to manage, store, and backup your configuration files.
+- [winfetch](https://github.com/lptstr/winfetch) - 🛠 A terminal system information utility for Windows. Like Neofetch, but for Windows.
+- [awesome-prompts](https://github.com/lptstr/awesome-prompts) - a collection of awesome prompts for `bash`, PowerShell, etc.
 - [painter](https://github.com/lptstr/painter) - manage the Windows desktop wallpaper from the terminal
 - [pxlcon](https://github.com/lptstr/pxlcon) - a pixel art editor for the terminal. Like pxltrm, but cross-platform.
 - [pamirand](https://github.com/lptstr/pamirand) - a random-number generator implementing the Park-Miller algorithm
