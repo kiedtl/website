@@ -1,6 +1,10 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 # ./kiedtl
 
 P&#x1FF;w&#x3F5;rsh&#x3F5;ll &#x3B1;&#x256;di&#x199;t &#xB7; Wi&#x377;&#x256;&#x1FF;ws &#x284;&#x3B1;&#x377;&#x3B1;ti&#x199; &#xB7; D&#x1FF;t&#x377;&#x3F5;t pr&#x1FF;gr&#x3B1;&#x3FB;&#x3FB;&#x3F5;r
+
+<a href="https://github.com/kiedtl"><i class="fab fa-github"></i></a> &#8226; <a href="https://www.reddit.com/user/kiedtl"><i class="fab fa-reddit"></i></a> &#8226; <a href="https://codepen.io/kiedtl"><i class="fab fa-codepen"></i></a> &#8226; <a href="/blog/"><i class="fab fa-rss"></i></a> &#8226;
 
 [GitHub](https://github.com/kiedtl) &#8226; [CodePen](https://codepen.io/kiedtl) &#8226; [Reddit](https://www.reddit.com/user/kiedtl) &#8226; [Blog](/blog/)
 
