@@ -9,7 +9,7 @@ P&#x1FF;w&#x3F5;rsh&#x3F5;ll &#x3B1;&#x256;di&#x199;t &#xB7; Wi&#x377;&#x256;&#x
     <li><span class="fab fa-li fa-github" aria-hidden="true"></span> Code — GitHub:
     	<a href="https://github.com/kiedtl" title="GitHub profile">kiedtl</a> | Codepen: <a href="https://codepen.io/kiedtl" title="Codepen profile">kiedtl</a>
     </li>
-    	<li><span class="fab fa-li fa-reddit" aria-hidden="true"></span> Social — Reddit:
+    <li><span class="fab fa-li fa-reddit" aria-hidden="true"></span> Social — Reddit:
     	<a href="https://reddit.com/u/kiedtl" title="Reddit profile">u/kiedtl</a> 
     </li>		
     <li><span class="fas fa-li fa-blog" aria-hidden="true"></span> Blog —
