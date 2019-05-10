@@ -38,7 +38,7 @@ P&#x1FF;w&#x3F5;rsh&#x3F5;ll &#x3B1;&#x256;di&#x199;t &#xB7; Wi&#x377;&#x256;&#x
 	</li>
 </ul>
 
-<h3>Contact</h3>
+<h3>contact</h3>
 <ul class="fa-ul">
     <li>
 			<span class="far fa-li fa-envelope" aria-hidden="true"></span>
