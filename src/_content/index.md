@@ -46,6 +46,6 @@ P&#x1FF;w&#x3F5;rsh&#x3F5;ll &#x3B1;&#x256;di&#x199;t &#xB7; Wi&#x377;&#x256;&#x
     </li>
     <li>
 			<span class="far fa-li fa-comment-alt" aria-hidden="true"></span>
-                IRC: /query kiedtl on snoonet or freenode
+	    IRC: <code>/query kiedtl</code> on snoonet or freenode
     </li>
 </ul>
