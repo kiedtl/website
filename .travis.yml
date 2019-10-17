@@ -10,7 +10,7 @@ before_install:
     - curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
     - sudo apt-get install nodejs
     - sudo npm install --global surge
-    - go get -u https://github.com/tdewolff/minify/v2
+    - go get https://github.com/tdewolff/minify/v2
 
 script:
     - chmod +x src/mksite
