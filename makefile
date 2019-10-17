@@ -11,15 +11,15 @@ push:
 	@git push origin master
 
 clean:
-	@echo :: CLEANING
+	@echo ==> CLEANING
 	@cd src && rm -rf _website
 
 build: pull clean
-	@echo :: BUILDING
+	@echo ==> BUILDING
 	@cd src && ./mksite
 
 deploy: build
-	@echo :: DEPLOYING
+	@echo ==> DEPLOYING
 	@cd src && surge ${SFLAGS}
 	@git add . && git commit -am "build"
 	@git push origin master
