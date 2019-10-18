@@ -5,12 +5,15 @@ os:
 
 before_install:
     - sudo apt-get update
-    - sudo apt-get install curl webp jpegoptim pandoc golang
+    - sudo apt-get install curl webp jpegoptim pandoc wget
     - sudo apt-get install imagemagick pngquant
     - curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
     - sudo apt-get install nodejs
     - sudo npm install --global surge
-    - go get github.com/tdewolff/minify
+    - wget https://github.com/tdewolff/minify/releases/download/v2.5.2/minify_2.5.2_linux_amd64.tar.gz
+    - tar -xvf minify_2.5.2_linux_amd64.tar.gz
+    - cd minify_2.5.2_linux_amd64/
+    - sudo install -D -m755 ./minify /usr/bin/minify
 
 script:
     - chmod +x src/mksite
