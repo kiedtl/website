@@ -12,6 +12,7 @@ before_install:
     - sudo npm install --global surge
     - wget https://github.com/tdewolff/minify/releases/download/v2.5.2/minify_2.5.2_linux_amd64.tar.gz
     - tar -xvf minify_2.5.2_linux_amd64.tar.gz
+    - ls
     - cd minify_2.5.2_linux_amd64/
     - sudo install -D -m755 ./minify /usr/bin/minify
 
