@@ -28,12 +28,6 @@ Memory: 2256MiB / 15916MiB
 
 I use [polybar](https://polybar.github.io) for the status bar and [Vivaldi](https://vivaldi.com) as my browser.
 
-<picture>
-  <source srcset="/images/vivaldi-scr.webp" type="image/webp">
-  <source srcset="/images/vivaldi-scr.jpg" type="image/png">
-  <img src="/images/vivaldi-scr.jpg" alt="desktop">
-</picture>
-
 ![](https://preview.redd.it/uxlmswllbt131.jpg?width=1024&auto=webp&s=5b881dce698e1c181246835652122943262a1320)
 
 Running three instances of Vivaldi and one instance of Dolphin/Nautilus and Alacritty each, my CPU usage is surprisingly light - a maximum of 25% usage and a minimum of 5% usage. RAM usage is around 5500 MB and the core temperature is less than 40&#176;C.
