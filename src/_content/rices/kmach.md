@@ -2,7 +2,9 @@
 
 ![](https://i.redd.it/1frxqfwm6os21.jpg)
 
-My laptop currently runs <s>BTW</s> Arch Linux with GNOME/i3-gaps. For the terminal, I use [Alacritty](https://github.com/jwilm/alacritty) or [mistty](https://github.com/lptstr/mistty) with ZSH and sometimes PowerShell.
+> **Note**: I've switched to other machines and distros since, so this rice is outdated.
+
+My (old) laptop runs <s>BTW</s> Arch Linux with i3-gaps. For the terminal, I use(d) [Alacritty](https://github.com/jwilm/alacritty) or [mistty](https://github.com/lptstr/mistty) with ZSH and sometimes PowerShell.
 
 ```
 kiedtl@kmach
@@ -22,8 +24,7 @@ GPU: Intel UHD Graphics 620
 Memory: 2256MiB / 15916MiB
 ```
 
-<blockquote class="reddit-card" data-card-created="1555796605"><a href="https://www.reddit.com/r/unixporn/comments/bdxen7/i3gaps_rising_moon/">[i3-gaps] Rising moon</a> from <a href="http://www.reddit.com/r/unixporn">r/unixporn</a></blockquote>
-<script async src="//embed.redditmedia.com/widgets/platform.js" charset="UTF-8"></script>
+![](https://preview.redd.it/zmc4y2f2h1y21.jpg?width=1024&auto=webp&s=9d2533008ab2ab4b3acfa89111aedf1a02457aa2)
 
 I use [polybar](https://polybar.github.io) for the status bar and [Vivaldi](https://vivaldi.com) as my browser.
 
@@ -33,23 +34,21 @@ I use [polybar](https://polybar.github.io) for the status bar and [Vivaldi](http
   <img src="/images/vivaldi-scr.jpg" alt="desktop">
 </picture>
 
+![](https://preview.redd.it/uxlmswllbt131.jpg?width=1024&auto=webp&s=5b881dce698e1c181246835652122943262a1320)
+
 Running three instances of Vivaldi and one instance of Dolphin/Nautilus and Alacritty each, my CPU usage is surprisingly light - a maximum of 25% usage and a minimum of 5% usage. RAM usage is around 5500 MB and the core temperature is less than 40&#176;C.
 
-It sounds strange, but I use three different text editors, depending on what I am editing. For .NET, HTML, CSS, JavaScript, and other miscellaeneous tasks, I use Visual Studio Code. For Rust, shell scripts, PowerShell, I use Spacemacs. For quick tasks where I don't like to waste time starting up the editor, I use nano.
+It sounds strange, but I use(d) three different text editors, depending on what I am editing. For .NET, HTML, CSS, JavaScript, and other miscellaeneous tasks, I use Visual Studio Code. For Rust, shell scripts, PowerShell, I use Spacemacs. For quick tasks where I don't like to waste time starting up the editor, I use nano.
 
-<picture>
-  <source srcset="/images/screenshot-editors-1.webp" type="image/webp">
-  <source srcset="/images/screenshot-editors-1.jpg" type="image/png">
-  <img src="/images/screenshot-editors-1.jpg" alt="desktop">
-</picture>
+![](https://preview.redd.it/u4tcf4vttmx21.jpg?width=1024&auto=webp&s=4157547bd4acbb246c8bb315cf81c703a15b55b8)
 
 I've also configured i3-gaps to automatically set the wallpaper and terminal colors on startup. I have a directory of favourite wallpapers and use [pywal](https://github.com/dylanaraps/pywal) to do the job.
 
-<picture>
-  <source srcset="/images/screenshot-laptop-3.webp" type="image/webp">
-  <source srcset="/images/screenshot-laptop-3.jpg" type="image/png">
-  <img src="/images/screenshot-laptop-3.jpg" alt="desktop">
-</picture>
+### First Rice
+
+Here's a screenshot of my first rice, for your enjoyment `;-)`
+
+![](https://preview.redd.it/z1r3ny1q3qk21.png?width=1024&auto=webp&s=325d27e53ab3cb452960afad49ea9cb6c5a75e70)
 
 ---
 
