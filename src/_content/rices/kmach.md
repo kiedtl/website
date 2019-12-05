@@ -50,45 +50,6 @@ Here's a screenshot of my first rice, for your enjoyment `;-)`
 **NOTE:** These screenshots were made before I made the switch from Manjaro to Arch and may be outdated.
 
 - **Content**
-    - **gotop** (far left)
-    - **cmatrix** (top middle)
-    - **neofetch** (bottom middle)
-    - **pipes.sh** (far right)
-
-<picture>
-  <source srcset="/images/screenshot-laptop-1.webp" type="image/webp">
-  <source srcset="/images/screenshot-laptop-1.png" type="image/png">
-  <img src="/images/screenshot-laptop-1.png" alt="desktop">
-</picture>
-
----
-
-- **Content**
-    - **peaclock** (top right)
-    - **neofetch** (bottom right)
-    - **spacevim** (left)
-
-<picture>
-  <source srcset="/images/screenshot-laptop-2.webp" type="image/webp">
-  <source srcset="/images/screenshot-laptop-2.png" type="image/png">
-  <img src="/images/screenshot-laptop-2.png" alt="desktop">
-</picture>
-
----
-
-- **Content**
-    - **alacritty**
-    - **cmatrix** (all windows)
-    
-<picture>
-  <source srcset="/images/screenshot-laptop-4.webp" type="image/webp">
-  <source srcset="/images/screenshot-laptop-4.jpg" type="image/png">
-  <img src="/images/screenshot-laptop-4.jpg" alt="desktop">
-</picture>
-
----
-
-- **Content**
     - **alacritty**
     - **neofetch**
 
@@ -105,5 +66,5 @@ Here's a screenshot of my first rice, for your enjoyment `;-)`
 
 ### Sources
 - **`dotfiles`**: [https://github.com/kiedtl/dotfiles](https://github.com/kiedtl/dotfiles)
-
+- **`bin scripts`**: [https://github.com/kiedtl/bin](https://github.com/kiedtl/bin)
 ###### &#xA9; Kied Llaentenn (@kiedtl) 2019
