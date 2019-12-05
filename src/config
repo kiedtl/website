@@ -1,6 +1,6 @@
 #!/bin/bash
 
-site_name="./kiedtl"
+site_name="/home/kiedtl"
 folders=("projects" "computers")
 
 # --------- ADVANCED CONFIGURATION ----------
@@ -14,10 +14,10 @@ footer='<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/
 footer_blog="${footer}<script src=\"https://utteranc.es/client.js\" repo=\"kiedtl/website\" issue-term=\"pathname\" label=\"comment\" theme=\"github-light\" crossorigin=\"anonymous\" async></script>"
 
 # homelink - the content that appears on every non-index page (default: "<a href='/'>Home</a>")
-homelink="<a href='/'>/root</a>"
+homelink="<a href='/'>/home/</a> &#8226; <a href='/blog/'>/blog/</a>"
 
 # homelink_blog - the content at the top of every blog post (default: "<a href='/'>Home</a> <a href='/blog/'>Blog</a>")
-homelink_blog="<a href='/'>/root</a> &#8226; <a href='/blog/'>/blog</a>"
+homelink_blog="<a href='/'>/home/</a> &#8226; <a href='/blog/'>/blog/</a>"
 
 # favicon - the url to your favicon. default = empty.
 favicon="data:image/png;base64,"
