@@ -74,3 +74,6 @@ An ever-updating list of tools and programs that I find useful:
 - `loksh`: an implementation of the Korn Shell that's way better than `bash`. `bash`: 1.1M, `loksh`: 241K
 - [`ly`](https://github.com/cyglom/ly): a minimal console-based display manager that, as a bonus, has a cool DOOM animation.
 - [`slock`](https://tools.suckless.org/slock): the simplest lockscreen that I know of.
+- [`donsk`](https://github.com/lptstr/donsk): an extremely simple static site generator. You're previewing it right now.
+- [`lcharmap`](https://github.com/lptstr/lcharmap): a little utility like the Windows `charmap.exe` ported to Linux.
+- [`rsfetch`](https://github.com/rsfetch/rsfetch): a blazingly fast (<5ms) fetch program.
