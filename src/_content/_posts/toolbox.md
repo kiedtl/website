@@ -80,7 +80,7 @@ An ever-updating list of tools and programs that I find useful:
 
 ### Programming languages
 - `C`: yep, raw C is can be pretty useful on many occasions.
-- `Rust`: best described as a modern version of C++ perfectly obsessed with memory safety.
+- `Rust`: best described as a modern version of C++ obsessed with memory safety.
 - `V`: I still don't have much experience with it yet, but when it matures, this is definitely one language I'm going to
-  learn.
-- `PowerShell`: not quite a shell - more of a interpreted language often mistaken for a shell.
+  master.
+- `PowerShell`: not quite a shell - more of an interpreted language often mistaken for a shell.
