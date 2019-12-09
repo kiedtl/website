@@ -36,7 +36,7 @@ An ever-updating list of tools and programs that I find useful:
 	- **Pro:** extremely simple by default.
 	- **Pro:** easy to setup you're own package repository (necessary, since like KISS, no
 	  that many packages exist in the repos).
-	- **Pro:** merely mentioning that you use CRUX moves you up in the world of [r/unixporn](https://reddit.com/r/unixporn).
+	- **Pro:** merely mentioning that you use CRUX moves you up in the world of (SFW) [r/unixporn](https://reddit.com/r/unixporn).
 	- *Con:* not rolling release. Many will disagree, but I like to keep things "fresh".
 	- *Con:* sparse community. not that many people use it, sadly.
  
@@ -50,8 +50,8 @@ An ever-updating list of tools and programs that I find useful:
 	  due to the fact that it ships with a minimal set of features, and patches must be applied
 	  to use certain features (such as a scratchpad). I recommend using [Luke Smith's setup](https://github.com/LukeSmithxyz)
 	  as a starting point, and to build up from there. Optionally, you can use [Mitch Weaver's setup](https://github.com/mitchweaver/suckless),
-	  or, better yet, [my setup >:-\]](https://github.com/kiedtl/suckless).
-	- *Con:* nasty community. Mde by a group who call themselved sUcKlEsS, almost the entire
+	  or, better yet, [my setup :-\]](https://github.com/kiedtl/suckless).
+	- *Con:* nasty community. Made by a group who call themselved sUcKlEsS, almost the entire
 	  community is dominated by a bunch of bigoted jackasses.
 	- *Con:* because the config is in the source, you have to recompile and restart your X session
 	  for changes in the configuration to take effect. This isn't bad, unless you're fine-tuning your tiling gaps.
