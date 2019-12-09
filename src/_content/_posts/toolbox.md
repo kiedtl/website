@@ -77,3 +77,10 @@ An ever-updating list of tools and programs that I find useful:
 - [`donsk`](https://github.com/lptstr/donsk): an extremely simple static site generator. You're previewing it right now.
 - [`lcharmap`](https://github.com/lptstr/lcharmap): a little utility like the Windows `charmap.exe` ported to Linux.
 - [`rsfetch`](https://github.com/rsfetch/rsfetch): a blazingly fast (<5ms) fetch program.
+
+### Programming languages
+- `C`: yep, raw C is can be pretty useful on many occasions.
+- `Rust`: best described as a modern version of C++ perfectly obsessed with memory safety.
+- `V`: I still don't have much experience with it yet, but when it matures, this is definitely one language I'm going to
+  learn.
+- `PowerShell`: not quite a shell - more of a interpreted language often mistaken for a shell.
