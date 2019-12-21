@@ -4,24 +4,18 @@ SFLAGS = --project ${HTMLDR} --domain ${DOMAIN}
 
 all:  clean build deploy
 
-pull:
-	@git pull origin master
-
-push:
-	@git push origin master
-
 clean:
 	@echo ==> CLEANING
-	@cd src && rm -rf _website
+	cd src && rm -rf _website
 
 build: pull clean
 	@echo ==> BUILDING
-	@cd src && ./mksite
+	cd src && ./mksite
 
 deploy: build
 	@echo ==> DEPLOYING
-	@cd src && surge ${SFLAGS}
-	@git add . && git commit -am "build"
-	@git push origin master
+	cd src && surge ${SFLAGS}
+	git add . && git commit -am "build"
+	git push origin master
 
-.PHONY: all pull push clean build deploy
+.PHONY: all clean build deploy
