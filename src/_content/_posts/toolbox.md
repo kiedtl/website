@@ -28,6 +28,7 @@ An ever-updating list of tools and programs that I find useful:
 - [Void Linux](https://voidlinux.org)
 	- **Pro:** Runs on many architectures.
 	- **Pro:** Ability to choose between `glibc` and `musl`.
+	- **Pro:** uses `runit`, not systemd.
 	- *Con:* package manager isn't all that great.
 
 - [CRUX Linux](https://crux.nu)
@@ -68,7 +69,7 @@ An ever-updating list of tools and programs that I find useful:
 
 - `xterm`
 	- **Pro:** it just works.
-	- *Con:* very bloated, at about 65K lines of code. Compare to `st`, which is 8K loc.
+	- *Con:* very bloated, at about 65K lines of code. Compare to (unpatched) `st`, which is 5K loc.
 
 ### misc
 - `loksh`: an implementation of the Korn Shell that's way better than `bash`. `bash`: 1.1M, `loksh`: 241K
@@ -79,8 +80,11 @@ An ever-updating list of tools and programs that I find useful:
 - [`rsfetch`](https://github.com/rsfetch/rsfetch): a blazingly fast (<5ms) fetch program.
 
 ### Programming languages
-- `C`: yep, raw C is can be pretty useful on many occasions.
+- `C`: yep, raw C is the still the best language on earth, contrary to the opinion of some jAvAsCrIpT heretics.
 - `Rust`: best described as a modern version of C++ obsessed with memory safety.
 - `V`: I still don't have much experience with it yet, but when it matures, this is definitely one language I'm going to
   master.
 - `PowerShell`: not quite a shell - more of an interpreted language often mistaken for a shell.
+
+### fonts
+- `ttyp0`: a better version of `misc-fixed`.

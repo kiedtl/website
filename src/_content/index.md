@@ -28,6 +28,7 @@ Linux addict | Javascript hater | C/Rust programmer
 - [winfetch](https://github.com/lptstr/winfetch) - A system information utility for Windows 10.
 - [rsfetch](https://github.com/rsfetch/rsfetch) - An extremely fast (1ms) and somewhat minimal (?) *nix fetch program.
 - [lcharmap](https://github.com/lptstr/lcharmap) - The Windows `charmap` utility ported to Linux on the CLI.
+- [fire](https://github.com/lptstr/fire) - The PSX DOOM fire animation, ported to the terminal.
 - [painter](https://github.com/lptstr/painter) - manage the Windows desktop wallpaper from the terminal
 - [meow](github.com/kiedtl/meow) - a `lolcat` clone for Windows.
 - [knaur](github.com/lptstr/knaur) - a hackable AUR helper for Arch-based distros.
@@ -41,15 +42,4 @@ Linux addict | Javascript hater | C/Rust programmer
 <li>
 <span class="fab fa-li fa-linux" aria-hidden="true"></span>Linux — <a href="/rices/kmach">kmach (old)</a>
 </li>	
-</ul>
-
-<h3>contact</h3>
-**Note** I may or may not answer your PMs or messages. If it's something important, Reddit is the most reliable.
-<ul class="fa-ul">
-<li>
-<span class="far fa-li fa-envelope" aria-hidden="true"></span> Reddit: Send a PM to <a href="https://reddit.com/u/kiedtl" title="Reddit profile">/u/kiedtl</a> 
-</li>
-<li>
-<span class="far fa-li fa-comment-alt" aria-hidden="true"></span> IRC: <code>/query kiedtl</code> on snoonet or freenode
-</li>
 </ul>
