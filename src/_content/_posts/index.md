@@ -1,2 +1,1 @@
-- [Debugging C with GDB/strace](c-gdb.html)
-- [Useful Tools](toolbox.html)
+[continue](/)
