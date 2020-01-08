@@ -1,27 +1,6 @@
-<!-- I know, I know, privacy advocats will tear me apart for this, but I do use Google Analytics here.
-	But hey, if you hate trackers so much, you should be using Brave or a PiHole to protect yourself. -->
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css?family=Lobster%7CDroid%20Sans" rel="stylesheet">
-
 # ./kiedtl
 
-Linux addict | Javascript hater | C/Rust programmer
-
-<h3>links</h3>
-<ul class="fa-ul">
-  <li><span class="fab fa-li fa-github" aria-hidden="true"></span> Code — GitHub:
-  <a href="https://github.com/kiedtl" title="GitHub profile">kiedtl</a>
-  </li>
-  <li><span class="fab fa-li fa-reddit" aria-hidden="true"></span> Social — Reddit:
-  <a href="https://reddit.com/u/kiedtl" title="Reddit profile">u/kiedtl</a> 
-  </li>		
-  <li><span class="fas fa-li fa-blog" aria-hidden="true"></span> Blog —
-  <a href="/blog/" title="blog">over here</a> 
-  </li>
-  <li><span class="fas fa-li fa-lock" aria-hidden="true"></span>PGP — Keybase:
-  <a href="https://keybase.io/kiedtl" title="Keybase profile">kiedtl</a> | Key: <a download href="/files/CEA9620E.asc" title="0DD9 A971 D788 7A29 5C5A D789 6A01 949D CEA9 620E">CEA9620E.asc</a>
-  </li>
-</ul>
+[GitHub](https://github.com/kiedtl) | [Reddit](https://old.reddit.com/u/kiedtl)
 
 ### projects
 
@@ -29,17 +8,11 @@ Linux addict | Javascript hater | C/Rust programmer
 - [rsfetch](https://github.com/rsfetch/rsfetch) - An extremely fast (1ms) and somewhat minimal (?) *nix fetch program.
 - [lcharmap](https://github.com/lptstr/lcharmap) - The Windows `charmap` utility ported to Linux on the CLI.
 - [fire](https://github.com/lptstr/fire) - The PSX DOOM fire animation, ported to the terminal.
-- [painter](https://github.com/lptstr/painter) - manage the Windows desktop wallpaper from the terminal
-- [meow](github.com/kiedtl/meow) - a `lolcat` clone for Windows.
-- [knaur](github.com/lptstr/knaur) - a hackable AUR helper for Arch-based distros.
 
-### computers
+### posts
+- [My setup](/blog/3dot14.html)
+- [Debugging C with GDB/strace](/blog/c-gdb.html)
+- [Useful Tools](/blog/toolbox.html)
 
-<ul class="fa-ul">
-<li>
-<span class="fab fa-li fa-linux" aria-hidden="true"></span>Linux — <a href="/rices/3dot14">3dot14</a>
-</li>
-<li>
-<span class="fab fa-li fa-linux" aria-hidden="true"></span>Linux — <a href="/rices/kmach">kmach (old)</a>
-</li>	
-</ul>
+#### outdated posts
+- [kmach rice](/blog/kmach.html)
