@@ -31,7 +31,8 @@ for md in _content/*.md; do
         home=$homelink
 
 
-    minify --type html \
+    #minify --type html \
+    sed ':a;N;$!ba;s|>\s*<|><|g' \
         <<< "${template/'{{content}}'/${home}$(pandoc "$md")}" \
         > "_website/${file_name/%.md/.html}"
 
@@ -57,7 +58,7 @@ until [[ $ctr -eq "${#folders[@]}" ]]; do
 
         home=$homelink
 
-        minify --type html \
+        sed ':a;N;$!ba;s|>\s*<|><|g' \
             <<< "${template/'{{content}}'/${home}$(pandoc "$md")}" \
             > "_website/$folder/${file_name/%.md/.html}"
 
@@ -73,7 +74,7 @@ for md in _content/_posts/*.md; do
     [[ $file_name != index.md ]] &&
         home=$homelink_blog
 
-    minify --type html \
+    sed ':a;N;$!ba;s|>\s*<|><|g' \
         <<< "${template_blog/'{{content}}'/${home}$(pandoc "$md")}" \
         > "_website/blog/${file_name/%.md/.html}"
 
