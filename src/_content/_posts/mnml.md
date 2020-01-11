@@ -1,6 +1,7 @@
 # on being small
 
 \<rant\>
+
 ---
 
 Last year, there was a wave of new software being released in the Linux world
@@ -11,12 +12,12 @@ The first, KISS Linux, is a musl-based distro inspired by Alpine, CRUX,
 and Void Linux. It uses Busybox as it's coreutils (instead of GNU coreutils),
 and busybox init as it's init system.
 
-*See also:* [https://getkiss.org/](https://getkiss.org/)
+*See also:*   [https://getkiss.org/](https://getkiss.org/)
 
 The second one I'll mention, sowm, is an itsy bitsy floating window manager
 in ~200 loc targeted at advanced users.
 
-*See also:* [https://github.com/dylanaraps/sowm](https://github.com/dylanaraps/sowm)
+*See also:*   [https://github.com/dylanaraps/sowm](https://github.com/dylanaraps/sowm)
 
 Not to say that any of this mnml software is bad -- quite the opposite, the
 only complaint I have with KISS Linux is that it's package manager hasn't
