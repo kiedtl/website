@@ -9,10 +9,11 @@
 - [lcharmap](https://github.com/lptstr/lcharmap) - The Windows `charmap` utility ported to Linux on the CLI.
 - [fire](https://github.com/lptstr/fire) - The PSX DOOM fire animation, ported to the terminal.
 
-### posts
-- [My setup](/blog/3dot14.html)
-- [Debugging C with GDB/strace](/blog/c-gdb.html)
-- [Useful Tools](/blog/toolbox.html)
+### posts/rants
+- [on being small](/blog/mnml.html)
+- [my setup](/blog/3dot14.html)
+- [debugging c with gdb/strace](/blog/c-gdb.html)
+- [useful tools](/blog/toolbox.html)
 
 #### outdated posts
 - [kmach rice](/blog/kmach.html)
