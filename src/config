@@ -23,4 +23,4 @@ homelink_blog="<a href='/'>/home/</a> &#8226; <a href='/blog/'>/blog/</a>"
 favicon="data:image/png;base64,"
 
 # style - the minified CSS style for your site
-style='a{text-decoration:none;color:#080808;}a:focus,a:hover{text-decoration:underline;}body{font:sans-serif;line-height:1.6;color:#234;background:#f4f3f2;overflow-y:scroll}img,main{display:block;margin:25px auto;}main{padding:20px;max-width:600px;line-height:1.6;word-wrap:break-word}img{max-width:100%}pre>code{display:block;padding:20px;white-space:pre-line}code{background:#eee;padding:2px}blockquote{border-left:7px solid #ddd;padding-left:14px;color:#666;margin:0}h1,h2,h3{font:monospace;line-height:1.2}'
+style='body{font:sans-serif;line-height:1.6;color:#234;background:#f4f3f2;overflow-y:scroll}img,main{display:block;margin:25px auto;}main{padding:20px;max-width:600px;line-height:1.6;word-wrap:break-word}img{max-width:100%}pre>code{display:block;padding:20px;white-space:pre-line}code{background:#eee;padding:2px}blockquote{border-left:7px solid #ddd;padding-left:14px;color:#666;margin:0}h1,h2,h3{font:monospace;line-height:1.2}'
