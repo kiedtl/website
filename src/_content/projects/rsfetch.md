@@ -101,6 +101,7 @@ We can format rsfetch's output into:
 ## installation
 
 You will need:
+
 * GNU Make (optional)
 * the Rust compiler toolchain
 
