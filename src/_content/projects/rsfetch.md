@@ -18,12 +18,12 @@ you want enabled:
 ```
 $ rsfetch -desk
 
-■────────────────────────■
+■─────────────────────────■
 │ OS       =   void      │
 │ KERNEL   =   4.19.89_2 │
 │ EDITOR   =   nvim      │
 │ SHELL    =   loksh     │
-■────────────────────────■
+■─────────────────────────■
 ```
 
 Further options can be provided to enable an ASCII logo and/or to disable
@@ -36,12 +36,12 @@ $ rsfetch -deskcl
  ├┬┘└─┐├┤ ├┤  │ │  ├─┤
  ┴└─└─┘└  └─┘ ┴ └─┘┴ ┴
 
-■────────────────────────■
+■─────────────────────────■
 │ os       =   void      │
 │ kernel   =   4.19.89_2 │
 │ editor   =   nvim      │
 │ shell    =   loksh     │
-■────────────────────────■
+■─────────────────────────■
 ```
 
 A Neofetch-style output mode is provided:
