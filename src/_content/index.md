@@ -5,7 +5,7 @@
 ### projects
 
 - [winfetch](https://github.com/lptstr/winfetch) - A system information utility for Windows 10.
-- [rsfetch](https://github.com/rsfetch/rsfetch) - An extremely fast (1ms) and somewhat minimal (?) *nix fetch program.
+- [rsfetch](/projects/rsfetch.html) - An extremely fast (1ms) and somewhat minimal (?) *nix fetch program.
 - [lcharmap](https://github.com/lptstr/lcharmap) - The Windows `charmap` utility ported to Linux on the CLI.
 - [fire](https://github.com/lptstr/fire) - The PSX DOOM fire animation, ported to the terminal.
 
