@@ -1,3 +1,3 @@
 # choosing a window manager
 
-todo: write
+When I first switched to Linux, I used i3-gaps.
