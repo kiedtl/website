@@ -10,11 +10,12 @@
 - [fire](https://github.com/lptstr/fire) - The PSX DOOM fire animation, ported to the terminal.
 
 ### posts/rants
+- [clean websites](/blog/kleen.html)
 - [keeping things fresh](/blog/deadcode.html)
 - [on being small](/blog/mnml.html)
 - [my setup](/blog/3dot14.html)
 - [debugging c with gdb/strace](/blog/c-gdb.html)
 - [useful tools](/blog/toolbox.html)
 
-#### outdated posts
+### outdated posts
 - [kmach rice](/blog/kmach.html)
