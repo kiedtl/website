@@ -30,11 +30,9 @@ for md in _content/*.md; do
     [[ $file_name != index.md ]] &&
         home=$homelink
 
-
-    #minify --type html \
-    sed ':a;N;$!ba;s|>\s*<|><|g' \
-        <<< "${template/'{{content}}'/${home}$(pandoc "$md")}" \
-        > "_website/${file_name/%.md/.html}"
+    # actual conversion here
+    printf "${template/'{{content}}'/${home}$(pandoc "$md" --no-highlight -f markdown-smart -t html5)}" \
+	    | sed ':a;N;$!ba;s|>\s*<|><|g' > "_website/${file_name/%.md/.html}"
 
     home=
 done
