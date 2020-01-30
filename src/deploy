@@ -1,3 +1,12 @@
-#!/usr/bin/env bash
+#!/bin/sh
+#
+# deploy
+# (c) Kiëd Llaentenn (@kiedtl)
+# See the LICENSE for more information.
 
-surge --project ./_website/ --domain kiedtl.surge.sh
+main() {
+	surge --project ./public --domain kiedtl.surge.sh
+}
+
+main "$@"
+
