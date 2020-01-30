@@ -5,10 +5,9 @@ os:
 
 before_install:
     - sudo apt-get update
-    - curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
-    - sudo apt-get install nodejs
+    - sudo apt-get install nodejs zola
     - sudo npm install --global surge
 
 script:
     - chmod +x src/deploy
-    - cd src && ./deploy
+    - cd src && zola build && ./deploy

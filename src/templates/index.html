@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-us">
-	<head>
-		{% block headers %}{{ config.extra.headers | safe }}{% endblock title %}
-		<link href="{% block fav %}{{ config.extra.favicon | safe }}{% endblock fav %}, rel=icon type=image/png>
-		<title>{% block ptitle %}{{ section.title | safe }}{% endblock ptitle %}</title>
-		<style>
+<head>
+{% block headers %}{{ config.extra.headers | safe }}{% endblock title %}
+<link href="{% block fav %}{{ config.extra.favicon | safe }}{% endblock fav %}, rel=icon type=image/png>
+<title>{% block ptitle %}{{ section.title | safe }}{% endblock ptitle %}</title>
+<style>
 body,
 h1,
 h2,
@@ -125,21 +125,21 @@ h4::before{
  }
 }
 
-		</style>
-	</head>
-	<body>
-		<main>
-			{% block homelink %}
-			{{ config.extra.homelink | safe }}
-			{% endblock homelink %}
+</style>
+</head>
+<body>
+<main>
+{% block homelink %}
+{{ config.extra.homelink | safe }}
+{% endblock homelink %}
 
-			{% block content %}
-			{{ section.content | safe }}
-			{% endblock content %}
-		</main>
+{% block content %}
+{{ section.content | safe }}
+{% endblock content %}
+</main>
 		
-		{% block footer %}
-		{{ config.extra.footer | safe }}
-		{% endblock footer %}
-	</body>
+{% block footer %}
+{{ config.extra.footer | safe }}
+{% endblock footer %}
+</body>
 </html>
