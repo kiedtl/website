@@ -5,7 +5,10 @@ os:
 
 before_install:
     - sudo apt-get update
-    - sudo apt-get install nodejs zola
+    - sudo apt-get install nodejs wget
+    - wget https://github.com/getzola/zola/releases/download/v0.9.0/zola-v0.9.0-x86_64-unknown-linux-gnu.tar.gz -O z.tar.gz
+    - tar xvf z.tar.gz
+    - ls
     - sudo npm install --global surge
 
 script:
