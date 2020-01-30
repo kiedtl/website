@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><meta name="google-site-verification" content="_Wt6XNMQUlHbi_wkIVeSwhekdKjuG3rmB1tYec-zu1c" />
+		<link href="data:image/png;base64,, rel=icon type=image/png>
+		<title></title>
+		<style>
+			
+			blockquote,body,h1,h2,h3,p,ul{margin:1ch 0 0;padding:0}body{margin:1ch;overflow-y:scroll}img{height:auto;max-width:100%}body{font:16px/1.6 monospace,monospace}img,main{display:block;max-width:80ch;margin:25px auto}h1,h2,h3{font-size:inherit;margin:3ch 0 2ch}h1{display:table;overflow:hidden;padding-bottom:16px;position:relative}h1:after{content:"--------------------------------------------------------------------------------";position:absolute;bottom:0;left:2ch;height:16px;width:100%;overflow:hidden;word-break:break-all;font-weight:400}h1::before{content:'# '}h2::before{content:'## '}h3::before{content:'### '}h4::before{content:'#### '}ul{padding:0;list-style:none}blockquote::before,ul>li::before{float:left;width:1ch;margin-right:1ch;content:'-'}blockquote::before{content:'>'}blockquote{background:#ffc}li>ul{margin:0 0 1ch 4ch}pre>code{display:block;padding:1ch 0 1ch 4ch;background:666666;overflow-x:auto}code{border-radius:2px;background:#eee;padding:0 4px}a{text-decoration:none}a:hover{border-bottom:1px solid}h1::before,h2::before,h3::before,h4::before{color:red}@media (prefers-color-scheme:dark){body{background:#000;color:#fff}a{color:#6cf}blockquote,code{background:#333}}
+			
+		</style>
+	</head>
+	<body>
+		<main>
+			
+			<a href='/'>/home/</a> &#8226; <a href='/blog/'>/blog/</a>
+			
+
+			<h1 id="on-being-small">on being small</h1>
+<p>&lt;rant&gt;</p>
+<hr />
+<p>Last year, there was a wave of new software being released in the Linux world
+with a focus on being minimal. Much of that software is from Dylan Araps,
+the creator of Neofetch and pywal.</p>
+<p>The first, KISS Linux, is a musl-based distro inspired by Alpine, CRUX,
+and Void Linux. It uses Busybox as it's coreutils (instead of GNU coreutils),
+and busybox init as it's init system.</p>
+<p><em>See also:</em>   <a href="https://getkiss.org/">https://getkiss.org/</a></p>
+<p>The second one I'll mention, sowm, is an itsy bitsy floating window manager
+in ~200 loc targeted at advanced users.</p>
+<p><em>See also:</em>   <a href="https://github.com/dylanaraps/sowm">https://github.com/dylanaraps/sowm</a></p>
+<p>Not to say that any of this mnml software is bad -- quite the opposite, the
+only complaint I have with KISS Linux is that it's package manager hasn't
+quite matured enough, so there are quite a few bugs (all of that has probably
+changed by now, I haven't used KISS Linux in 4 months now).</p>
+<p>However, they each have a fundemental problem: in their quest for being
+small and lightweight, they often omit important features.</p>
+<p>Take KISS, for instance. By using Busybox, they are avoiding the terribly
+bloated GNU coreutils, but at the cost of having to use a non-standard
+set of tools. For example, busybox <code>patch</code> doesn't support all the options
+of GNU <code>patch</code>, making it incompatible with scripts or build systems
+that need those options.</p>
+<p>Or look as sowm. Chances are, if you use polybar (or, depending on your bar
+script, lemonbar) then sowm won't play well with it if you
+need information on the active window, active workspace, or number of
+workspaces (<em>which is what the majority of bars have</em>). This is due to sowm
+not supporting EWMH, because you see, EWMH is bloat and including support
+(even primitive) in sowm would make it not minimal.</p>
+<p>I agree that GNU tools are bloated. I agree that ICCCM and EWMH is garbage.
+But sometimes, you have to put up with it. How hard would it be to add
+just the <code>patch</code> tool to the KISS repositories? How hard would it be
+to implement JUST <code>_NET_ACTIVE_WINDOW</code>, <code>_NET_WM_NAME</code>, <code>_NET_CURRENT_DESKTOP</code>
+in sowm? But no, if you do that, you aren't pure, you're Polluted, and
+to hell with you.</p>
+<hr />
+<p>&lt;/rant&gt;</p>
+
+		</main>
+		
+		
+		<a rel='license' href='http://creativecommons.org/licenses/by-nc-nd/4.0/'><img alt='Creative Commons License' style='border-width:0' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAIAAAD8q9/YAAAABGdBTUEAANbY1E9YMgAAAZ9JREFUSMflljFrwkAUx98H6J3N6KbXFjtJJZNIB+Ntds0kdIxDp3boTYJ0UDcLutxXOCfbpejQSRE5+g38CvcVrtCTNJVLiFAKaR4ZwvH+yf3yf+/lAHIYOjfxDTybi+jVvesCwGg0ssoopRjjKZ+Y5O3HtnBayISvduApn2CM42hD5splxeQv3hf9fj/DwI3rRrlcTq4NKSUAdG47RrKRm/ZNO6vACCNjr5SSEAIAlFKlFKUUAAghUkpjcs2thVU9fh5b58Lhy37eWxejKmtynOSwV9MA9556ALBcLrXWhBDf97XW7Cscx1FKcc6FEGYRYRRW9Wq9sj794CZhN3GZvyWxAz883gOAlFIpFZ1bvu+7rhutasYYxtioXt9e1tt1gsNWT+J2HPdp0kuOALY6TCkNgsA4zBjjnO8dRkc4nOCVtYzTOHyUJL6H0b6HhRCO4wBAEARhD7uuu9vttNatVqt6VU3Zw+mB/7qHZ3NRb9RLpVKOpvSUTxA6GQ6HCcCe551fnP2T/3A4ugaDgZW26TWLxWK2T1r5OkvnKj4Bfm7H+J/sGfMAAAAASUVORK5CYII=' /></a>
+		
+	</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><meta name="google-site-verification" content="_Wt6XNMQUlHbi_wkIVeSwhekdKjuG3rmB1tYec-zu1c" />
+		<link href="data:image/png;base64,, rel=icon type=image/png>
+		<title></title>
+		<style>
+			
+			blockquote,body,h1,h2,h3,p,ul{margin:1ch 0 0;padding:0}body{margin:1ch;overflow-y:scroll}img{height:auto;max-width:100%}body{font:16px/1.6 monospace,monospace}img,main{display:block;max-width:80ch;margin:25px auto}h1,h2,h3{font-size:inherit;margin:3ch 0 2ch}h1{display:table;overflow:hidden;padding-bottom:16px;position:relative}h1:after{content:"--------------------------------------------------------------------------------";position:absolute;bottom:0;left:2ch;height:16px;width:100%;overflow:hidden;word-break:break-all;font-weight:400}h1::before{content:'# '}h2::before{content:'## '}h3::before{content:'### '}h4::before{content:'#### '}ul{padding:0;list-style:none}blockquote::before,ul>li::before{float:left;width:1ch;margin-right:1ch;content:'-'}blockquote::before{content:'>'}blockquote{background:#ffc}li>ul{margin:0 0 1ch 4ch}pre>code{display:block;padding:1ch 0 1ch 4ch;background:666666;overflow-x:auto}code{border-radius:2px;background:#eee;padding:0 4px}a{text-decoration:none}a:hover{border-bottom:1px solid}h1::before,h2::before,h3::before,h4::before{color:red}@media (prefers-color-scheme:dark){body{background:#000;color:#fff}a{color:#6cf}blockquote,code{background:#333}}
+			
+		</style>
+	</head>
+	<body>
+		<main>
+			
+			<a href='/'>/home/</a> &#8226; <a href='/blog/'>/blog/</a>
+			
+
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.3/ace.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.3/mode-html.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.3/mode-javascript.js"></script>
+<script src="https://kiedtl.surge.sh/js/prace/prace.js"></script>
+<script>
+  function init() {
+      praceInit("pre");
+  }
+  window.onload = init;
+</script>
+<p><a href="https://github.com/kiedtl/invisitext" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a></p>
+<style>
+	.github-corner:hover .octo-arm {
+		animation: octocat-wave 560ms ease-in-out
+	}
+
+	@keyframes octocat-wave {
+		0%,
+		100% {
+			transform: rotate(0)
+		}
+		20%,
+		60% {
+			transform: rotate(-25deg)
+		}
+		40%,
+		80% {
+			transform: rotate(10deg)
+		}
+	}
+
+	@media (max-width:500px) {
+		.github-corner:hover .octo-arm {
+			animation: none
+		}
+		.github-corner .octo-arm {
+			animation: octocat-wave 560ms ease-in-out
+		}
+	}
+</style>
+<h1 id="pracejs">PraceJS</h1>
+<p>A piece of Javascript code thst you can add to any webpage that transforms all the &lt;pre&gt; elements in that webpage to a mini Ace editor.</p>
+<h2 id="usage">Usage</h2>
+<p>Start by downloading prace.js and adding it and the Ace editor to your project:</p>
+<pre lang="html" theme="tomorrow">
+&lt;script src=&quot;path/to/the/ace/editor.js&quot; async&gt;&lt;/script&gt;
+&lt;script src=&quot;path/to/the/script/prace.js&quot; async&gt;&lt;/script&gt;
+</pre>
+<p>Then, initialize PraceJS on document load with the Javascript code:</p>
+<pre lang="javascript" theme="tomorrow">
+function init() {
+    praceInit("pre");
+}
+window.onload = init;
+</pre>
+<p>...where the first argument of the <code>praceInit()</code> function is the element to transform. I personally recommend the <code>pre</code> element, because if something goes wrong or Javascript is disabled, the pre element will still render as a code block.</p>
+<p>Then, you can define your <code>pre</code> elements:</p>
+<pre lang="html" theme="tomorrow">
+&lt;pre lang=&quot;html&quot; theme=&quot;tomorrow&quot;&gt;
+...
+&lt;/pre&gt;
+</pre>
+<h2 id="demo">Demo</h2>
+<p>The demo is on this page. Notice how all code blocks became Ace editors.</p>
+<h2 id="license">License</h2>
+<p>AGPL-v3.0</p>
+
+		</main>
+		
+		
+		<a rel='license' href='http://creativecommons.org/licenses/by-nc-nd/4.0/'><img alt='Creative Commons License' style='border-width:0' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAIAAAD8q9/YAAAABGdBTUEAANbY1E9YMgAAAZ9JREFUSMflljFrwkAUx98H6J3N6KbXFjtJJZNIB+Ntds0kdIxDp3boTYJ0UDcLutxXOCfbpejQSRE5+g38CvcVrtCTNJVLiFAKaR4ZwvH+yf3yf+/lAHIYOjfxDTybi+jVvesCwGg0ssoopRjjKZ+Y5O3HtnBayISvduApn2CM42hD5splxeQv3hf9fj/DwI3rRrlcTq4NKSUAdG47RrKRm/ZNO6vACCNjr5SSEAIAlFKlFKUUAAghUkpjcs2thVU9fh5b58Lhy37eWxejKmtynOSwV9MA9556ALBcLrXWhBDf97XW7Cscx1FKcc6FEGYRYRRW9Wq9sj794CZhN3GZvyWxAz883gOAlFIpFZ1bvu+7rhutasYYxtioXt9e1tt1gsNWT+J2HPdp0kuOALY6TCkNgsA4zBjjnO8dRkc4nOCVtYzTOHyUJL6H0b6HhRCO4wBAEARhD7uuu9vttNatVqt6VU3Zw+mB/7qHZ3NRb9RLpVKOpvSUTxA6GQ6HCcCe551fnP2T/3A4ugaDgZW26TWLxWK2T1r5OkvnKj4Bfm7H+J/sGfMAAAAASUVORK5CYII=' /></a>
+		
+	</body>
+</html>

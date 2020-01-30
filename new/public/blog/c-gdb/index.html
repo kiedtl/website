@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><meta name="google-site-verification" content="_Wt6XNMQUlHbi_wkIVeSwhekdKjuG3rmB1tYec-zu1c" />
+		<link href="data:image/png;base64,, rel=icon type=image/png>
+		<title></title>
+		<style>
+			
+			blockquote,body,h1,h2,h3,p,ul{margin:1ch 0 0;padding:0}body{margin:1ch;overflow-y:scroll}img{height:auto;max-width:100%}body{font:16px/1.6 monospace,monospace}img,main{display:block;max-width:80ch;margin:25px auto}h1,h2,h3{font-size:inherit;margin:3ch 0 2ch}h1{display:table;overflow:hidden;padding-bottom:16px;position:relative}h1:after{content:"--------------------------------------------------------------------------------";position:absolute;bottom:0;left:2ch;height:16px;width:100%;overflow:hidden;word-break:break-all;font-weight:400}h1::before{content:'# '}h2::before{content:'## '}h3::before{content:'### '}h4::before{content:'#### '}ul{padding:0;list-style:none}blockquote::before,ul>li::before{float:left;width:1ch;margin-right:1ch;content:'-'}blockquote::before{content:'>'}blockquote{background:#ffc}li>ul{margin:0 0 1ch 4ch}pre>code{display:block;padding:1ch 0 1ch 4ch;background:666666;overflow-x:auto}code{border-radius:2px;background:#eee;padding:0 4px}a{text-decoration:none}a:hover{border-bottom:1px solid}h1::before,h2::before,h3::before,h4::before{color:red}@media (prefers-color-scheme:dark){body{background:#000;color:#fff}a{color:#6cf}blockquote,code{background:#333}}
+			
+		</style>
+	</head>
+	<body>
+		<main>
+			
+			<a href='/'>/home/</a> &#8226; <a href='/blog/'>/blog/</a>
+			
+
+			<h1 id="debugging-c-code-with-gdb">Debugging C code with GDB</h1>
+<p>Having a program crash is annoying enough. What's more annoying is having you program crash 
+with no way to get a stack trace, or any other debugging information, which is just the case
+with most C code.</p>
+<p>You see, most C crashes (IMO) are caused by your program trying to read into memory which
+is doesn't have permission to access:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int
+main ( void )
+{
+	char sentence[] = { &#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;, &#39; &#39;, &#39;w&#39;, &#39;o&#39;, &#39;r&#39;, &#39;l&#39;, &#39;d&#39;, &#39;!&#39; };
+	for (int c = 0; c &lt; strlen(sentence); c++) fprintf(stdout, &quot;%s&quot;, sentence[c]);
+	return 0;
+}
+</span></pre>
+<p>The above program crashes because you're trying to read a <code>char</code> as a <code>char *</code>. The program 
+tries to walk through your char, looking for the null terminator, then dies when it overlaps
+the boundary of the string.</p>
+<p>So, on running the program:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">$ vim main.c
+$ gcc main.c -o test
+$ ./test
+Memory fault
+</span></pre>
+<p>That's it. Or, if you're lucky:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">$ ./test
+Segmentation fault
+</span></pre>
+<p>No stack trace, nothing.</p>
+<p>This is where GDB comes into play:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">$ gdb ./test
+GNU gdb (GDB) 8.3.1
+Copyright (C) 2019 Free Software Foundation, Inc.
+License blah blah
+
+&lt;snip&gt;
+
+For help, type &quot;help&quot;.
+Type &quot;apropos word&quot; to search for commands related to &quot;word&quot;...
+Reading symbols from ./test...
+(gdb)
+</span></pre>
+<p>On the <code>gdb</code> prompt, run the program:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">(gdb) run
+Starting program: /home/kiedtl/src/test/test
+
+Program received signal SIGSEGV, Segmentation fault.
+0xdeadbeef in memchr (src=src@entry=0xed, c=c@entry=0, n=&lt;optimized out&gt;,
+    n@entry=829823792384) as src/string/memchr.c:17
+17        src/string/memchr.c: No suck file or directory.
+(gdb)
+</span></pre>
+<p>Show the backtrace:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">(gdb) bt
+#0  0xdeadbeef in memchr (src=src@entry=0x00, c=c@entry=0, n=&lt;optimized out&gt;,
+    n@entry=98798798798) at src/string/memchr.c:17
+
+&lt;snip&gt;
+
+#4  0xdeadbeef in fprintf (f=&lt;optimized out&gt;, fmt=&lt;optimized out&gt;)
+    at src/stdio/fprintf.c:9
+#5  0x004006f8 in main ()
+</span></pre>
+<p>Strange, it's not showing the line number of the crash, only the function.</p>
+<p>Oh, wait. You see, you're supposed to compile <code>main.c</code> with <code>-ggdb</code>, so that 
+GCC will add special debugging symbols in the finished executable for GDB to 
+look at.</p>
+<p>Let's try this again:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">$ gcc --ggdb main.c -o test
+gcc: error: unrecognized command line option &#39;--ggdb&#39;; did you mean &#39;-ggdb&#39;?
+$ gcc -ggdb main.c -o test
+$ gdb ./test
+GNU gdb (GDB) 8.3.1
+Copyright (C) 2019 Free Software Foundation, Inc.
+License blah blah
+
+&lt;snip&gt;
+
+For help, type &quot;help&quot;.
+Type &quot;apropos word&quot; to search for commands related to &quot;word&quot;...
+Reading symbols from ./test...
+(gdb) run
+Starting program: /home/kiedtl/src/test/test
+
+Program received signal SIGSEGV, Segmentation fault.
+0xdeadbeef in memchr (src=src@entry=0xed, c=c@entry=0, n=&lt;optimized out&gt;,
+    n@entry=829823792384) as src/string/memchr.c:17
+17        src/string/memchr.c: No suck file or directory.
+(gdb) bt
+#0  0xdeadbeef in memchr (src=src@entry=0x00, c=c@entry=0, n=&lt;optimized out&gt;,
+    n@entry=98798798798) at src/string/memchr.c:17
+
+&lt;snip&gt;
+
+#4  0xdeadbeef in fprintf (f=&lt;optimized out&gt;, fmt=&lt;optimized out&gt;)
+    at src/stdio/fprintf.c:9
+#5  0x004006f8 in main () at main.c:7
+</span></pre>
+<p>There, we have the line number of our crash. This is so much easier than blindly 
+stamping <code>printf</code>'s all over our code.</p>
+<p>Even if you're using C++, and not C, you can still use GDB as a debugger.</p>
+<p>There's another tool, called <code>strace</code>, and it basically shows all syscalls your
+program is making. It's also pretty useful.</p>
+
+		</main>
+		
+		
+		<a rel='license' href='http://creativecommons.org/licenses/by-nc-nd/4.0/'><img alt='Creative Commons License' style='border-width:0' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAIAAAD8q9/YAAAABGdBTUEAANbY1E9YMgAAAZ9JREFUSMflljFrwkAUx98H6J3N6KbXFjtJJZNIB+Ntds0kdIxDp3boTYJ0UDcLutxXOCfbpejQSRE5+g38CvcVrtCTNJVLiFAKaR4ZwvH+yf3yf+/lAHIYOjfxDTybi+jVvesCwGg0ssoopRjjKZ+Y5O3HtnBayISvduApn2CM42hD5splxeQv3hf9fj/DwI3rRrlcTq4NKSUAdG47RrKRm/ZNO6vACCNjr5SSEAIAlFKlFKUUAAghUkpjcs2thVU9fh5b58Lhy37eWxejKmtynOSwV9MA9556ALBcLrXWhBDf97XW7Cscx1FKcc6FEGYRYRRW9Wq9sj794CZhN3GZvyWxAz883gOAlFIpFZ1bvu+7rhutasYYxtioXt9e1tt1gsNWT+J2HPdp0kuOALY6TCkNgsA4zBjjnO8dRkc4nOCVtYzTOHyUJL6H0b6HhRCO4wBAEARhD7uuu9vttNatVqt6VU3Zw+mB/7qHZ3NRb9RLpVKOpvSUTxA6GQ6HCcCe551fnP2T/3A4ugaDgZW26TWLxWK2T1r5OkvnKj4Bfm7H+J/sGfMAAAAASUVORK5CYII=' /></a>
+		
+	</body>
+</html>

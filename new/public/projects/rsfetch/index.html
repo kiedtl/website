@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><meta name="google-site-verification" content="_Wt6XNMQUlHbi_wkIVeSwhekdKjuG3rmB1tYec-zu1c" />
+		<link href="data:image/png;base64,, rel=icon type=image/png>
+		<title></title>
+		<style>
+			
+			blockquote,body,h1,h2,h3,p,ul{margin:1ch 0 0;padding:0}body{margin:1ch;overflow-y:scroll}img{height:auto;max-width:100%}body{font:16px/1.6 monospace,monospace}img,main{display:block;max-width:80ch;margin:25px auto}h1,h2,h3{font-size:inherit;margin:3ch 0 2ch}h1{display:table;overflow:hidden;padding-bottom:16px;position:relative}h1:after{content:"--------------------------------------------------------------------------------";position:absolute;bottom:0;left:2ch;height:16px;width:100%;overflow:hidden;word-break:break-all;font-weight:400}h1::before{content:'# '}h2::before{content:'## '}h3::before{content:'### '}h4::before{content:'#### '}ul{padding:0;list-style:none}blockquote::before,ul>li::before{float:left;width:1ch;margin-right:1ch;content:'-'}blockquote::before{content:'>'}blockquote{background:#ffc}li>ul{margin:0 0 1ch 4ch}pre>code{display:block;padding:1ch 0 1ch 4ch;background:666666;overflow-x:auto}code{border-radius:2px;background:#eee;padding:0 4px}a{text-decoration:none}a:hover{border-bottom:1px solid}h1::before,h2::before,h3::before,h4::before{color:red}@media (prefers-color-scheme:dark){body{background:#000;color:#fff}a{color:#6cf}blockquote,code{background:#333}}
+			
+		</style>
+	</head>
+	<body>
+		<main>
+			
+			<a href='/'>/home/</a> &#8226; <a href='/blog/'>/blog/</a>
+			
+
+			<h1 id="rsfetch">rsfetch</h1>
+<p>rsfetch is yet another information-fetching utility for Linux and BSD.</p>
+<h2 id="anti-features">(anti-)features</h2>
+<ul>
+<li>written in Rust for speed.</li>
+<li>no configuration file (runtime configuration is done via command-line flags).</li>
+<li>no support for arcane OS's (MINIX, AIX, Solaris, etc)</li>
+<li>it's mInImAl</li>
+<li>multiple output styles (<code>default</code>, <code>neofetch</code>, <code>minimal</code>)</li>
+<li>output is easy to parse (when using <code>minimal</code> output style)</li>
+</ul>
+<h2 id="usage">usage</h2>
+<p>Simply execute the rsfetch binary, providing a flag for each information field
+you want enabled:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">$ rsfetch -desk
+
+■─────────────────────────■
+│ OS       =   void      │
+│ KERNEL   =   4.19.89_2 │
+│ EDITOR   =   nvim      │
+│ SHELL    =   loksh     │
+■─────────────────────────■
+</span></pre>
+<p>Further options can be provided to enable an ASCII logo and/or to disable
+bolding, capitalization, etc:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">$ rsfetch -deskcl
+
+ ┬─┐┌─┐┌─┐┌─┐┌┬┐┌─┐┬ ┬
+ ├┬┘└─┐├┤ ├┤  │ │  ├─┤
+ ┴└─└─┘└  └─┘ ┴ └─┘┴ ┴
+
+■─────────────────────────■
+│ os       =   void      │
+│ kernel   =   4.19.89_2 │
+│ editor   =   nvim      │
+│ shell    =   loksh     │
+■─────────────────────────■
+</span></pre>
+<p>A Neofetch-style output mode is provided:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">$ rsfetch -deskclNuUH@p xbps
+
+    ___     kiedtl@3dot14
+   (.. |    os        void
+   (&lt;&gt; |    uptime    1d 1h 8m 
+  / __  \   kernel    4.19.89_2
+ ( /  \ /|  editor    nvim
+_/\ __)/_)  shell     loksh
+\/-____\/   packages  460 (xbps)
+</span></pre>
+<p>Notice that rsfetch does not do any distro detection to automatically display
+distro ASCII art, or to auto-detect the package manager. This must be provided
+manually.</p>
+<p>Should you dislike the default/neofetch output modes that rsfetch provides,
+or should you want more control on how the information is displayed
+(information order, separator, etc), you may also use rsfetch as the backbone
+of your own fetch script.</p>
+<p>For example, with the following script:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">#!/bin/bash
+
+# information buffer
+declare -a data
+
+# parse rsfetch output into buffer
+while IFS=&quot;\n&quot; read -r info; do
+        data+=($info)
+done &lt;&lt;&lt;&quot;$(rsfetch -deskM)&quot;
+
+# output buffer in the style we want
+echo &quot;
+ |\___/|   os &gt; ${data[0]}
+ /     \   ke &gt; ${data[1]}
+/__^ ^__\  ed &gt; ${data[2]}
+   \o/     sh &gt; ${data[3]}
+&quot;
+</span></pre>
+<p>We can format rsfetch's output into:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;"> |\___/|   os &gt; void
+ /     \   ke &gt; 4.19.89_2
+/__^ ^__\  ed &gt; nvim
+   \o/     sh &gt; loksh
+</span></pre><h2 id="installation">installation</h2>
+<p>You will need:</p>
+<ul>
+<li>GNU Make (optional)</li>
+<li>the Rust compiler toolchain</li>
+</ul>
+<p>Retrieve the rsfetch source:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">$ git clone git://github.com/rsfetch/rsfetch
+</span></pre>
+<p>Build and install:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;"># make install
+</span></pre>
+<p>Or, if you don't have GNU Make:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">$ cargo build --release
+# install -m755 ./target/release/rsfetch /usr/local/bin/rsfetch
+</span></pre><h2 id="more-information">more information</h2>
+<p>View benchmarks/source on <a href="https://github.com/rsfetch/rsfetch">GitHub</a>.</p>
+<h2 id="license">license</h2>
+<p>Licensed under the MIT license. View on <a href="https://raw.githubusercontent.com/rsfetch/rsfetch/master/LICENSE">GitHub</a>.</p>
+
+		</main>
+		
+		
+		<a rel='license' href='http://creativecommons.org/licenses/by-nc-nd/4.0/'><img alt='Creative Commons License' style='border-width:0' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAIAAAD8q9/YAAAABGdBTUEAANbY1E9YMgAAAZ9JREFUSMflljFrwkAUx98H6J3N6KbXFjtJJZNIB+Ntds0kdIxDp3boTYJ0UDcLutxXOCfbpejQSRE5+g38CvcVrtCTNJVLiFAKaR4ZwvH+yf3yf+/lAHIYOjfxDTybi+jVvesCwGg0ssoopRjjKZ+Y5O3HtnBayISvduApn2CM42hD5splxeQv3hf9fj/DwI3rRrlcTq4NKSUAdG47RrKRm/ZNO6vACCNjr5SSEAIAlFKlFKUUAAghUkpjcs2thVU9fh5b58Lhy37eWxejKmtynOSwV9MA9556ALBcLrXWhBDf97XW7Cscx1FKcc6FEGYRYRRW9Wq9sj794CZhN3GZvyWxAz883gOAlFIpFZ1bvu+7rhutasYYxtioXt9e1tt1gsNWT+J2HPdp0kuOALY6TCkNgsA4zBjjnO8dRkc4nOCVtYzTOHyUJL6H0b6HhRCO4wBAEARhD7uuu9vttNatVqt6VU3Zw+mB/7qHZ3NRb9RLpVKOpvSUTxA6GQ6HCcCe551fnP2T/3A4ugaDgZW26TWLxWK2T1r5OkvnKj4Bfm7H+J/sGfMAAAAASUVORK5CYII=' /></a>
+		
+	</body>
+</html>
