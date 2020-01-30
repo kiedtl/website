@@ -1,0 +1,28 @@
+# The URL the site will be built for
+base_url = "https://kiedtl.surge.sh"
+
+compile_sass = false
+
+highlight_code = true
+build_search_index = false
+
+title = "/home/kiedtl"
+description = ""
+default_language = "en"
+
+generate_rss = true
+
+[extra]
+headers = "<meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><meta name=\"google-site-verification\" content=\"_Wt6XNMQUlHbi_wkIVeSwhekdKjuG3rmB1tYec-zu1c\" />"
+
+footer = "<a rel='license' href='http://creativecommons.org/licenses/by-nc-nd/4.0/'><img alt='Creative Commons License' style='border-width:0' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAIAAAD8q9/YAAAABGdBTUEAANbY1E9YMgAAAZ9JREFUSMflljFrwkAUx98H6J3N6KbXFjtJJZNIB+Ntds0kdIxDp3boTYJ0UDcLutxXOCfbpejQSRE5+g38CvcVrtCTNJVLiFAKaR4ZwvH+yf3yf+/lAHIYOjfxDTybi+jVvesCwGg0ssoopRjjKZ+Y5O3HtnBayISvduApn2CM42hD5splxeQv3hf9fj/DwI3rRrlcTq4NKSUAdG47RrKRm/ZNO6vACCNjr5SSEAIAlFKlFKUUAAghUkpjcs2thVU9fh5b58Lhy37eWxejKmtynOSwV9MA9556ALBcLrXWhBDf97XW7Cscx1FKcc6FEGYRYRRW9Wq9sj794CZhN3GZvyWxAz883gOAlFIpFZ1bvu+7rhutasYYxtioXt9e1tt1gsNWT+J2HPdp0kuOALY6TCkNgsA4zBjjnO8dRkc4nOCVtYzTOHyUJL6H0b6HhRCO4wBAEARhD7uuu9vttNatVqt6VU3Zw+mB/7qHZ3NRb9RLpVKOpvSUTxA6GQ6HCcCe551fnP2T/3A4ugaDgZW26TWLxWK2T1r5OkvnKj4Bfm7H+J/sGfMAAAAASUVORK5CYII=' /></a>"
+
+# to be used with footer!
+footer_blog = "<script src=\"https://utteranc.es/client.js\" repo=\"kiedtl/website\" issue-term=\"pathname\" label=\"comment\" theme=\"github-light\" crossorigin=\"anonymous\" async></script><noscript>Sorry, you need Javascript enabled to post comments.</noscript>"
+
+homelink = "<a href='/'>/home/</a> &#8226; <a href='/blog/'>/blog/</a>"
+homelink_blog = "<a href='/'>/home/</a> &#8226; <a href='/blog/'>/blog/</a>"
+
+favicon = "data:image/png;base64,"
+
+style = "body,h1,h2,h3,p,ul,blockquote{margin:1ch 0 0;padding:0}body{margin:1ch;overflow-y:scroll}img{height:auto;width:100%}body{font:16px/1.6 monospace,monospace}nav{text-align:center}main,img{max-width:80ch;margin:0 auto}h1,h2,h3{font-size:inherit;margin:3ch 0 2ch}h1{display:table;overflow:hidden;padding-bottom:16px;position:relative}h1:after{content:'--------------------------------------------------------------------------------';position:absolute;bottom:0;left:2ch;height:16px;width:100%;overflow:hidden;word-break:break-all;font-weight:400}h1::before{content:'# '}h2::before{content:'## '}h3::before{content:'### '}ul{padding:0;list-style:none}ul>li::before,blockquote::before{float:left;width:1ch;margin-right:1ch;content:'-'}blockquote::before{content:'>'}blockquote{background:#FFC}li>ul{margin:0 0 1ch 4ch}pre>code{display:block;padding:1ch 0 1ch 4ch;background:none;overflow-x:auto}code{border-radius:2px;background:#eee;padding:0 4px}a{text-decoration:none}a:hover{border-bottom:1px solid}h1::before,h2::before,h3::before{color:red}@media(prefers-color-scheme:dark){body{background:#000;color:#fff}a{color:#6CF}code,blockquote{background:#333}}"
