@@ -1,4 +1,6 @@
 +++
+title = "on being small"
+template = "blog.html"
 +++
 
 # on being small

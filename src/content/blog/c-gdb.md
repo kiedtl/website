@@ -1,4 +1,6 @@
 +++
+title = "debugging C code with gdb"
+template = "blog.html"
 +++
 
 # Debugging C code with GDB
@@ -7,7 +9,7 @@ Having a program crash is annoying enough. What's more annoying is having you pr
 with no way to get a stack trace, or any other debugging information, which is just the case
 with most C code.
 
-You see, most C crashes (IMO) are caused by your program trying to read into memory which
+You see, most C crashes are caused by your program trying to read into memory which
 is doesn't have permission to access:
 
 ```
@@ -22,9 +24,9 @@ main ( void )
 	return 0;
 }
 ```
-The above program crashes because you're trying to read a `char` as a `char *`. The program 
+The above program crashes because you're trying to read a `char` as a `char *`. The `fprintf`
 tries to walk through your char, looking for the null terminator, then dies when it overlaps
-the boundary of the string.
+the boundary of the character's memory.
 
 So, on running the program:
 ```
@@ -33,12 +35,12 @@ $ gcc main.c -o test
 $ ./test
 Memory fault
 ```
-That's it. Or, if you're lucky:
+That's it. Or, if you happen to be one of the poor souls that use `glibc` over `musl`:
 ```
 $ ./test
 Segmentation fault
 ```
-No stack trace, nothing.
+No stack trace, nothing. If you're lucky, you get a core dump. That's it.
 
 This is where GDB comes into play:
 ```
@@ -79,8 +81,8 @@ Show the backtrace:
 ```
 Strange, it's not showing the line number of the crash, only the function.
 
-Oh, wait. You see, you're supposed to compile `main.c` with `-ggdb`, so that 
-GCC will add special debugging symbols in the finished executable for GDB to 
+Oh, wait. You see, you're supposed to compile `main.c` with `-ggdb`, so that
+GCC will add special debugging symbols in the finished executable for GDB to
 look at.
 
 Let's try this again:

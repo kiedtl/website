@@ -124,16 +124,14 @@ h4::before{
 <body>
 <main>
 {% block homelink %}
-{{ config.extra.homelink | safe }}
 {% endblock homelink %}
 
 {% block content %}
 {{ section.content | safe }}
 {% endblock content %}
-</main>
-		
 {% block footer %}
 {{ config.extra.footer | safe }}
 {% endblock footer %}
+</main>
 </body>
 </html>

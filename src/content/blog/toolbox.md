@@ -1,9 +1,12 @@
 +++
+title = "Toolbox"
+template = "blog.html"
 +++
 
 # Useful tools
 
-An ever-updating list of tools and programs that I find useful:
+A list of tools and programs that I find useful that I might update
+once in a while.
 
 ### Operating systems
 - Linux ;)
@@ -14,7 +17,7 @@ An ever-updating list of tools and programs that I find useful:
 - [Arch Linux](https://archlinux.org)
 	- **Pro:** awesome pacman package manager
 	- **Pro:** rolling release (you're always using the latest version!)
-	- **Pro:** great community
+	- **Pro:** great community(?)
 	- **Pro:** you get to say that yOu UsE aRcH bTw
 	- *Con:* Arch uses `systemd`, and there's no way to change that.
 	- *Con:* Arch uses `glibc`, and there's no way to change that.
@@ -33,6 +36,7 @@ An ever-updating list of tools and programs that I find useful:
 	- **Pro:** Ability to choose between `glibc` and `musl`.
 	- **Pro:** uses `runit`, not systemd.
 	- *Con:* package manager isn't all that great.
+	- *Con:* package format just plain sucks.
 
 - [CRUX Linux](https://crux.nu)
 	- **Pro:** glorious package manager and package format. Both are extraordinarily simple to use
@@ -43,6 +47,8 @@ An ever-updating list of tools and programs that I find useful:
 	- **Pro:** merely mentioning that you use CRUX moves you up in the world of (SFW) [r/unixporn](https://reddit.com/r/unixporn).
 	- *Con:* not rolling release. Many will disagree, but I like to keep things "fresh".
 	- *Con:* sparse community. not that many people use it, sadly.
+	- *Con:* due to lack of developers, *most* packages are missing proper footprint/md5sums, making
+	  it a pain in the ass to install anything.
  
 ### Window Managers
 - [`dwm`](https://dwm.suckless.org/)

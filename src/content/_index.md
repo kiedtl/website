@@ -1,5 +1,5 @@
 +++
-title = "/home/kiedtl"
+title = "/home/kiedtl/"
 +++
 
 # ./kiedtl

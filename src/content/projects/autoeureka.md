@@ -1,4 +1,5 @@
 +++
+title = "Automatic Eureka"
 +++
 
 <link rel="stylesheet" href="/css/hint.css" />

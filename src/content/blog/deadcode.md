@@ -1,4 +1,6 @@
 +++
+title = "keeping things fresh"
+template = "blog.html"
 +++
 
 # "keeping things fresh"
@@ -20,6 +22,8 @@ bloated, but because it's old. [^3]
 
 As if source code *rusted*.
 
-[^1]: See [https://blckk.me/rice](https://blckk.me/rice)
-[^2]: Having a severe case of NIHS, he eventually wrote his own WM, [sowm](https://github.com/dylanaraps/sowm).
-[^3]: In case you didn't know, Openbox is slow, bloated, and has a terrible config format.
+<br><hr/><br>
+
+[^1]: See [https://blckk.me/rice](https://blckk.me/rice).<br>
+[^2]: Having a severe case of NIHS, he eventually wrote his own WM, [sowm](https://github.com/dylanaraps/sowm).<br>
+[^3]: In case you didn't know, Openbox is slow, bloated, and has a terrible config format.<br>

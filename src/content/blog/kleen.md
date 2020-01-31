@@ -1,4 +1,6 @@
 +++
+title = "Nice website designs"
+template = "blog.html"
 +++
 
 # Nice website designs

@@ -1,6 +1,9 @@
 {% extends "index.html" %}
 
 {% block ptitle %}{{ page.title | safe }}{% endblock ptitle %}
-{% block homelink %}{{ config.extra.homelink_blog | safe }}{% endblock homelink %}
+{% block homelink %}{{ config.extra.homelink | safe }}{% endblock homelink %}
 {% block content %}{{ page.content | safe }}{% endblock content %}
-{% block footer %}{{ config.extra.footer | safe }}{% endblock footer %}
+{% block footer %}
+{{ config.extra.footer | safe }}
+{{ config.extra.footer_blog | safe }}
+{% endblock footer %}

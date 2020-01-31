@@ -1,4 +1,5 @@
 +++
+title = "Prace"
 +++
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.3/ace.js"></script>
