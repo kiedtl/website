@@ -11,6 +11,7 @@ websites as possible, I thought I'd draw up a list of websites that
 make do with clean, minimal website designs and little or no javascript.
 
 - [this website :)](http://kiedtl.surge.sh/)
+- [Suckless.org](https://suckless.org/)
 - [Dylan Arap's (old) site](http://blckk.me/website)
 - [Drew Devault's website](http://drewdevault.com/)
 - [Collapse OS project page](http://collapseos.org/)
