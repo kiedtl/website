@@ -8,7 +8,7 @@ before_install:
     - wget https://github.com/getzola/zola/releases/download/v0.9.0/zola-v0.9.0-x86_64-unknown-linux-gnu.tar.gz -O z.tar.gz
     - tar xvf z.tar.gz
     - curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
-    - sudo apt-get install nodejs wget
+    - sudo apt-get install nodejs wget libssl1.1 libcrypto++6 libsass1 libgcc-5-dev
     - sudo npm install --global surge
 
 script:
