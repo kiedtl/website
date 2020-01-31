@@ -2,7 +2,7 @@
 title = "/home/kiedtl/"
 +++
 
-# ./kiedtl
+# /home/kiedtl
 
 [GitHub](https://github.com/kiedtl) | [Reddit](https://old.reddit.com/u/kiedtl)
 
