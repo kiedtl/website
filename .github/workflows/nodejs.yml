@@ -1,0 +1,30 @@
+name: Node.js CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: sudo apt-get update
+    - run: wget https://github.com/getzola/zola/releases/download/v0.9.0/zola-v0.9.0-x86_64-unknown-linux-gnu.tar.gz -O z.tar.gz
+    - run: tar xvf z.tar.gz
+    - run: curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+    - run: sudo apt-get install nodejs snapcraft
+    - run: sudo snap install --edge zola
+    - run: sudo npm install --global surge
+    - run: chmod +x src/deploy
+    - run: cd src && ../zola build && ./deploy
+      env:
+        CI: true
