@@ -14,6 +14,7 @@ title = "/home/kiedtl/"
 - [fire](https://github.com/lptstr/fire) - The PSX DOOM fire animation, ported to the terminal.
 
 ### posts/rants
+- [my choice of window managers](/blog/wm)
 - [clean websites](/blog/kleen/)
 - [keeping things fresh](/blog/deadcode/)
 - [on being small](/blog/mnml/)
