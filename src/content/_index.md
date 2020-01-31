@@ -9,17 +9,17 @@ title = "/home/kiedtl"
 ### projects
 
 - [winfetch](https://github.com/lptstr/winfetch) - A system information utility for Windows 10.
-- [rsfetch](/projects/rsfetch.html) - An extremely fast (1ms) and somewhat minimal (?) *nix fetch program.
+- [rsfetch](/projects/rsfetch/) - An extremely fast (1ms) and somewhat minimal (?) *nix fetch program.
 - [lcharmap](https://github.com/lptstr/lcharmap) - The Windows `charmap` utility ported to Linux on the CLI.
 - [fire](https://github.com/lptstr/fire) - The PSX DOOM fire animation, ported to the terminal.
 
 ### posts/rants
-- [clean websites](/blog/kleen.html)
-- [keeping things fresh](/blog/deadcode.html)
-- [on being small](/blog/mnml.html)
-- [my setup](/blog/3dot14.html)
-- [debugging c with gdb/strace](/blog/c-gdb.html)
-- [useful tools](/blog/toolbox.html)
+- [clean websites](/blog/kleen/)
+- [keeping things fresh](/blog/deadcode/)
+- [on being small](/blog/mnml/)
+- [my setup](/blog/3dot14/)
+- [debugging c with gdb/strace](/blog/c-gdb/)
+- [useful tools](/blog/toolbox/)
 
 ### outdated posts
-- [kmach rice](/blog/kmach.html)
+- [kmach rice](/blog/kmach/)
