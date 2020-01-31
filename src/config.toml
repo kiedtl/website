@@ -2,8 +2,7 @@
 base_url = "https://kiedtl.surge.sh"
 
 compile_sass = false
-
-highlight_code = true
+highlight_code = false
 build_search_index = false
 
 title = "/home/kiedtl"
