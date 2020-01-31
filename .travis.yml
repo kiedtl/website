@@ -13,4 +13,4 @@ before_install:
 
 script:
     - chmod +x src/deploy
-    - cd src && ../../zola build && ./deploy
+    - cd src && ../zola build && ./deploy
