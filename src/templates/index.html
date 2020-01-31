@@ -2,16 +2,10 @@
 <html lang="en-us">
 <head>
 {% block headers %}{{ config.extra.headers | safe }}{% endblock title %}
-<link href="{% block fav %}{{ config.extra.favicon | safe }}{% endblock fav %}, rel=icon type=image/png>
+<link href="{% block fav %}{{ config.extra.favicon | safe }}{% endblock fav %}", rel=icon type=image/png>
 <title>{% block ptitle %}{{ section.title | safe }}{% endblock ptitle %}</title>
 <style>
-body,
-h1,
-h2,
-h3,
-p,
-ul,
-blockquote {
+body,h1,h2,h3,p,ul,blockquote {
  margin: 1ch 0 0;
  padding: 0;
 }
@@ -45,7 +39,7 @@ h1 {
  position: relative;
 }
 h1:after {
- content: '--------------------------------------------------------------------------------';
+ content: "--------------------------------------------------------------------------------";
  position: absolute;
  bottom: 0;
  left: 2ch;
