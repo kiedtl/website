@@ -4,6 +4,17 @@
 {% block headers %}{{ config.extra.headers | safe }}{% endblock title %}
 <link href="{% block fav %}{{ config.extra.favicon | safe }}{% endblock fav %}", rel=icon type=image/png>
 <title>{% block ptitle %}{{ section.title | safe }}{% endblock ptitle %}</title>
+<!-- privacy advocates are gonna kill me, but I do use google analytics here... -->
+<!-- but hey, if you hate tracking so much, you should be using ublock origin or a pihole to protect yourself! -->
+<!-- and anyway, I have to get my self-esteem from somewhere :P -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-98707492-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-98707492-3');
+</script>
 <style>
 body,h1,h2,h3,p,ul,blockquote {
  margin: 1ch 0 0;
