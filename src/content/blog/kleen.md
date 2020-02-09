@@ -5,10 +5,8 @@ template = "blog.html"
 
 # Nice website designs
 
-At the height of the web obesity crisis, where inexperienced web developers
-are gleefully stuffing as much javascript into their poorly designed
-websites as possible, I thought I'd draw up a list of websites that
-make do with clean, minimal website designs and little or no javascript.
+Here's a list of websites with clean, minimal designs,
+small memory footprint, and little or no Javascript.
 
 - [this website :)](http://kiedtl.surge.sh/)
 - [Suckless.org](https://suckless.org/)
@@ -17,4 +15,6 @@ make do with clean, minimal website designs and little or no javascript.
 - [Collapse OS project page](http://collapseos.org/)
 - [KISS Linux project page](http://getkiss.org/)
 - [Arch Linux website](https://archlinux.org/)
+- [Josh Bradley's website](https://joshbradley.me/building-this-website/)
+- [Lobsters](https://lobste.rs/)
 - [Hacker News](https://news.ycombinator.com/)
