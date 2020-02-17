@@ -16,8 +16,6 @@ title = "/home/kiedtl/"
 ### posts/rants
 - [my choice of window managers](/blog/wm)
 - [clean websites](/blog/kleen/)
-- [keeping things fresh](/blog/deadcode/)
-- [on being small](/blog/mnml/)
 - [my setup](/blog/3dot14/)
 - [debugging c with gdb/strace](/blog/c-gdb/)
 - [useful tools](/blog/toolbox/)
