@@ -12,10 +12,13 @@ once in a while.
 - Linux ;)
 	- **Pro**: no forced updates.
 	- **Pro**: no forcibly installed junkware (cOrTaNa, OneDrive, Candy Crush Saga)
+	- Pro: much faster (boot times, IO, whatever metric you have)
+	- Con: depending on what distro you are using, steeper learning curve than Windows
+	or Linux.
 
 ### Distros
 - [Arch Linux](https://archlinux.org)
-	- **Pro:** awesome pacman package manager
+	- **Pro:** awesome `pacman` package manager
 	- **Pro:** rolling release (you're always using the latest version!)
 	- **Pro:** great community(?)
 	- **Pro:** you get to say that yOu UsE aRcH bTw
@@ -26,10 +29,10 @@ once in a while.
 - [KISS Linux](https://getkiss.org)
 	- **Pro:** Ruggedly mnmlist mentality.
 	- **Pro:** Easy to switch out system components with others, unlike Arch.
-	- *Con:* package manager hasn't had quite enough time to mature, and doesn't have many features.
+	- <s>Con: package manager hasn't had quite enough time to mature, and doesn't have many features.</s>
 	- *Con:* very few packages are in the repositories, meaning you're going to take the
 	  time to package them yourself, which wouldn't be that difficult, only KISS Linux's
-	  package format absolutely sucks.
+	  package format kinda sucks.
 
 - [Void Linux](https://voidlinux.org)
 	- **Pro:** Runs on many architectures.
@@ -45,7 +48,6 @@ once in a while.
 	- **Pro:** easy to setup you're own package repository (necessary, since like KISS, no
 	  that many packages exist in the repos).
 	- **Pro:** merely mentioning that you use CRUX moves you up in the world of (SFW) [r/unixporn](https://reddit.com/r/unixporn).
-	- *Con:* not rolling release. Many will disagree, but I like to keep things "fresh".
 	- *Con:* sparse community. not that many people use it, sadly.
 	- *Con:* due to lack of developers, *most* packages are missing proper footprint/md5sums, making
 	  it a pain in the ass to install anything.
@@ -54,15 +56,13 @@ once in a while.
 - [`dwm`](https://dwm.suckless.org/)
 	- **Pro:** configuration is in the source. This is precisely what makes `dwm` so extensible:
 	  the fact that the configuration is a part of the source means that you can call custom
-	  C functions from your config and from X.
+	  C functions from your config and from X (like Xmonad).
 	- **Pro:** dynamic. Don't like tiling? `dwm` has floating builtin.
 	- *Con:* hard to patch for newer users. Many users (me included) found `dwm` hard to use
 	  due to the fact that it ships with a minimal set of features, and patches must be applied
 	  to use certain features (such as a scratchpad). I recommend using [Luke Smith's setup](https://github.com/LukeSmithxyz)
 	  as a starting point, and to build up from there. Optionally, you can use [Mitch Weaver's setup](https://github.com/mitchweaver/suckless),
 	  or, better yet, [my setup :-\]](https://github.com/kiedtl/suckless).
-	- *Con:* nasty community. Made by a group who call themselved sUcKlEsS, almost the entire
-	  community is dominated by a bunch of bigoted jackasses.
 	- *Con:* because the config is in the source, you have to recompile and restart your X session
 	  for changes in the configuration to take effect. This isn't bad, unless you're fine-tuning your tiling gaps.
 	- *Con:* default bar sucks. Don't argue with me, it sucks, it sucks horribly, and nothing will change that.
@@ -73,12 +73,15 @@ once in a while.
 - [`alacritty`](https://github.com/jwilm/alacritty)
 	- **Pro:** GPU rendered, making it blazingly fast - provided, of course, you have a good GPU
 	  in the first place.
-	- *Con:* if you don't have a good GPU, alacritty sucks.
+	- *Con:* if you don't have a good GPU or if you are on a platform that doesn't support OpenGL,
+	alacritty doesn't work.
 	- *Con:* configuration is in YAML, which really sucks.
 
 - `xterm`
-	- **Pro:** it just works.
-	- *Con:* very bloated, at about 65K lines of code. Compare to (unpatched) `st`, which is 5K loc.
+	- **Pro:** it Just Works™.
+	- *Con:* huge, at about 65K lines of code. Compare to (unpatched) `st`, which is 5K loc.
+	- *Con:* very slow, depending on what you're doing.
+	- *Con:* configuration is in Xresources. Xresources sucks.
 
 ### misc
 - `loksh`: an implementation of the Korn Shell that's way better than `bash`. `bash`: 1.1M, `loksh`: 241K
@@ -90,10 +93,12 @@ once in a while.
 
 ### Programming languages
 - `C`: yep, raw C is the still the best language on earth, contrary to the opinion of some jAvAsCrIpT heretics.
-- `Rust`: best described as a modern version of C++ obsessed with memory safety.
+- `Rust`: best described as a modern version of C++ obsessed with memory safety. Great when you're building something
+that needs to be robust.
 - `V`: I still don't have much experience with it yet, but when it matures, this is definitely one language I'm going to
   master.
 - `PowerShell`: not quite a shell - more of an interpreted language often mistaken for a shell.
 
 ### fonts
 - `ttyp0`: a better version of `misc-fixed`.
+- [`cozette`](https://github.com/slavfox/Cozette): a comfy font derived from Dina and proggy heavily influenced by creep.
