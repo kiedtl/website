@@ -9,8 +9,9 @@ template = "blog.html"
 *NOTE: This article assumes that GNU Make is the make in use. A very basic understanding
 of Make syntax is also assumed.*
 
-
+<br>
 I sometimes see makefiles like this:
+
 ```
 build:
 	gcc -O4 -ggdb main.c -o program_name
@@ -21,7 +22,7 @@ Specifically, for C. If you want a command runner, you really should be
 using [just](https://github.com/casey/just) or just plain old POSIX shell
 scripts.
 
-Here's what a good makefile looks like:
+Here's what a good makefile looks like: <br>
 
 ```
 NAME	= program_name
@@ -43,7 +44,7 @@ clean:
 
 Let's disect this improved makefile line by line:
 
-<hr>
+<br><hr><br>
 
 ```
 NAME	= program_name
