@@ -8,13 +8,16 @@ template = "blog.html"
 When I first switched to Linux from Windows, I used KDE. When I figured out
 that you can't use GNOME plugins in KDE, I gave it up and switched to GNOME.
 
+
 After spending the first two days trying to rice GNOME, and seeing the
 tons of `i3-gaps`-based eye candy on [r/unixporn](https://old.reddit.com/r/unixporn),
 I downloaded i3 -- then i3-gaps -- via `pacman` on my Manjaro installation and tried it.
 I was hooked, needless to say -- the productivity I experienced by
 using a tiling window manager was unprecedented.
 
+
 For a few months, I was satisfied. And then I found [suckless](https://suckless.org).
+
 
 Their philosophy in a nutshell:
 - software should come with the bare minimal set of features.
@@ -25,27 +28,33 @@ clog the mailing list asking for help. hey guys, i cant change the border
 color in the suckless terminal,, its still grey but i want it to blue, i removed `#cacbca` and
 changed it to `darkblue`, but it wont work can i have some help thanks in advance
 
+
 After trying out `dwm` in an Alpine environment, I came to the conclusion that
 all this mnmlist/suckless stuff just wasn't for me. I had a hard time patching
 stuff into st and getting polybar to dock at the top properly in dwm, so I just
 switched back to my beloved Arch/i3-gaps setup and continued to post the usual
 `I use Arch BTW` garbage on [r/linuxmasterrace](https://old.reddit.com/r/linuxmasterrace).
 
+
 That all changed, though, when I bought the Raspberry Pi Zero W I'm using to write
 this blog post on. It was just slightly larger that my thumb, and could do some
 pretty amazing stuff. I installed Arch Linux ARM + i3-gaps on it and was content
 for a while.
 
+
 Eventually, though, I decided to give `dwm` another shot. I cloned Mitch Weaver's
 [suckless setup](https://github.com/mitchweaver/suckless), changed the colors to my liking,
 and forced myself to use it.
 
+
 Oh boy.
+
 
 Now, with `dwm`'s master/slave layout, coupled with the `scratchpad` patch, I was
 even *more* productive. I wondered how I survived without `dwm`, especially without the
 scratchpad. Weaver had made it extraordinarily easy to apply successive patches to dwm
 with his setup, and I highly encourage you to try it. I still use it myself. [^1]
+
 
 Indeed, recently I had another round of `wm`-hopping, but what made me come back to dwm
 each time was it's variety patches and the everlasting scratchpad. I tried spectrwm -- too slow. [^2]
@@ -60,19 +69,21 @@ Openbox, but once again, the fact that it was floating drove me away. [^4] And i
 the middle of this, I added Plan9 movement [^5] to `dwm`, allowing me to use floating
 windows easily (when necessary -- I still prefer tiling). [^6]
 
+
 So -- download `dwm`, add some patches, and give it a shot. Unless you know how
 to program in C, I'd recommend using someone else's setup (like Luke Smith's or Mitch Weaver's)
 instead of trying to build your own setup from scratch. [^7]
 
+
 And remember, if you think `dwm` sucks: *default* `dwm` sucks. Give it some love,
 and feel free to rewrite the keybindings in `config.h` to suit your taste.
+
 
 
 ### why tiling?
 I'm sometimes asked why I like tiling so much. Here's a non-exhaustive list of reasons:
 - windows are automatically arranged; no more messing with individual windows.
 - efficient use of screen real estate.
-- you barely need to even reach for the mouse.
 - and anyway, they look cool. especially with the useless gaps 8-)
 
 <br><hr/><br>
