@@ -12,8 +12,8 @@ once in a while.
 - Linux ;)
 	- **Pro**: no forced updates.
 	- **Pro**: no forcibly installed junkware (cOrTaNa, OneDrive, Candy Crush Saga)
-	- Pro: much faster (boot times, IO, whatever metric you have)
-	- Con: depending on what distro you are using, steeper learning curve than Windows
+	- **Pro**: much faster (boot times, IO, whatever metric you have)
+	- *Con:* depending on what distro you are using, steeper learning curve than Windows
 	or Linux.
 
 ### Distros
@@ -49,8 +49,7 @@ once in a while.
 	  that many packages exist in the repos).
 	- **Pro:** merely mentioning that you use CRUX moves you up in the world of (SFW) [r/unixporn](https://reddit.com/r/unixporn).
 	- *Con:* sparse community. not that many people use it, sadly.
-	- *Con:* due to lack of developers, *most* packages are missing proper footprint/md5sums, making
-	  it a pain in the ass to install anything.
+	- *Con:* **most** packages are missing proper footprint/md5sums.
  
 ### Window Managers
 - [`dwm`](https://dwm.suckless.org/)
