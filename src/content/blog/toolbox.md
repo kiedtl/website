@@ -26,20 +26,20 @@ once in a while.
 	- *Con:* Arch uses `glibc`, and there's no way to change that.
 	- *Con:* Arch uses GNU Coreutils, and it's difficult to change it to, say, Busybox.
 
-- [KISS Linux](https://getkiss.org)
+- [KISS Linux](https://k1ss.org)
 	- **Pro:** Ruggedly mnmlist mentality.
 	- **Pro:** Easy to switch out system components with others, unlike Arch.
+	- Pro: extremely simple package manager gives you a lot of control.
+	- Pro: extremely simple package format.
 	- <s>Con: package manager hasn't had quite enough time to mature, and doesn't have many features.</s>
-	- *Con:* very few packages are in the repositories, meaning you're going to take the
-	  time to package them yourself, which wouldn't be that difficult, only KISS Linux's
-	  package format kinda sucks.
 
 - [Void Linux](https://voidlinux.org)
 	- **Pro:** Runs on many architectures.
 	- **Pro:** Ability to choose between `glibc` and `musl`.
 	- **Pro:** uses `runit`, not systemd.
-	- *Con:* package manager isn't all that great.
-	- *Con:* package format just plain sucks.
+	- *Con:* package manager isn't all that great, and gives you very
+	  little control.
+	- *Con:* package format is ridiculously complex.
 
 - [CRUX Linux](https://crux.nu)
 	- **Pro:** glorious package manager and package format. Both are extraordinarily simple to use
@@ -67,6 +67,11 @@ once in a while.
 	- *Con:* default bar sucks. Don't argue with me, it sucks, it sucks horribly, and nothing will change that.
 	- *Con:* Polybar doesn't work too well with it by default. Usually, you'll have to add `override-redirect = true` to
 	  you're Polybar config. Sometimes it's worse.
+- [`sowm`](https://github.com/dylanaraps/sowm)
+	- **Pro**: very simple, so like dwm, it's easy to hack.
+	- **Con**: no borders.
+	- **Con**: no EWMH support.
+	- **Con**: it's __*floating*__.
 
 ### Terminals
 - [`alacritty`](https://github.com/jwilm/alacritty)
@@ -84,9 +89,10 @@ once in a while.
 
 ### misc
 - `loksh`: an implementation of the Korn Shell that's way better than `bash`. `bash`: 1.1M, `loksh`: 241K
+- `mksh`: like `loksh`, but with some extra features such as `HERESTRINGS`.
 - [`ly`](https://github.com/cyglom/ly): a minimal console-based display manager that, as a bonus, has a cool DOOM animation.
 - [`slock`](https://tools.suckless.org/slock): the simplest lockscreen that I know of.
-- [`donsk`](https://github.com/lptstr/donsk): an extremely simple static site generator. You're previewing it right now.
+- `scdoc`: A markup format that compiles to mandoc.
 - [`lcharmap`](https://github.com/lptstr/lcharmap): a little utility like the Windows `charmap.exe` ported to Linux.
 - [`rsfetch`](https://github.com/rsfetch/rsfetch): a blazingly fast (<5ms) fetch program.
 
@@ -100,4 +106,4 @@ that needs to be robust.
 
 ### fonts
 - `ttyp0`: a better version of `misc-fixed`.
-- [`cozette`](https://github.com/slavfox/Cozette): a comfy font derived from Dina and proggy heavily influenced by creep.
+- [`cozette`](https://github.com/slavfox/Cozette): a comfy font derived from Dina/proggy and heavily influenced by creep.
