@@ -5,6 +5,8 @@ template = "blog.html"
 
 # my choice of window managers
 
+**EDIT**: I've switched to sowm with 2bwm-movement, so this post is just a little bit outdated.
+
 When I first switched to Linux from Windows, I used KDE. When I figured out
 that you can't use GNOME plugins in KDE, I gave it up and switched to GNOME.
 
