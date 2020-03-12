@@ -8,6 +8,12 @@ template = "blog.html"
 I've switched to [KISS Linux](https://k1ss.org), a simple distro focused on
 the concept of "less is more". It's basically a musl-based version of CRUX Linux.
 
+<br>
+
+![](/images/kiss-scrot.jpg)
+
+<br>
+
 Several things I like:
 
 - nice package format.
