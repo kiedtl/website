@@ -15,7 +15,8 @@ title = "/home/kiedtl/"
 - [signet](https://github.com/lpstr/signet) - Easily compare SHAsums with an ssh-randomart-esque system.
 - [fire](https://github.com/lptstr/fire) - The PSX DOOM fire animation, ported to the terminal.
 
-### posts/rants
+### posts
+- [`itoa`, `atoi` considered harmful](/blog/itoa.md)
 - [KISS Linux](/blog/kiss)
 - [writing idiomatic makefiles](/blog/make)
 - [my choice of window managers](/blog/wm)
