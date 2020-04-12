@@ -1,5 +1,7 @@
 +++
 title = "the law of conservation of complexity"
+draft = true
+date = "2020-03-27"
 template = "blog.html"
 +++
 

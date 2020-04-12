@@ -1,5 +1,6 @@
 +++
 title = "Makefiles"
+date = "2020-02-17"
 template = "blog.html"
 +++
 
@@ -18,8 +19,8 @@ build:
 ```
 
 Please, don't do this. `make` isn't a command runner, it's a build system.
-Specifically, for C. If you want a command runner, you really should be
-using [just](https://github.com/casey/just) or just plain old POSIX shell
+(Specifically, for C.) If you want a command runner, you really should be
+using [just](https://github.com/casey/just) or maybe plain old POSIX shell
 scripts.
 
 Here's what a good makefile looks like: <br>
@@ -115,7 +116,7 @@ rebuild your project completely.
 ```
 
 We're telling make that `clean` is a *phony* recipe, not an actual target -- that is, even
-if a file called `clean` exists, build it anyway if told to.
+if a file called `clean` exists, `make` should build it anyways.
 
 Normally, when `make` is told to execute a recipe, it first checks to see if a file with
 the recipe name is *up to date*[^1]. If it is, it exits with `make: nothing to be done for <recipe>.`;

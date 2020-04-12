@@ -1,5 +1,6 @@
 +++
 title = "debugging C code with gdb"
+date = "2019-12-05"
 template = "blog.html"
 +++
 

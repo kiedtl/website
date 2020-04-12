@@ -1,5 +1,6 @@
 +++
 title = "Nice website designs"
+date = "2020-01-26"
 template = "blog.html"
 +++
 

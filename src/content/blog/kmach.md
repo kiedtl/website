@@ -1,4 +1,7 @@
 +++
+title = "linux @ kmach"
+date = "2019-03-13"
+template = "blog.html"
 +++
 
 # linux @ kmach
