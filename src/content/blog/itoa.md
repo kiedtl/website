@@ -1,6 +1,6 @@
 +++
 title = "itoa, atoi considered harmful"
-date = "2020-04-02"
+date = 2020-04-02
 template = "blog.html"
 +++
 

@@ -1,6 +1,6 @@
 +++
 title = "my choice of window managers"
-date = "2020-01-31"
+date = 2020-01-31
 template = "blog.html"
 +++
 

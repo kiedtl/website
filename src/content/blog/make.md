@@ -1,6 +1,6 @@
 +++
 title = "Makefiles"
-date = "2020-02-17"
+date = 2020-02-17
 template = "blog.html"
 +++
 

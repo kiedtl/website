@@ -1,6 +1,6 @@
 +++
 title = "Useful tools"
-date = "2019-12-06"
+date = 2019-12-06
 template = "blog.html"
 +++
 
