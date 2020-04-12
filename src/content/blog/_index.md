@@ -1,5 +1,6 @@
 +++
-title = "how on earth did you get here?"
+title = "archive"
+template = "archive.html"
 +++
 
-[continue](/)
+# Archive

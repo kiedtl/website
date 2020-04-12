@@ -28,16 +28,6 @@ body{overflow-y:scroll;font-family:sans-serif}img,main,pre>code{display:block;ma
 {{ section.content | safe }}
 {% endblock content %}
 
-{% block posts %}
-{% for year, posts in section.pages | group_by(attribute="year") %}
-	<ul>
-		{% for post in posts %}
-			<li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
-		{% endfor %}
-	</ul>
-{% endfor %}
-{% endblock posts %}
-
 {% block footer %}
 {{ config.extra.footer | safe }}
 {% endblock footer %}

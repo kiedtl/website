@@ -4,7 +4,7 @@ title = "/home/kiedtl/"
 
 # /home/kiedtl
 
-[GitHub](https://github.com/kiedtl) | [Reddit](https://old.reddit.com/u/kiedtl)
+[GitHub](https://github.com/kiedtl) | [Reddit](https://old.reddit.com/u/kiedtl) | [Blog](/blog)
 
 ### projects
 
@@ -14,5 +14,3 @@ title = "/home/kiedtl/"
 - [mandelica](https://github.com/lptstr/mandelica) - Generate mandelbrot sets in the farbfeld image format.
 - [signet](https://github.com/lpstr/signet) - Easily compare SHAsums with an ssh-randomart-esque system.
 - [fire](https://github.com/lptstr/fire) - The PSX DOOM fire animation, ported to the terminal.
-
-### posts

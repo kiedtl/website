@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+
+{% block homelink %}{{ config.extra.homelink | safe }}{% endblock homelink %}
+{% block ptitle %}{{ page.title | safe }}{% endblock ptitle %}
+{% block content %}{{ page.content | safe }}{% endblock content %}
+
+{% block posts %}
+{% for year, posts in section.pages | group_by(attribute="year") %}
+        <ul>
+                {% for post in posts %}
+                        <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+                {% endfor %}
+        </ul>
+{% endfor %}
+{% endblock posts %}
