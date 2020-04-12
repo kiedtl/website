@@ -1,11 +1,12 @@
-{% extends "index.html" %}
+{% extends "section.html" %}
 
 {% block homelink %}{{ config.extra.homelink | safe }}{% endblock homelink %}
-{% block ptitle %}{{ page.title | safe }}{% endblock ptitle %}
-{% block content %}{{ page.content | safe }}{% endblock content %}
+{% block ptitle %}{{ section.title | safe }} - kiedtl{% endblock ptitle %}
+{% block content %}{{ section.content | safe }}{% endblock content %}
 
 {% block posts %}
 {% for year, posts in section.pages | group_by(attribute="year") %}
+	<h2>{{ year | safe }}</h2>
         <ul>
                 {% for post in posts %}
                         <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
