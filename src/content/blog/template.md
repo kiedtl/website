@@ -1,6 +1,6 @@
 +++
 title = ""
 draft = true
-date =
+date = 2020-03-12
 template = "blog.html"
 +++
