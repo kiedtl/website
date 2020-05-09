@@ -16,7 +16,7 @@
   gtag('config', 'UA-98707492-3');
 </script>
 <style>
-body{overflow-y:scroll;font-family:sans-serif}img,main,pre>code{display:block;margin:25px auto}main{padding:20px;max-width:600px;line-height:1.6;word-wrap:break-word}img{max-width:100%}pre>code{padding:20px;white-space:pre-wrap}code{background:#eee;padding:2px}blockquote{border-left:7px solid #ddd;padding:0 14px;color:#666;margin:0}h1,h2,h3,h4{line-height:1.2}hr{border:2px solid #ddd}
+@import url(https://rsms.me/inter/inter.css);@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@3/distr/fira_code.css);html{scroll-behavior:smooth;padding:0;line-height:1.5;overflow-y:scroll;font-family:Inter var,sans-serif;font-size:18px}h1{font-size:1.8rem}h2{font-size:1.6rem}h3{font-size:1.4rem}h4{font-size:1.2rem}h1,h2,h3{margin:0;margin-top:3rem}h4,h5,h6{margin:0;margin-top:1.5rem}img,main{display:block;margin:25px auto}main{padding:20px;max-width:600px;line-height:1.6;word-wrap:break-word}a,a:active,a:hover,a:visited{transition:ease .2s;color:var(--light-black)}a#homelink{text-decoration:none}img{max-width:100%}code,pre{font-family:fira code vf,monospace}pre{overflow:auto!important;padding:1.3rem;margin:1rem -1.3rem!important;border:2px solid #666;border-radius:.4rem}pre>code{display:block;white-space:pre!important;border:none;color:#000}code{white-space:pre-wrap;color:#d344e2}blockquote{border-left:7px solid #ccc;padding:0 14px;color:#555;margin:0}h1,h2,h3,h4{line-height:1.2}hr{margin:0;margin-bottom:1rem;margin-top:1rem;border:2px solid #eee}
 </style>
 </head>
 <body>
@@ -36,7 +36,7 @@ body{overflow-y:scroll;font-family:sans-serif}img,main,pre>code{display:block;ma
 <b>{{ year }}</b>
 <ul>
 {% for post in posts %}
-        <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+<li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
 </li>
