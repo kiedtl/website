@@ -9,7 +9,7 @@ title = "/home/kiedtl/"
 ### projects
 
 - [winfetch](https://github.com/lptstr/winfetch) - A system information utility for Windows 10.
-- [rsfetch](/projects/rsfetch/) - An extremely fast (1ms) and somewhat minimal (?) *nix fetch program.
+- [rsfetch](projects/rsfetch/) - An extremely fast (1ms) and somewhat minimal (?) *nix fetch program.
 - [lcharmap](https://github.com/lptstr/lcharmap) - The Windows `charmap` utility ported to Linux on the CLI.
 - [mandelica](https://github.com/lptstr/mandelica) - Generate mandelbrot sets in the farbfeld image format.
 - [signet](https://github.com/lpstr/signet) - Easily compare SHAsums with an ssh-randomart-esque system.

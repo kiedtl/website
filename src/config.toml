@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://kiedtl.surge.sh"
+base_url = "https://tilde.team/~kiedtl/"
 
 compile_sass = false
 highlight_code = false
@@ -19,6 +19,6 @@ footer = "<br><a rel='license' href='http://creativecommons.org/licenses/by-nc-n
 # to be used with footer!
 footer_blog = "<br><script src=\"https://utteranc.es/client.js\" repo=\"kiedtl/website\" issue-term=\"pathname\" label=\"comment\" theme=\"github-light\" crossorigin=\"anonymous\" async></script><noscript>Javascript is required for comments.</noscript>"
 
-homelink = "<a href='/'>⟵ Back</a>"
+homelink = "<a id=\"homelink\" href='/'>⟵ Back</a><hr>"
 
 favicon = "data:image/png;base64,"

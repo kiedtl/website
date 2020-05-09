@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-{% block headers %}{{ config.extra.headers | safe }}{% endblock title %}
+{% block headers %}{{ config.extra.headers | safe }}{% endblock headers %}
 <link href="{% block fav %}{{ config.extra.favicon | safe }}{% endblock fav %}", rel=icon type=image/png>
 <title>{% block ptitle %}{{ section.title | safe }}{% endblock ptitle %}</title>
 <!-- privacy advocates are gonna kill me, but I do use google analytics here... -->
