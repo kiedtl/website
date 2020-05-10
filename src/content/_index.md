@@ -1,10 +1,10 @@
 +++
-title = "/home/kiedtl/"
+title = "~kiedtl"
 +++
 
-# /home/kiedtl
+# ~kiedtl
 
-[GitHub](https://github.com/kiedtl) | [Reddit](https://old.reddit.com/u/kiedtl)
+[GitHub](https://github.com/kiedtl) | [Reddit](https://old.reddit.com/u/kiedtl) | [Lobsters](https://lobste.rs/u/kiedtl)
 
 ### projects
 
