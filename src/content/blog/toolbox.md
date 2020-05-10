@@ -53,6 +53,12 @@ once in a while.
 	- *Con:* **most** packages are missing proper footprint/md5sums.
  
 ### Window Managers
+- `awesomewm`
+	- **Pro:** since a lot of Awesome's behaviour and aesthetics can be tweaked via it's Lua API, Awesome can be anything you want it to be.
+	- **Pro:** lots of layouts to choose from, including tiling and floating.
+	- **Con:** Awesome's default configuration is stuffed with lots of garbage you have to remove. E.g. title bars, menubar, launchers. The sort of stuff that should be left out by default and added by the user if he/she so wishes.
+	- **Con:** due to configuration being done in a programming language, executed at runtime, I find Awesome has a tendency to be a bit laggy at times.
+	- **Con:** no support for manual tiling... yet. Not a problem for me personally but I've heard lots of other ricers complaining about this.
 - [`dwm`](https://dwm.suckless.org/)
 	- **Pro:** configuration is in the source. This is precisely what makes `dwm` so extensible:
 	  the fact that the configuration is a part of the source means that you can call custom
@@ -104,6 +110,8 @@ that needs to be robust.
 - `V`: I still don't have much experience with it yet, but when it matures, this is definitely one language I'm going to
   master.
 - `PowerShell`: not quite a shell - more of an interpreted language often mistaken for a shell.
+- `Zig`: a (WIP) language that aims to replace C.
+- `Lua`: the languages simplicity makes Lua ideal for small programs and "scripts" -- unfortunately, the standard library is rather sparse.
 
 ### fonts
 - `ttyp0`: a better version of `misc-fixed`.
