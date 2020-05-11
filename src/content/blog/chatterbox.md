@@ -1,8 +1,7 @@
 +++
 title = "Program eloquence considered harmful"
 draft = false
-date = 2020-03-12
-template = "blog.html"
+date = 2020-05-11
 +++
 
 # Program eloquence considered harmful

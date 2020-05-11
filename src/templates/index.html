@@ -29,30 +29,32 @@
 {% endblock content %}
 
 {% block posts %}
- <p>
-			<h1>Blag</h1>
-		</p>
-		<table>
-			<thead></thead>
-			<tbody>
+<p>
+<h1>Blag</h1>
+</p>
+<table>
+<thead></thead>
+<tbody>
 {% set blog = get_section(path="blog/_index.md") %}
-{% for year, posts in blog.pages | group_by(attribute="year") %}
-{% for post in posts %}
-<li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
-        				<tr>
-					<td align="left">
-						<a href="{{ post.permalink }}">{{ post.title }}</a>
-					<td align="right">
-						{{ post.date }}
-					</td>
-				</tr>
+{% for post in blog.pages %}
+<tr>
+<td align="left">
+<a href="{{ post.permalink }}">{{ post.title }}</a>
+<td align="right">
+{{ post.date }}
+</td>
+</tr>
 {% endfor %}
-        			</tbody>
-		</table>
-{% endfor %}
+</tbody>
+</table>
 {% endblock posts %}
-  
-  
+
+{% block footer %}
+{{ config.extra.footer | safe }}
+{% endblock footer %}
+
+</main>
+
 {% block sidebar %}
   	<div class="sidebar">
 		<img id="avatar" src="https://github.com/kiedtl.png" \>
@@ -82,11 +84,5 @@
 {% endblock sidebar %}
 
 
-{% block footer %}
-{{ config.extra.footer | safe }}
-{% endblock footer %}
-
-
-</main>
 </body>
 </html>
