@@ -9,7 +9,7 @@ template = "blog.html"
 Here's a list of websites with clean, minimal designs,
 small memory footprint, and little or no Javascript.
 
-- [this website :)](http://kiedtl.surge.sh/)
+- [this website :)](http://kiedtl.tilde.team/)
 - [Suckless.org](https://suckless.org/)
 - [Dylan Arap's (old) site](http://blckk.me/website)
 - [Drew Devault's website](http://drewdevault.com/)
@@ -20,3 +20,4 @@ small memory footprint, and little or no Javascript.
 - [Lobsters](https://lobste.rs/)
 - [Hacker News](https://news.ycombinator.com/)
 - [Source Hut](https://sr.ht/)
+- [Bartłomiej Piotrowski's website](https://bpiotrowski.pl/)
