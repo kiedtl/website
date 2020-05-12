@@ -6,6 +6,7 @@
 
 main() {
 	surge --project ./public --domain kiedtl.surge.sh
+    surge --project ./public --domain lptstr.surge.sh
 }
 
 main "$@"
