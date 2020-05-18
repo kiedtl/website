@@ -14,85 +14,95 @@ once in a while.
 	- **Pro**: no forced updates.
 	- **Pro**: no forcibly installed junkware (cOrTaNa, OneDrive, Candy Crush Saga)
 	- **Pro**: much faster (boot times, IO, whatever metric you have)
-	- *Con:* depending on what distro you are using, steeper learning curve than Windows
-	or Linux.
+	- **Con**: depending on what distro you are using, steeper learning curve than Windows.
 
 ### Distros
 - [Arch Linux](https://archlinux.org)
-	- **Pro:** awesome `pacman` package manager
-	- **Pro:** rolling release (you're always using the latest version!)
-	- **Pro:** great community(?)
-	- **Pro:** you get to say that yOu UsE aRcH bTw
-	- *Con:* Arch uses `systemd`, and there's no way to change that.
-	- *Con:* Arch uses `glibc`, and there's no way to change that.
-	- *Con:* Arch uses GNU Coreutils, and it's difficult to change it to, say, Busybox.
+	- **Pro**: awesome `pacman` package manager
+	- **Pro**: rolling release (you're always using the latest version!)
+	- **Pro**: great community(?)
+	- **Pro**: you get to say that yOu UsE aRcH bTw
+	- **Con**: Arch uses `systemd`, and there's no way to change that.
+	- **Con*: Arch uses `glibc`, and there's no way to change that.
+	- **Con**: Arch uses GNU Coreutils, and it's difficult to change it to, say, Busybox.
 
 - [KISS Linux](https://k1ss.org)
-	- **Pro:** Ruggedly mnmlist mentality.
-	- **Pro:** Easy to switch out system components with others, unlike Arch.
-	- Pro: extremely simple package manager gives you a lot of control.
-	- Pro: extremely simple package format.
+	- **Pro**: Ruggedly mnmlist mentality.
+	- **Pro**: Easy to switch out system components with others, unlike Arch.
+	- **Pro**: extremely simple package manager gives you a lot of control.
+	- **Pro**: extremely simple package format.
 	- <s>Con: package manager hasn't had quite enough time to mature, and doesn't have many features.</s>
 
 - [Void Linux](https://voidlinux.org)
-	- **Pro:** Runs on many architectures.
-	- **Pro:** Ability to choose between `glibc` and `musl`.
-	- **Pro:** uses `runit`, not systemd.
-	- *Con:* package manager isn't all that great, and gives you very
+	- **Pro**: Runs on many architectures.
+	- **Pro**: Ability to choose between `glibc` and `musl`.
+	- **Pro**: uses `runit`, not systemd.
+	- **Con**: package manager isn't all that great, and gives you very
 	  little control.
-	- *Con:* package format is ridiculously complex.
+	- **Con**: package format is ridiculously complex.
 
 - [CRUX Linux](https://crux.nu)
-	- **Pro:** glorious package manager and package format. Both are extraordinarily simple to use
-	  and hack.
-	- **Pro:** extremely simple by default.
-	- **Pro:** easy to setup you're own package repository (necessary, since like KISS, no
+	- **Pro**: extremely simple package format and package manager.
+	- **Pro**: extremely simple by default.
+	- **Pro**: easy to setup you're own package repository (necessary, since like KISS, no
 	  that many packages exist in the repos).
-	- **Pro:** merely mentioning that you use CRUX moves you up in the world of (SFW) [r/unixporn](https://reddit.com/r/unixporn).
-	- *Con:* sparse community. not that many people use it, sadly.
-	- *Con:* **most** packages are missing proper footprint/md5sums.
+	- **Pro**: merely mentioning that you use CRUX moves you up in the world of (SFW) [r/unixporn](https://reddit.com/r/unixporn).
+	- **Con**: sparse community. not that many people use it, sadly.
+	- **Con**: **most** packages are missing proper footprint/md5sums.
  
 ### Window Managers
 - `awesomewm`
-	- **Pro:** since a lot of Awesome's behaviour and aesthetics can be tweaked via it's Lua API, Awesome can be anything you want it to be.
-	- **Pro:** lots of layouts to choose from, including tiling and floating.
-	- **Con:** Awesome's default configuration is stuffed with lots of garbage you have to remove. E.g. title bars, menubar, launchers. The sort of stuff that should be left out by default and added by the user if he/she so wishes.
-	- **Con:** due to configuration being done in a programming language, executed at runtime, I find Awesome has a tendency to be a bit laggy at times.
-	- **Con:** no support for manual tiling... yet. Not a problem for me personally but I've heard lots of other ricers complaining about this.
+	- **Pro**: since a lot of Awesome's behaviour and aesthetics can be tweaked via it's Lua API, Awesome can be anything you want it to be.
+	- **Pro**: lots of layouts to choose from, including tiling and floating.
+	- **Con**: Awesome's default configuration is stuffed with lots of garbage you have to remove. E.g. title bars, menubar, launchers. The sort of stuff that should be left out by default and added by the user if he/she so wishes.
+	- **Con**: due to configuration being done in a programming language, executed at runtime, I find Awesome has a tendency to be a bit laggy at times.
+	- **Con**: no support for manual tiling... yet. Not a problem for me personally but I've heard lots of other ricers complaining about this.
+
 - [`dwm`](https://dwm.suckless.org/)
-	- **Pro:** configuration is in the source. This is precisely what makes `dwm` so extensible:
+	- **Pro**: configuration is in the source. This is precisely what makes `dwm` so extensible:
 	  the fact that the configuration is a part of the source means that you can call custom
-	  C functions from your config and from X (like Xmonad).
-	- **Pro:** dynamic. Don't like tiling? `dwm` has floating builtin.
-	- *Con:* hard to patch for newer users. Many users (me included) found `dwm` hard to use
+	  C functions from your config and from X.
+	- **Pro**: dynamic. Don't like tiling? `dwm` has floating builtin.
+	- **Con**: pain in the ass to compile when you change
+	  configuration.
+	- **Con**: hard to patch for newer users. Many users (me included) found `dwm` hard to use
 	  due to the fact that it ships with a minimal set of features, and patches must be applied
 	  to use certain features (such as a scratchpad). I recommend using [Luke Smith's setup](https://github.com/LukeSmithxyz)
 	  as a starting point, and to build up from there. Optionally, you can use [Mitch Weaver's setup](https://github.com/mitchweaver/suckless),
 	  or, better yet, [my setup :-\]](https://github.com/kiedtl/suckless).
-	- *Con:* because the config is in the source, you have to recompile and restart your X session
+	- **Con**: because the config is in the source, you have to recompile and restart your X session
 	  for changes in the configuration to take effect. This isn't bad, unless you're fine-tuning your tiling gaps.
-	- *Con:* default bar sucks. Don't argue with me, it sucks, it sucks horribly, and nothing will change that.
-	- *Con:* Polybar doesn't work too well with it by default. Usually, you'll have to add `override-redirect = true` to
+	- **Con**: default bar sucks. Don't argue with me, it sucks, it sucks horribly, and nothing will change that.
+	- **Con**: Polybar doesn't work too well with it by default. Usually, you'll have to add `override-redirect = true` to
 	  you're Polybar config. Sometimes it's worse.
+
 - [`sowm`](https://github.com/dylanaraps/sowm)
+	- **Pro**: it's __*floating*__.
 	- **Pro**: very simple, so like dwm, it's easy to hack.
+	- **Con**: it's __*floating*__.
 	- **Con**: no borders.
 	- **Con**: no EWMH support.
-	- **Con**: it's __*floating*__.
+
+- `2bwm`
+	- **Pro**: hey, two borders!!
+	- **Pro**: although it's floating, you can manage most
+	  window-related tasks with the keyboard alone.
+	- **Con**: configuration is in the source, so it's a pain in the
+	  ass to compile every time you change the configuration.
 
 ### Terminals
 - [`alacritty`](https://github.com/jwilm/alacritty)
-	- **Pro:** GPU rendered, making it blazingly fast - provided, of course, you have a good GPU
+	- **Pro**: GPU rendered, making it blazingly fast - provided, of course, you have a good GPU
 	  in the first place.
-	- *Con:* if you don't have a good GPU or if you are on a platform that doesn't support OpenGL,
+	- **Con**: if you don't have a good GPU or if you are on a platform that doesn't support OpenGL,
 	alacritty doesn't work.
-	- *Con:* configuration is in YAML, which really sucks.
+	- **Con**: configuration is in YAML, which really sucks.
 
 - `xterm`
-	- **Pro:** it Just Works™.
-	- *Con:* huge, at about 65K lines of code. Compare to (unpatched) `st`, which is 5K loc.
-	- *Con:* very slow, depending on what you're doing.
-	- *Con:* configuration is in Xresources. Xresources sucks.
+	- **Pro**: it Just Works™.
+	- **Con**: huge, at about 65K lines of code. Compare to (unpatched) `st`, which is 5K loc.
+	- **Con**: very slow, depending on what you're doing.
+	- **Con**: configuration is in Xresources. Xresources sucks.
 
 ### misc
 - `loksh`: an implementation of the Korn Shell that's way better than `bash`. `bash`: 1.1M, `loksh`: 241K
