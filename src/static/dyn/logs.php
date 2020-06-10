@@ -1,1 +1,0 @@
-/home/kiedtl/src/app/logs.php
