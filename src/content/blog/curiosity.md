@@ -5,7 +5,7 @@ date = 2020-10-24
 template = "blog.html"
 +++
 
-A few days ago, I discovered [gemini][https://gemini.circumlunar.space] for
+A few days ago, I discovered [gemini](https://gemini.circumlunar.space) for
 the first time. Wondering exactly how large it was, I thought I'd write a
 quick and dirty crawler for it, which you can find
 [here](https://github.com/lptstr/curiosity).
@@ -13,7 +13,7 @@ quick and dirty crawler for it, which you can find
 It took me an unusual amount of time to get a working crawler (I've never
 done network or async programming in Rust before), but at last, with the
 help of `cadey`'s `gemtext`-parsing library, I had a prototype. I started
-crawlingon 2020-10-22 1827, but was stopped several times by various
+crawling on 2020-10-22 1827, but was stopped several times by various
 crashes, mostly because I had made some stupid assumptions about what kind
 of links I'd find (for instance, that no one would put a url with just the
 scheme type e.g. `gemini:///`). Later, it crashed again, due to a bug in
@@ -28,10 +28,10 @@ That is, a `=>` with no valid url following it :facepalm:
 
 Amusingly, I had stupidly decided I didn't need a method of saving the
 crawler's state to a file that could be picked up later in the event of a
-crash; because of that, each time the buggy thing crashed, I'd have to
+crash; because of that, each time a crash occurred, I'd have to
 start over from scratch.
 
-At last, though, it finished, after retrieving a total of 20MB of urls and
+At last, though, it finished, after retrieving a total of 10MB of urls and
 their backlinks:
 
 ```
@@ -64,4 +64,4 @@ I'm not yet sure what I'm going to do with this data. Previously, I had
 some vague idea of setting up a small search engine, but given that I
 haven't the money to set up my own server or purchase a suitable domain, I
 don't think that'll happen. I'd hate to hog resources on a
-[tilde][tildeverse.org].
+[tilde](tildeverse.org).
