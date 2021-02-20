@@ -7,7 +7,7 @@ date = 2020-05-11
 # Program eloquence considered harmful
 
 Let's compare some error messages -- specifically, the ones that occur when
-you try to execute a nonexistant command in Windows PowerShell and GNU
+you try to execute a nonexistent command in Windows PowerShell and GNU
 Bash.
 
 PowerShell:
@@ -49,7 +49,7 @@ can, a rule he calls the "Rule of Silence":
 > up*. Well-behaved Unix programs do their jobs unobtrusively, with a
 > minimum of fuss and bother. Silence is golden.
 >
-> This "silence is golden" rule eveolved originally because Unix predates
+> This "silence is golden" rule evolved originally because Unix predates
 > video displays. On the slow printing terminals of 1969, each line of
 > unnecessary output was a serious drain on the user's time. That
 > constraint is gone, but excellent reasons for terseness remain. (Raymond,
@@ -74,8 +74,8 @@ stuff in the tersest possible form.
 Why? Because **users don't like reading.**
 
 When a user is using a particular application, they are usually trying to
-get something done. They may be trying to check their email, launch an IM
-client, or start their browser. Reading stuff takes time, and thus slows
+get something done. They may be trying to check their email, launch
+Discord, or start their browser. Reading stuff takes time, and thus slows
 the user down. Because of this, users will do the minimal amount of reading
 that they can.
 
@@ -88,7 +88,7 @@ better word!) enough to use PowerShell will know that they should
 double-check their spelling without an error message telling them to do so.
 
 And even in "normal" applications -- where the majority of users are not
-knowledgable enough to know that their spelling could be to blame -- an
+knowledgeable enough to know that their spelling could be to blame -- an
 error message that's too verbose is *still* problematic, because many, if
 not most, non-techy users won't bother reading it!
 
@@ -211,7 +211,7 @@ As you can see, I've condensed the first line, continue prompt, and warning
 quite a bit; I've also changed the second line to not be a sentence, thus
 eliminating a whole two letter word ;)
 
-The warning has been changed to not repeat the host and ip address, which
+The warning has been changed to not repeat the host and IP address, which
 was already listed previously. The completely unnecessary `please`
 has been removed from the password error.
 
