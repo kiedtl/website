@@ -6,18 +6,18 @@ template = "blog.html"
 
 # On Shell Replacements
 
-> NOTE: by referring to "shell", I am specificaly talking about
+> NOTE: by referring to "shell", I am specifically talking about
 > the Korn shell and it's variants, including bash and POSIX shell.
 
 There are now a number of alternatives to the traditional Unix shell,
-most notably Microsoft's Powershell [^1] and the Oil Shell [^2]. These
+most notably Microsoft's PowerShell [^1] and the Oil Shell [^2]. These
 projects all have something in common -- they attempt to replace the
 current Korn shell and it's derivatives (including bash and POSIX shell) 
 with a cleaner, more consistent, and (in some cases) fully blown
 programming language.
 
 In addition, I've also heard some claiming that an interpreted language
-(like Python or TCL) could be usuable as a shell with a few `imports`
+(like Python or TCL) could be usable as a shell with a few `imports`
 and other tweaks.
 
 Not that I'm claiming any of the aforementioned ideas are bad, by any
@@ -48,7 +48,7 @@ come pre-installed. [^6]
 2. **Portability**: As long as you don't use shell specific features
 (such as the so-called `bashisms`, but which are really `kshisms`),
 your scripts are certain to work across multiple shells. [^7]
-3. **Speed**: Fine, shell scripts are slow, but they're much caster than,
+3. **Speed**: Fine, shell scripts are slow, but they're much faster than,
 say, Python. (Just try using the Python REPL on a really slow machine, like a
 Raspberry Pi Zero. Python takes ages just to start, while bash, whose own
 *documentation* describes as "too big and too slow", starts virtually
@@ -67,7 +67,7 @@ show.
 If your script is so large or complex that you're considering using a shell
 replacement, you may as well use a "real language".
 
-Oil, NuShell, PowerShell, etc will probably never replace Unix shell, because
+Oil, NuShell, PowerShell, etc. will probably never replace Unix shell, because
 they are all either slower or less portable that Unix shell.
 
 ---
@@ -83,5 +83,5 @@ however, a number of tricks to get local variables in POSIX sh. E.g.
 using subshells, `var=blah command -arg1`, etc.
 [^6]: For Windows, a number of POSIX shells exist, including Git Bash,
 MSYS(2), WSL1/WSL2, and Cygwin.
-[^7]: Expect, of course, the non-POSIX ones, like `fish` or `zsh`.
+[^7]: Except, of course, the non-POSIX ones, like `fish` or `zsh`.
 [^8]: See `bash(1)`, section `BUGS`.
