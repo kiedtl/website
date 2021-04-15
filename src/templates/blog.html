@@ -1,8 +1,19 @@
 {% extends "index.html" %}
 
-{% block ptitle %}{{ page.title | safe }} - kiedtl{% endblock ptitle %}
-{% block homelink %}{{ config.extra.homelink | safe }}{% endblock homelink %}
-{% block title %}{{ page.title | safe }}{%endblock title %}
+{% block ptitle %}{{ page.title | safe }} - ~kiedtl{% endblock ptitle %}
+{% block homelink %}
+<table>
+	<thead></thead>
+	<tbody>
+		<tr>
+			<td align="left">{{ config.extra.homelink | safe }}</td>
+			<td align="right">{{ page.reading_time }} min</td>
+		</tr>
+	</tbody>
+</table>
+<hr>
+{% endblock homelink %}
+{% block title %}{{ page.title | safe }}{% endblock title %}
 {% block content %}{{ page.content | safe }}{% endblock content %}
 {% block posts %}{% endblock posts %}
 {% block footer %}

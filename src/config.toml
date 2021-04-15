@@ -19,6 +19,6 @@ footer = "<br><a rel='license' href='http://creativecommons.org/licenses/by-nc-n
 # to be used with footer!
 footer_blog = "<br><script src=\"https://utteranc.es/client.js\" repo=\"kiedtl/website\" issue-term=\"pathname\" label=\"comment\" theme=\"github-light\" crossorigin=\"anonymous\" async></script><noscript>Javascript is required for comments.</noscript>"
 
-homelink = "<a id=\"homelink\" href='/~kiedtl/'>⟵ Back</a><hr>"
+homelink = "<a id=\"homelink\" href='/~kiedtl/'>⟵ Back</a>"
 
 favicon = "data:image/png;base64,"

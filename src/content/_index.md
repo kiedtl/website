@@ -7,9 +7,9 @@ title = "~kiedtl"
 		style="margin-botton:20px;margin-right:20px"
 		src="https://github.com/kiedtl.png" />
 	<h1>~kiedtl</h1>
-</p> <br>
+</p> <br> <br>
 
-Hey! I'm a hobbyist Rust and C developer, as well as being a outspoken anti-<code>systemd</code> FUD spreader. I've created dozens of completely pointless utilities of which I am the sole user. I love <a href="https://en.wikipedia.org/wiki/Joy_(programming_language)">concatenative</a> <a href="https://en.wikipedia.org/wiki/Forth_(programming_language)">stack-based</a> languages, <a href="https://9p.io">vicious space bunnies</a>, and <a href="https://k1sslinux.org">minimalism</a>.
+Hey! I'm a hobbyist Rust and C developer, as well as being yet another <a href="https://www.removeddit.com/r/linux/comments/eqllsf/_/feusx3x/">outspoken anti-<code>systemd</code> FUD spreader</a>. I've created dozens of completely pointless utilities of which I am the sole user. I love <a href="https://en.wikipedia.org/wiki/Joy_(programming_language)">concatenative</a> <a href="https://en.wikipedia.org/wiki/Forth_(programming_language)">stack-based</a> languages, <a href="https://9p.io">vicious space bunnies</a>, and <a href="https://k1sslinux.org">minimalism</a>.
 
 <p>
 	<h5>email</h5>
