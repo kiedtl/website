@@ -31,3 +31,15 @@ Hey! I'm a hobbyist Rust and C developer, as well as being yet another <a href="
 	<code>/msg kiedtl</code> on freenode or <a href="https://tilde.chat">tilde.chat</a>
 </p>
 
+<p><h1>Projects</h1></p>
+
+<table>
+<thead>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="//tilde.team/~kiedtl/projects/cursed/">cursed_font</a></td>
+<td align="right"><a href="//github.com/kiedtl/cursed">GitHub</a></td>
+</tr>
+</tbody>
+</table>
