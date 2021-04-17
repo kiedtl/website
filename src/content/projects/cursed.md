@@ -127,3 +127,7 @@ version of `cursed_font`, back when it was just an upscaled version of
 
 <br>
 <img src="//tilde.team/~kiedtl/images/cursed/oldscrot.png" alt="old screenshot" />
+<br>
+
+(If you do want this version, you can find it in the `old/` directory of
+the GitHub repository.)
