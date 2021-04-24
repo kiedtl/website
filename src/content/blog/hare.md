@@ -12,11 +12,11 @@ unlisted = true
 
 It seems like every year there's a new wannabe-C-replacement. I do write a
 lot of C for hobby projects, so I'm acutely aware of C's many defects (to
-name a few: a hacky handling system, no proper namespacing, no tagged
+name a few: a hacky error handling system, no proper namespacing, no tagged
 unions, an absolutely miserable macro system, &c).
 
 Some C replacements I've been interested in are Rust[^1], Zig, Myrddin, and
-Drew Devault's new systems programming language, Hare.
+Drew DeVault's new systems programming language, Hare.
 
 ---
 
@@ -41,10 +41,10 @@ box, check.
 > code. It has manual memory management, no runtime, and uses the C ABI.
 
 Manual memory management? check. C ABI? check. No runtime? *Really*? Even C
-has a runtime, `crt.S`, which calls `main` at the *bare minimum*. I think
-what Drew means is that there will be no massive Go-like runtime.
+has a runtime (`crt.S`) I think what Drew means is that there will be no
+massive Go-like runtime.
 
-> Hare fits on a 3½" floppy disc. When it’s done, you’ll be able to buy a
+> Hare fits on a 3½" floppy disc. When it's done, you’ll be able to buy a
 > floppy disc with Hare on it to support the project.
 
 (from [here](https://harelang.org/floppies/))
@@ -70,25 +70,27 @@ export fn main() void = {
 };
 ```
 
-Mm, ok. So we have a less ambigious syntax than C does (`fn main() void`
+Mm, ok. So we have a less ambiguous syntax than C does (`fn main() void`
 instead of `void main(void)`). We have a file extension of `.ha`.
 `haha.ha`. And we have... suffixes for number literals?  I wonder what that
 `z` is in the `0z`. It's probably the equivalent of C's `size_t`. There's
 not much else we can tell from this small snippet, though.
 
+<br>
 
 Wait.
 
+<br><br>
 
 Just wait a moment.
 
-
+<br><br>
 
 What was that right before the `fn main()`? Is that an `export` keyword?
 And hey, there's a bunch `use` statements as well! Praise Allah! We have
 proper namespacing!! Even if this was the only benefit Hare provided over C
 it'd still make Hare worth using, in my humble opinion. No more stupid
-function prototypes in header files with arcane, idiosyncratic macro
+function prototypes in header files with an arcane, idiosyncratic macro
 syntax.
 
 Alright, that's cool. Let's move on.
@@ -128,16 +130,16 @@ platform *isn't a viable platform* until it has a *C compiler*. *Sheesh*.
 > | i686  | …Planned |
 > | arm32  | …Planned |
 
-Interesting. What compiler backend *are* you using? Oh, I see, you're using
-[QBE](https://c9x.me/compile). It's not a bad choice, really. You're going
-to miss out on LLVM's optimisations, you're going to have to finish up that
-half-completed `aarch64` code, and you're going to have to write your own
-code to support other architectures, but hey, you're going to get
-*screaming* fast compiles and a much simpler compiler design! And you'll
-get to use C instead of C++!
+Interesting, no `arm32` or `i686` yet?. What compiler backend *are* you
+using? Oh, I see, you're using [QBE](https://c9x.me/compile). It's not a
+bad choice. You're going to miss out on LLVM's optimisations, you're going
+to have to finish up that half baked `aarch64` code, and you're going
+to have to write your own code to support other architectures, but hey,
+you're going to get *screaming* fast compiles and a much simpler compiler
+design! As a bonus, you'll get to use C instead of C++!
 
-Hopefully the improvements Hare makes to QBE will be upstreamed; the
-project seems to be unmaintained at present.
+Hopefully the improvements the Hare developers makes to QBE will be
+upstreamed; the project seems to be unmaintained at present.
 
 > ## Operating systems
 >
@@ -167,43 +169,11 @@ language features that will be explored in the future and *might* be added
 to the language:
 
 - Borrow checking (really? I'm not convinced this can be done in a
-  `[better,more_efficient,less_bloated]` way than Rust does.)
+  `[better,more_efficient,less_bloated]` way than Rust does. And hey, wasn't
+  this language supposed to be *simple*?)
 - Async I/O (well, whatever you do, don't make it a builtin thing
   and ruin the language's elegance like Rust did.)
 - Closures (Sigh. If only closures weren't so hard.)
-
-## Lack of generics
-
-One flaw of Hare is *blazingly* obvious: the [lack of
-generics](https://harelang.org/blog/2021-03-26-high-level-data-structures/):
-
-> Hare does not support generics, and our approach to data structures is
-> much like C: DIY. Hare supports the following basic data structures:
->
-> - Slices
-> - Tuples
-> - Structs and unions
-> - Tagged unions
->
-> That’s the complete list of aggregate type classes defined by the
-> specification. You can build arbitrarily complex data structures out of
-> these, but, like C, Hare puts the ball in your court. For most of your
-> application’s day-to-day data processing needs, these types are
-> sufficient, shunting data from A to B without much fuss. For most of your
-> data processing, these limitations will not be your bottleneck, and
-> simpler (but slower) data structures won’t have much of an impact on your
-> program.
-
-(Drew goes on to explain how if the performance of these data structures
-*are* your bottleneck, you may as well write it yourself.)
-
-Mhm. Thank you so much. I'm going to be just so bloody *thrilled* when it's
-time to convert my eighth `HashMap` implementation, ripped out from three
-other projects of mine, from `<string, string>` to `<string, i8>`.  And
-this bastard of a language doesn't even leave me with a crippled
-search-and-replace macro system to help me with this in the smallest way.
-(At least we have pointers. Maybe we can cast from and to them like we do
-with `void*` in C...? *shudder*)
 
 ## Trying out the language
 
@@ -216,81 +186,25 @@ than that. I think I'll write a Nga implementation for
 
 For those who are unfamiliar with RetroForth and Nga: RetroForth is a
 highly portable, modernised, general-purpose FORTH scripting language, and
-Nga is the VM Retro is implemented on.  stacks, arrays, bit shifting,
-argument parsing, etc. I'll be doing a loose port of
+Nga is the VM Retro is implemented on. I'll be doing a loose port of
 `vm/nga-c/barebones.c`, the minimalist C implementation of Nga. It doesn't
 do argument parsing,
 
-One small bump would due to the fact that Retro string are NULL-terminated,
-so I'd probably have to use an array of `u8`'s instead of Hare's `rune`'s
-and strings. *(EDIT: turns out I didn't need to worry about this; all string
-stuff is done in the hosted RetroForth code outside of Nga.)*
-
-### Getting started
-
-```
-] tmux
-] cd src/retroforth/vm/
-] mkdir nga-hare
-] nvim nga-hare/barebones.ha
-```
-
-Oh, wait. I need a Vim syntax script! How could I do without those!
-
-```
-] cd ~/etc/nvim/syntax
-] l
-gmi.vim  unuc.vim  zf.vim
-] git clone https://git.sr.ht/~sircmpwn/hare.vim
-Cloning into 'hare.vim'...
-remote: Enumerating objects: 77, done.
-remote: Total 77 (delta 0), reused 0 (delta 0), pack-reused 77
-Unpacking objects: 100% (77/77), 9.84 KiB | 387.00 KiB/s, done.
-] l hare.vim/
-ftdetect/  ftplugin/  README.md  syntax/
-] mv hare.vim/syntax/hare.vim .
-mv: overwrite './hare.vim'? ^C
-] mv hare.vim hare.tmp
-] mv hare.tmp/syntax/hare.vim .
-] mv hare.tmp/ftdetect/hare.vim  ../ftdetect/
-] mv hare.tmp/ftplugin/hare.vim ../ftplugin/
-mv: cannot move 'hare.tmp/ftplugin/hare.vim' to '../ftplugin/': Not a directory
-] mkdir ../ftplugin
-] mv hare.tmp/ftplugin/hare.vim ../ftplugin/
-] rm -rf hare.vim
-] l
-gmi.vim  hare.tmp/  unuc.vim  zf.vim
-] oops
-mksh: oops: inaccessible or not found
-] git clone https://git.sr.ht/~sircmpwn/hare.vim
-Cloning into 'hare.vim'...
-remote: Enumerating objects: 77, done.
-remote: Total 77 (delta 0), reused 0 (delta 0), pack-reused 77
-Unpacking objects: 100% (77/77), 9.84 KiB | 402.00 KiB/s, done.
-] mv hare.vim/syntax/hare.vim hare
-] rm -rf hare.vim
-] mv hare hare.vim
-] 
-```
-
-Okaaay. Now, I'm the kind of person who like to learn a language as I
-go, so I'm glancing a lot at Hare's source and docs to see what the syntax of
-structures are, how to put an array literal in there, etc. Hare's
-documentation is *very* sparse (can't blame the Hare devs for that, of
-course), so I'm ending up looking more at Hare's source than at the online
-docs.
-
 ---
 
-Fast-forward to Tuesday, 1200. I'd spent the last few hours of the evening
+Fast-forward a week or so. I'd spent the last few hours of the that day
 figuring this out before going to bed. The next morning, I continued,
 running into a slew of compiler quirks and bugs, one of which I submitted
-a patch for. By Wednesday I still hadn't finished, despite this being the
+a patch for. Two days later, I still hadn't finished, despite this being the
 kind of task which would usually take me an afternoon to complete. One
 reason for that would be the fact that Hare is still very, *very* pre-alpha
 -- a lot of semantical errors are handled with `assert`'s, so instead of
 `Variably-sized arrays stored in the stack are currently unsupported` you
 get `harec: src/eval.c:27: eval_access: Assertion 'in->access.object->otype == O_DECL' failed.`.
+
+Eventually, I just gave up and tried the language out in other ways. I had
+some fun implementing `hash::crc*` and `unix::tty::*` and sending patches
+upstream.
 
 
 Some thoughts on my experience, in no particular order:
@@ -341,22 +255,23 @@ cleaner.
 
 However, this only works for primitives that already *have* default types
 -- you can't define the default type for, say, a `struct` like you can in
-Rust (by implementing `Default`, I think, I'm not sure).
+Rust (by implementing `Default`, I think, I'm not entirely sure).
 
 #### Far too loose syntax for `if`/`else`/`for`
 
 A commonly-cited problem with C's syntax is the fact that the braces for
 loops and control-flow statements are optional. Instead of taking care of
-this problem like any sane language created in 2020 would, Hare doesn't.
+this problem like any sane language created in 2020 would, Hare sadly does
+not.
 
 #### Less undefined behaviour
 
-In Hare, most behaviour that is undefined in C (e.g. overflow) is defined
-in Hare's spec.
+In Hare, most behaviour that is implementation-defined (or worse,
+platform-defined) in C (e.g. overflow) is defined in Hare's spec.
 
 #### Good Unicode support in the standard library
 
-Hare has builtin functions for UTF8 processing in the `encoding` module,
+Hare has builtin functions for UTF-8 processing in the `encoding` module,
 which is nice (though I haven't personally used it yet, so I'm not sure how
 robust it is right now). You even have functions to get properties of
 Unicode codepoints in the `unicode` module! In C you'd have to pull in a
@@ -404,7 +319,7 @@ len(buf);                   // => 20
 
 Hare checks indexes to slices and arrays at runtime, so the following would
 result in an error, not an incomprehensible segfault that has to be
-`valgrind`'d to reveal further details.
+`valgrind`'d to reveal further its internal mysteries.
 
 ```
 let foo = [0z, 1z, 2z];
@@ -412,7 +327,7 @@ return foo[28];
 ```
 
 Of course, if you want unchecked slices for performance reasons, you can
-have them with the `[*]<type>` syntax.
+have them with the `*[*]type` syntax.
 
 
 #### No uninitialized variables
@@ -450,6 +365,7 @@ else
 let foo = if (bar) 0 else 89;
 ```
 
+
 #### Expression-only
 
 In Hare, as in many other languages, most statements, including `if`/`else`,
@@ -475,6 +391,7 @@ size_t x = boo() ? baz() : 89;
 ```
 
 Because of this, Hare doesn't need a ternary operator.
+
 
 #### Nullable pointers
 
@@ -520,6 +437,7 @@ chance of this feature not landing at all:
 <ddevault> maybe, but not likely
 ```
 
+
 #### Semicolons everywhere!
 
 This is definitely a non-issue, but why are there semicolons *everywhere*?
@@ -540,6 +458,7 @@ for (let i = 0z; i < len(monsters); i += 1) {
 }; // or this?
 ```
 
+
 #### Casting slices
 
 The unintuitive and error-prone `fread` shouldn't be something one misses
@@ -559,6 +478,7 @@ let newbuf: *[*]i32 = (buf: *[*]u8: *[*]i32);
 fread(&buf, sizeof(int32_t), fileLen, fp);
 ```
 
+
 #### Copying slices
 
 The slice copy syntax, which means one doesn't have to use `memcpy`, is
@@ -568,14 +488,16 @@ really, really neat:
 buf[a..b] = another_buf[x..y];
 ```
 
+
 #### Lack of range syntax
 
 Hare doesn't have iterators, but a cleaner syntax for `for (let i = 0z; i <
 max; i += 1)` (maybe something like `for (i in 0..=max)`) would be neat.
 
+
 #### Empty `fn`/`if`/`for` statements
 
-The following in Hare is invalid:
+The following is invalid in Hare:
 
 ```
 fn foo() void = {
@@ -608,6 +530,7 @@ I'm not yet sure whether this is a good thing or a bad thing. Sure, you can
 do clever shenanigans now, but something tells me this will make the code's
 control flow much harder to follow.
 
+
 #### Tagged unions for error handling
 
 In Hare, you have monadic error handling with tagged unions and error
@@ -617,6 +540,7 @@ types. You can even define your own error types!
 use errors;
 
 type myerror = void!;
+type error = (myerror | error::invalid)!;
 
 fn foo() (void | error) = {
         foobar()?;
@@ -625,7 +549,7 @@ fn foo() (void | error) = {
                 null => return errors::invalid,
         };
         if (barbaz() && iswhyze()?)
-                return errors::unsupported;
+                return myerror;
 };
 ```
 
@@ -635,14 +559,47 @@ expression when I'm trying to quickly write a test program; I'd rather save
 that for later when I come to cleanup whatever I wrote. I think that'll be
 added as the language matures, though.
 
-## Conclusion
+*Update*: As of April 24, the `!` operator (`unwrap()`) is being
+implemented in Hare.
 
-Hare is still a young language, and most of my criticisms of the language
-will be out of date before long. But the main issue is that while Hare
-could've been a promising language, like the Gemini Protocol[^3], it seems
-to have taken its goal of simplicity way too far.
 
-From asking questions in `#hare`:
+## Lack of generics
+
+One flaw(?) of Hare is *blazingly* obvious: the [lack of
+generics](https://harelang.org/blog/2021-03-26-high-level-data-structures/):
+
+> Hare does not support generics, and our approach to data structures is
+> much like C: DIY. Hare supports the following basic data structures:
+>
+> - Slices
+> - Tuples
+> - Structs and unions
+> - Tagged unions
+>
+> That’s the complete list of aggregate type classes defined by the
+> specification. You can build arbitrarily complex data structures out of
+> these, but, like C, Hare puts the ball in your court. For most of your
+> application’s day-to-day data processing needs, these types are
+> sufficient, shunting data from A to B without much fuss. For most of your
+> data processing, these limitations will not be your bottleneck, and
+> simpler (but slower) data structures won’t have much of an impact on your
+> program.
+
+(Drew goes on to explain how if the performance of these data structures
+*are* your bottleneck, you may as well write it yourself. But, really, why
+wouldn't you include highly optimized data structure implementations in the
+standard library that everyone can benefit from?)
+
+Mhm. Thank you so much. I'm going to be just so bloody *thrilled* when it's
+time to convert my eighth `HashMap` implementation, ripped out from three
+other projects of mine, from `<string, string>` to `<string, i8>`.  And
+this bastard of a language doesn't even leave me with a crippled
+search-and-replace macro system to help me with this in the smallest
+way.[^3] (Well, we do have `void*` pointers. Maybe we can cast `void*` to
+other types like we do in C...? *shudder*)
+
+
+## No functional programming
 
 ```
 [me whining about how Hare doesn't have a pipe operator]
@@ -659,7 +616,7 @@ From asking questions in `#hare`:
 <ddevault> functional programming can never succeed as a systems programming
            paradigm
   <kiedtl> I'd like to prove you wrong :)
-<ddevault> it obsfucates too much of what's going on from the programmer
+<ddevault> it obfuscates too much of what's going on from the programmer
 <ddevault> no
   <kiedtl> I think it makes it clearer and more concise, but that's my
            opinion :)
@@ -672,45 +629,78 @@ From asking questions in `#hare`:
   <kiedtl> Thanks, your view is clearer now :)
 ```
 
-...and reading the website, I realized that Hare will have:
+That's fair, I guess. I'm just a bit confused about why *closures* are a
+"future research area" but anonymous functions won't be added:
 
-- No generics, trait systems, iterators, or common data structures in the
-  standard library.
-- Anonymous functions (not necessarily closures), or high-order functions
-  like `map`, `foldl`, or `filter`.
-- No functional programming concepts at all.
-- No support for Windows or macOS.
+```
+  <kiedtl> So, closures is a "future research area" for hare, meaning that it
+           *might* be implemented in the future, ...but Hare won't have "bare"
+           anonymous functions (that don't capture their environment)?
+<ddevault> no, probably not
+```
 
-Not all of these are *necessary* for Hare to have to be a comfy systems
-language, but all of these are things I really miss from Rust and other
-well-designed (for the most part) systems programming languages. Yes, I am
-a spoiled brat.
+*Update*: Drew has clarified his view:
 
-And yet, I would argue that generics *are* necessary for a systems
-programming language. Just about no one wants to maintain three hundred and
-fifty five implementations of the same underlying data structure for three
-hundred and fifty five bloody `structs`. When you have these things in a
-standard library, it means everyone can take advantage of battle-tested,
-well optimised implementations, and that those 10% of developers who *insist*
-on rolling their own can do so. You don't have to traumatise everyone who
-uses your language just to appease that 10%.[^4]
+```
+<ddevault> simpler to add, but with less utility
+<ddevault> and having two things is more complicated than having one thing
+```
 
-And yes, systems programming **is** about the *how*, but *only to a certain
-extent*! I'm sure everyone agrees with this, but everyone sets a different
-line. Drew DeVault says "no FP stuff or high-order functions" (ignoring the
-fact that a chaining operator is just a different way to write the exact
-same code, it's just syntax sugar, for heaven's sake) and sets that as the
-boundary; yet he allows the existence of a well-fed standard library that
-includes *hashes* and *streams* and, goodness, *Unicode*! that all hide
-what's going on from the programmer. That's the almost the *definition* of
-a function, a *chunk of reusable code* that *hides from the programmer*
-what's going on!
+And, for the record, I agree with him. In a language without `map`,
+`reduce`, and the other generic high-order function, anonymous functions
+don't really serve much of any purpose.
+
+
+## Strong typing
+
+Unlike C, in Hare one must do a lot of explicit casting between types,
+making it significantly harder to slash your left thumb off while trying to
+dereference an `int` cast as a `struct foo *`.
+
+
+## Subtyping
+
+In some modules in the standard library (see: `hash::adler32`,
+`hash::crc32`, &c) a technique called "subtyping" is used, where struct B,
+who's first member is a struct A, is cast as that struct A to properly
+conform to an interface. It's supposedly common in C (that's what I was
+told in `#hare`, anyway), though this is the first time I'm encountering
+it.
+
+It's not really an issue with the language itself, but it did make quite an
+ugly impression on me.
+
+
+## Conclusion
+
+Hare is still a young language, and some of my criticisms of the language
+will be out of date before long. But the main issue is that while Hare
+could've been a very promising language, like the Gemini Protocol[^4], it
+seems to have taken its goal of simplicity a bit too far.
+
+To return from the IRC quote from earlier, yes, systems programming
+**is** about the *how*, but *only to a certain extent*! I'm sure everyone
+agrees with this, but everyone sets a different line. Drew DeVault says "no
+FP stuff or high-order functions" (ignoring the fact that a chaining
+operator is just a different way to write the exact same code, it's just
+syntax sugar, for heaven's sake) and sets that as the boundary; yet he
+allows the existence of a well-fed standard library that includes *hashes*
+and *streams* and, goodness, *Unicode*! that all hide what's going on from
+the programmer. That's the almost the *definition* of a function, a *chunk
+of reusable code* that *hides from the programmer* what's going on!
 
 And, yes, everyone has different opinions. In my opinion, as someone who's
-too used to there being at least `foldl` in a language's standard library,
-FP stuff is *not* unsuited to a systems programming language; in Drew
-DeVault's, it is. Whether Hare gains widespread use all depends, in the
-end, on how many developers side with me and how many agree with Drew.[^5]
+too used to there being at least `foldl` in a language's standard library
+(I am a spoiled brat), FP stuff is *not* unsuited to a systems programming
+language; in Drew DeVault's, it is. Whether Hare gains widespread use all
+depends, in the end, on how many developers side with me and how many agree
+with Drew.[^5]
+
+Then again, none of these omissions really cripple the language in any way.
+I probably wouldn't choose it for a large project, but for small ones, Hare
+strikes a nice balance between simplicity and power. Who knows, for small
+utility programs that I know won't be running on non-Linux OS's anyway, I
+might just end up using this.
 
 The real question is, does Hare have an business existing when Zig and
 [Myrddin](https://myrlang.org) already exist? I don't know, I
@@ -729,13 +719,7 @@ Cheers!
   without semicolons, right (see Lua); I do sometimes wonder if programmers
   who enjoy this syntax also talk like that in real life;
 
-[^3]: Before I get swamped with hatemail from the usual crazed Gemini
-  fundamentalists, I promise I'll condense my criticism of Gemini into a
-  more constructive form in a future post. The flamebait can wait, but if
-  you still want to troll me, please send an email to `kiedtl` `at`
-  [tilde.team](https://tilde.team) so that I can add you to my spam filter.
-
-[^4]: A certain blogger in the Geminispace states:
+[^3]: A certain blogger in the Geminispace states:
 
   > Generics are way overrated.  Like any feature, generics /can/ be the
   > most elegant solution for some problems, but they’re needlessly complex
@@ -752,6 +736,12 @@ Cheers!
   just *templates* for functions and all the compiler should be doing is a
   glorified *search and replace operation* to condense that template into
   crystallized code.
+
+[^4]: Before I get swamped with hatemail from the usual crazed Gemini
+  fundamentalists, I promise I'll condense my criticism of Gemini into a
+  more constructive form in a future post. The flamebait can wait, but if
+  you still want to troll me, please send an email to `kiedtl` `at`
+  [tilde.team](https://tilde.team) so that I can add you to my spam filter.
 
 [^5]: I do suspect that there will be a group of hardcore Hare users, who,
   like the many Rust fanatics they despise, will be completely impervious
