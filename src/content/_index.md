@@ -28,7 +28,8 @@ Hey! I'm a hobbyist Rust and C developer, as well as being yet another <a href="
 
 <p>
 	<h5>chat</h5>
-	<code>/msg kiedtl</code> on freenode or <a href="https://tilde.chat">tilde.chat</a>
+	<code>/msg kiedtl</code> on <a href="https://tilde.chat">tilde.chat</a>
+	<code>/msg zr</code> on <a href="https://libera.chat">libera</a><br>
 </p>
 
 <p><h1>Projects</h1></p>
