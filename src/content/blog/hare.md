@@ -203,8 +203,8 @@ reason for that would be the fact that Hare is still very, *very* pre-alpha
 get `harec: src/eval.c:27: eval_access: Assertion 'in->access.object->otype == O_DECL' failed.`.
 
 Eventually, I just gave up and tried the language out in other ways. I had
-some fun implementing `hash::crc*` and `unix::tty::*` and sending patches
-upstream.
+some fun implementing `hash::crc*` and `unix::tty::*` in the stdlib and
+sending patches upstream.
 
 
 Some thoughts on my experience, in no particular order:
@@ -595,8 +595,11 @@ time to convert my eighth `HashMap` implementation, ripped out from three
 other projects of mine, from `<string, string>` to `<string, i8>`.  And
 this bastard of a language doesn't even leave me with a crippled
 search-and-replace macro system to help me with this in the smallest
-way.[^3] (Well, we do have `void*` pointers. Maybe we can cast `void*` to
-other types like we do in C...? *shudder*)
+way.[^3] I could use `void *` pointers as in C, but hell, if I wanted to do
+that I'd just use C instead.
+
+tl;dr Regarding generic data structures, Hare "puts the ball in your
+court", which is a nice euphemism for "forces you to reinvent the wheel".
 
 
 ## No functional programming
