@@ -9,7 +9,7 @@ title = "~kiedtl"
 	<h1>~kiedtl</h1>
 </p> <br> <br>
 
-Hey! I'm a hobbyist Rust and C developer, as well as being yet another <a href="https://www.removeddit.com/r/linux/comments/eqllsf/_/feusx3x/">outspoken anti-<code>systemd</code> FUD spreader</a>. I've created dozens of completely pointless utilities of which I am the sole user. I love <a href="https://en.wikipedia.org/wiki/Joy_(programming_language)">concatenative</a> <a href="https://en.wikipedia.org/wiki/Forth_(programming_language)">stack-based</a> languages, <a href="https://9p.io">vicious space bunnies</a>, and <a href="https://k1sslinux.org">minimalism</a>.
+Hey! I'm a hobbyist Rust and C developer, as well as being yet another <a href="https://www.removeddit.com/r/linux/comments/eqllsf/_/feusx3x/">outspoken anti-<code>systemd</code> FUD spreader</a>. I've created dozens of completely pointless utilities of which I am the sole user. I love <a href="https://en.wikipedia.org/wiki/Joy_(programming_language)">concatenative</a> <a href="https://en.wikipedia.org/wiki/Forth_(programming_language)">stack-based</a> languages, <a href="https://9p.io">vicious space bunnies</a>, <a href="https://k1sslinux.org">minimalism</a>, and <a href="https://github.com/kiedtl/roguelike">roguelikes</a>.
 
 <p>
 	<h5>email</h5>
@@ -29,7 +29,7 @@ Hey! I'm a hobbyist Rust and C developer, as well as being yet another <a href="
 <p>
 	<h5>chat</h5>
 	<code>/msg kiedtl</code> on <a href="https://tilde.chat">tilde.chat</a><br>
-	<code>/msg zr</code> on <a href="https://libera.chat">libera</a>
+	<code>/msg cot</code> on <a href="https://libera.chat">libera</a>
 </p>
 
 <p><h1>Projects</h1></p>
