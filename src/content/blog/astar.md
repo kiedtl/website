@@ -456,6 +456,66 @@ Summary
 
 That's another 200ms shaved off!
 
+## Optimization: Don't store Node's coordinate
+
+(Added 2021-08-12)
+
+It turns out we can remove the `coord` field from the `Node` struct, making
+the node matrix smaller and more cache-friendly. (Thanks again to
+[/u/aotdev](https://old.reddit.com/r/roguelikedev/comments/p1w4nn/optimizing_the_a_algorithm/h8jhs91/)
+for pointing this out!)
+
+Simply put, since we're storing nodes in a matrix, which is contiguous in
+memory, we can calculate the coordinate of a node by subtracting it from
+the address of the matrix's first element and doing some division/modulo
+operations.
+
+So, the `Node` struct is now just 32 bytes! (Zig):
+
+```
+const Node = struct {
+    parent: ?Coord,
+    g: usize,
+    h: usize,
+    state: NodeState,
+};
+```
+
+The following function is used to calculate the coordinates from a `Node`
+pointer (Zig):
+
+```
+inline fn coordFromPtr(ptr: *Node, matrix_start: *Node, z: usize) Coord {
+    const off = (@ptrToInt(ptr) - @ptrToInt(matrix_start)) / @sizeOf(Node);
+    const x = off % WIDTH;
+    const y = off / WIDTH;
+    return Coord.new(z, x, y);
+}
+```
+
+Benchmarks (earlier ones omitted):
+
+```
+Benchmark #1: ./rl-matrix-manhattan-parent_ptr-prechk
+  Time (mean ± σ):     890.5 ms ±  16.6 ms    [User: 250.1 ms, System: 67.9 ms]
+  Range (min … max):   869.6 ms … 910.2 ms    5 runs
+
+Benchmark #2: ./rl-matrix-manhattan-parent_ptr-prechk-no_ol_iter
+  Time (mean ± σ):     678.7 ms ±  26.8 ms    [User: 149.1 ms, System: 69.0 ms]
+  Range (min … max):   650.2 ms … 712.8 ms    5 runs
+
+Benchmark #3: ./rl-matrix-manhattan-parent_ptr-prechk-no_ol_iter-no_coord
+  Time (mean ± σ):     600.1 ms ±  14.0 ms    [User: 167.5 ms, System: 20.0 ms]
+  Range (min … max):   581.2 ms … 617.9 ms    5 runs
+
+Summary
+  './rl-matrix-manhattan-parent_ptr-prechk-no_ol_iter-no_coord' ran
+    1.13 ± 0.05 times faster than './rl-matrix-manhattan-parent_ptr-prechk-no_ol_iter'
+    1.48 ± 0.04 times faster than './rl-matrix-manhattan-parent_ptr-prechk'
+```
+
+\~80ms removed. Not bad!
+
 ## Closing Thoughts
 
 I've tried the following optimizations:
@@ -464,8 +524,10 @@ I've tried the following optimizations:
 - Using an overestimating heuristic
 - Storing parent nodes as pointers
 - Not iterating over the open list
+- Not storing the `Node`'s coordinate with the `Node`
 
-And as a result, almost three seconds were shaved off (3.66s vs 690ms).
+And as a result, <s>almost</s> more than three seconds were shaved off
+(3.66s vs <s>690ms</s> 600ms).
 
 Of course, there are many more optimizations that you can use, depending on
 your map's properties. For instance, if your map's obstacles are completely
