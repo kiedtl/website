@@ -10,6 +10,11 @@ the first time. Wondering exactly how large it was, I thought I'd write a
 quick and dirty crawler for it, which you can find
 [here](https://github.com/lptstr/curiosity).
 
+**Update 2021-10-20**: I thought I'd mention that at the time of writing
+that crawler I had little to knowledge of the Gemini protocol; as a result,
+I omitted a lot of crucial steps when crawling (like checking the MIME type
+of the response), possibly leading to highly inaccurate results.
+
 It took me an unusual amount of time to get a working crawler (I've never
 done network or async programming in Rust before), but at last, with the
 help of `cadey`'s `gemtext`-parsing library, I had a prototype. I started
@@ -65,3 +70,7 @@ some vague idea of setting up a small search engine, but given that I
 haven't the money to set up my own server or purchase a suitable domain, I
 don't think that'll happen. I'd hate to hog resources on a
 [tilde](tildeverse.org).
+
+**Update 2021-10-20**: note, there are at least two Gemini capsules that
+mirror the entire contents of Wikipedia. I'm sure a non-trivial portion of
+those 45,334 urls come from those capsules; I haven't checked, though.

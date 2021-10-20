@@ -40,4 +40,4 @@ familiar with the Lua API it's going to take quite a while.
 
 And now for the screenshot:
 
-![awesome screenshot (pun intended!)](/~kiedtl/images/scrots/awesome.jpg)
+![](/~kiedtl/images/scrots/awesome.jpg)

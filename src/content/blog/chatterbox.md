@@ -83,8 +83,8 @@ Therefore, a terse error message is more likely to get properly read than a
 verbose error.
 
 "But wait! PowerShell's message is more user-friendly, because it reminds
-the user to check their spelling!" Pffft. Anyone smart (for lack of a
-better word!) enough to use PowerShell will know that they should
+the user to check their spelling!" Pffft. Anyone with more than about 30
+minutes of experience with PowerShell will know that they should
 double-check their spelling without an error message telling them to do so.
 
 And even in "normal" applications -- where the majority of users are not
@@ -151,8 +151,8 @@ up anything:
 For one thing, repeating the entire search query in bold isn't necessary.
 The user already knows what they searched for.
 
-The suggestions, however,
-are OK since they are visually separate from the error.
+The suggestions, however, are OK since they are visually separate from the
+error.
 
 Fixed:
 
@@ -255,7 +255,8 @@ cat: invalid: invalid path
 
 ## conclusion
 
-Terser is better. Software isn't the place to show off your writing skills.
+Terser is better; just take care to not strip out necessary information.
+Software isn't the place to show off your writing skills.
 
 And if you really must include some kind of hint or suggestion, make it
 visually separate from the error message.

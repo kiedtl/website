@@ -55,12 +55,11 @@ Raspberry Pi Zero. Python takes ages just to start, while bash, whose own
 instantly. [^8])
 
 To be a good replacement for something, it's important that the replacement
-has all the advantages of the program it is replacing. But I still haven't seen
-a shell replacement that is portable across all platforms and architectures,
-tolerably fast, and is properly standardized. PowerShell is slow and bloated
-(since it is written in C#) and does not work on ARM architectures. Oil Shell
-is partly implemented in Python, which as we already know, is really, really
-show.
+has all the advantages of the program it is replacing. But I still haven't
+seen a shell replacement that is portable across all platforms and
+architectures, tolerably fast, and is properly standardized. PowerShell,
+for example, is slow and bloated (since it is written in C#) and does not
+work on ARM architectures.
 
 ### conclusion
 

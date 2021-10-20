@@ -721,6 +721,11 @@ Cheers!
 
 ---
 
+Note: If I still exist by late 2022 (not likely), when Hare is supposed to
+reach v1.0, I'll be updating this post.
+
+---
+
 [^1]: Yes, I know that Rust is a C++ replacement, not a C replacement. What
   I mean by that is that I use Rust in the same places I'd normally use C.
 
