@@ -117,7 +117,10 @@ deliberately choosing not to not support them means you're not going to
 replace a *fraction* of the C code that's been written out there. Hell, a
 major advantage of using C in the first place is the fact that there are
 *battle-tested* compilers *for every imaginable platform on earth*. A
-platform *isn't a viable platform* until it has a *C compiler*. *Sheesh*.
+platform *isn't a viable platform* until it has a *C compiler* (Drew
+himself notes this in a
+[post](https://drewdevault.com/2017/01/30/Lessons-to-learn-from-C.html)
+from early 2017)). *Sheesh*.
 
 > ## Architectures
 >
