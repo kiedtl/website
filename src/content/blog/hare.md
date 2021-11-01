@@ -120,7 +120,7 @@ major advantage of using C in the first place is the fact that there are
 platform *isn't a viable platform* until it has a *C compiler* (Drew
 himself notes this in a
 [post](https://drewdevault.com/2017/01/30/Lessons-to-learn-from-C.html)
-from early 2017)). *Sheesh*.
+from early 2017). *Sheesh*.
 
 > ## Architectures
 >
@@ -186,9 +186,11 @@ than that. I think I'll write a Nga implementation for
 [RetroForth](https://forth.works).  I'll be doing a loose port of
 `vm/nga-c/barebones.c`, the minimalist C implementation of Nga.
 
-> For those who are unfamiliar with RetroForth and Nga: RetroForth is a
-> highly portable, modernised, general-purpose FORTH scripting language, and
-> Nga is the VM Retro is implemented on.
+{% sidenote() %}
+For those who are unfamiliar with RetroForth and Nga: RetroForth is a
+highly portable, modernised, general-purpose FORTH scripting language, and
+Nga is the VM Retro is implemented on.
+{% end %}
 
 ---
 
