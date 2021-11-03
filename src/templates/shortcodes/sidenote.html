@@ -1,4 +1,4 @@
 <div class="sidenote-icon">&#9432;</div>
-<p class="sidenote">
-	Note: {{ body }}
-</p>
+<div class="sidenote">
+	{{ body | markdown(inline=true) | safe }}
+</div>

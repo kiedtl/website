@@ -354,15 +354,22 @@ if (a > b) {
 // What's the value of y if a < b?
 ```
 
-> Sidenote: this "feature" can be used to implement rand():
-> ```
-> size_t
-> my_rand(void)
-> {
->         size_t x;
->         return x;
-> }
-> ```
+{% sidenote() %}
+
+This "feature" can be used to implement rand():
+```
+size_t
+rand(void)
+{
+        // size_t x = 4;
+        size_t x;
+
+        // The value of x is undefined now.
+        return x;
+}
+```
+
+{% end %}
 
 Some compilers warn you of this, others don't. Hare avoids the issue by
 disallowing all uninitialised variables entirely:
@@ -579,7 +586,7 @@ added as the language matures, though.
 implemented in Hare.
 
 
-## Lack of generics
+#### Lack of generics
 
 One flaw(?) of Hare is *blazingly* obvious: the [lack of
 generics](https://harelang.org/blog/2021-03-26-high-level-data-structures/):
@@ -613,7 +620,7 @@ tl;dr Regarding generic data structures, Hare "puts the ball in your
 court", which is a neat euphemism for "forces you to reinvent the wheel".
 
 
-## No functional programming
+#### No functional programming
 
 ```
 [me whining about how Hare doesn't have a pipe operator]
@@ -666,14 +673,14 @@ And, for the record, I agree with him. In a language without `map`,
 really serve much of any purpose.
 
 
-## Strong typing
+#### Strong typing
 
 Unlike C, in Hare one must do a lot of explicit casting between types,
 making it significantly harder to slash your left thumb off while trying to
 dereference an `int` cast as a `struct foo *`.
 
 
-## Subtyping
+#### Subtyping
 
 In some modules in the standard library (see: `hash::adler32`,
 `hash::crc32`, &c) a technique called "subtyping" is used, where struct B,
