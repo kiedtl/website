@@ -12,12 +12,12 @@ default_language = "en"
 generate_rss = true
 
 [extra]
-headers = "<meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><meta name=\"google-site-verification\" content=\"_Wt6XNMQUlHbi_wkIVeSwhekdKjuG3rmB1tYec-zu1c\" />"
+headers = "<meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'>"
 
-footer = "<br><a rel='license' href='http://creativecommons.org/licenses/by-nc-nd/4.0/'><img alt='Creative Commons License' style='border-width:0' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAIAAAD8q9/YAAAABGdBTUEAANbY1E9YMgAAAZ9JREFUSMflljFrwkAUx98H6J3N6KbXFjtJJZNIB+Ntds0kdIxDp3boTYJ0UDcLutxXOCfbpejQSRE5+g38CvcVrtCTNJVLiFAKaR4ZwvH+yf3yf+/lAHIYOjfxDTybi+jVvesCwGg0ssoopRjjKZ+Y5O3HtnBayISvduApn2CM42hD5splxeQv3hf9fj/DwI3rRrlcTq4NKSUAdG47RrKRm/ZNO6vACCNjr5SSEAIAlFKlFKUUAAghUkpjcs2thVU9fh5b58Lhy37eWxejKmtynOSwV9MA9556ALBcLrXWhBDf97XW7Cscx1FKcc6FEGYRYRRW9Wq9sj794CZhN3GZvyWxAz883gOAlFIpFZ1bvu+7rhutasYYxtioXt9e1tt1gsNWT+J2HPdp0kuOALY6TCkNgsA4zBjjnO8dRkc4nOCVtYzTOHyUJL6H0b6HhRCO4wBAEARhD7uuu9vttNatVqt6VU3Zw+mB/7qHZ3NRb9RLpVKOpvSUTxA6GQ6HCcCe551fnP2T/3A4ugaDgZW26TWLxWK2T1r5OkvnKj4Bfm7H+J/sGfMAAAAASUVORK5CYII=' /></a>"
+footer = "<hr><p>Kiëd Llaentenn © 2019-2021 — <a rel='license' href='http://creativecommons.org/licenses/by-nc-nd/4.0/'>CC BY-NC-ND 4.0</a></p>"
 
-# to be used with footer!
-footer_blog = "<br><script src=\"https://utteranc.es/client.js\" repo=\"kiedtl/website\" issue-term=\"pathname\" label=\"comment\" theme=\"github-light\" crossorigin=\"anonymous\" async></script><noscript>Javascript is required for comments.</noscript>"
+# to be alongside footer
+footer_blog = "<hr><script src=\"https://utteranc.es/client.js\" repo=\"kiedtl/website\" issue-term=\"pathname\" label=\"comment\" theme=\"github-light\" crossorigin=\"anonymous\" async></script><noscript>Javascript is required for comments.</noscript>"
 
 homelink = "<a id=\"homelink\" href='/~kiedtl/'>⟵ Back</a>"
 
