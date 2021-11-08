@@ -1,7 +1,7 @@
 +++
 title = "cel7: a fantasy console-like"
 draft = false
-date = 2021-11-03
+date = 2021-11-06
 template = "blog.html"
 +++
 
@@ -121,6 +121,8 @@ time, documentation is very sparse (there's no docs on the sprite or color
 format), and worst of all, there's no source code -- just binaries for Windows
 and x86_64 Linux. I had to borrow a friend's Windows machine just to try it out,
 as the only computer I have access to at present is an ARM machine.
+
+![cel7 help message](/~kiedtl/images/cel7/cel7-orig-helpmsg.png)
 
 This project intrigued me too much to let it go, though. So, I started an open
 source reimplementation termed 'cel7ce' (i.e., cel7 community edition) on
