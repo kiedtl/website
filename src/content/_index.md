@@ -29,7 +29,7 @@ Hey! I'm a hobbyist Rust and C developer, as well as being yet another <a href="
 <p>
 	<h5>chat</h5>
 	<code>/msg kiedtl</code> on <a href="https://tilde.chat">tilde.chat</a><br>
-	<code>/msg cot</code> on <a href="https://libera.chat">libera</a>
+	<code>/msg cot</code> or <code>/msg kiedtl</code> on <a href="https://libera.chat">libera</a>
 </p>
 
 <p><h1>Projects</h1></p>

@@ -90,7 +90,7 @@ long as you attribute me.
 
 Kindly send feedback, hate mail, and other `cursed_font`-related
 bikeshedding to the author's email at
-`a2llZHRsIO+8oCB0aWxkZSBbZG90XSB0ZWFtCg==`, or `/msg kiedtl` on Freenode.
+`a2llZHRsIO+8oCB0aWxkZSBbZG90XSB0ZWFtCg==`, or `/msg cot` on libera.chat.
 Any advice on improving the glyphs in this font would be greatly
 appreciated.
 
