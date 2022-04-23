@@ -495,7 +495,7 @@ for (let i = 0z; i < sz; i += 1) append(buf, 0);
 // Reading an array of bytes into an array of i32's in Hare.
 // Not for children under the age of 18.
 io::read(fp, buf[..])?;
-let newbuf: *[*]i32 = (buf: *[*]u8: *[*]i32);
+let buf_i32: *[*]i32 = (buf: *[*]u8: *[*]i32);
 
 // The same thing, in C:
 fread(&buf, sizeof(int32_t), fileLen, fp);
@@ -588,7 +588,7 @@ implemented in Hare.
 
 #### Lack of generics
 
-One flaw(?) of Hare is *blazingly* obvious: the [lack of
+One flaw of Hare is *blazingly* obvious: the [lack of
 generics](https://harelang.org/blog/2021-03-26-high-level-data-structures/):
 
 > Hare does not support generics, and our approach to data structures is
@@ -668,9 +668,9 @@ a "future research area" but anonymous functions won't be added:
 <ddevault> and having two things is more complicated than having one thing
 ```
 
-And, for the record, I agree with him. In a language without `map`,
-`reduce`, and other generic high-order functions, anonymous functions don't
-really serve much of any purpose.
+<s>And, for the record, I agree with him. In a language without
+<code>map</code>, <code>reduce</code>, and other generic high-order functions,
+anonymous functions don't really serve much of any purpose.</s>
 
 
 #### Strong typing
