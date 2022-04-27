@@ -5,8 +5,14 @@ date = 2021-04-12
 template = "blog.html"
 
 [extra]
-unlisted = true
+unlisted = false
 +++
+
+{% sidenote() %}
+**Update 2022-04-27**: Since writing this post, Hare has undergone many changes,
+and has had its first public release. It's more than a year since I last looked
+at Hare, so expect this article to be full of outdated information.
+{% end %}
 
 # Thoughts on Hare
 
