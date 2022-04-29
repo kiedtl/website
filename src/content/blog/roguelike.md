@@ -13,13 +13,15 @@ losing interest. It's a reboot of my last attempt, which stalled last year
 due to overengineering, bad design choices, and extremely unrealistic
 goals.
 
-> For those who don't know what a roguelike is:
->
-> The definition is being stretched farther and farther each year, but for
-> the most part "roguelike" remains a game genre characterized by 2D
-> gameplay, simulationistic environments, and turn-based mechanics.
->
-> Look up DCSS, Brogue, or Cogmind to see some examples.
+{% sidenote() %}
+For those who don't know what a roguelike is:
+
+The definition is being stretched farther and farther each year, but for the
+most part "roguelike" remains a game genre characterized by 2D gameplay,
+simulationistic environments, and turn-based mechanics.
+
+Look up DCSS, Brogue, or Cogmind to see some examples.
+{% end %}
 
 ![empty room](//tilde.team/~kiedtl/images/rl/jul16-mapgen-lit.png)
 <br>
