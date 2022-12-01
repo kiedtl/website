@@ -3,7 +3,12 @@ title = "Thoughts on TGGW"
 draft = false
 date = 2022-04-23
 template = "blog.html"
+
+[extra]
+unlisted = true
 +++
+
+TODO: rewrite this garbage
 
 # Thoughts on TGGW
 
