@@ -3,36 +3,19 @@ title = "~kiedtl"
 +++
 
 <p>
-	<img height="128px" width="128px" align="left" id="avatar"
-		style="margin-botton:20px;margin-right:20px"
-		src="https://github.com/kiedtl.png" />
-	<h1>~kiedtl</h1>
-</p> <br> <br>
+<img height="150px" width="150px" align="left" id="avatar"
+	style="margin-botton:20px;margin-right:20px"
+	src="https://github.com/kiedtl.png" />
+<h2>~kiedtl</h2>
+Yet another <a href="https://www.removeddit.com/r/linux/comments/eqllsf/_/feusx3x/">outspoken anti-<code>systemd</code> FUD spreader</a>. Loves Zig, Rust, <a href="https://en.wikipedia.org/wiki/Joy_(programming_language)">concatenative</a> <a href="https://en.wikipedia.org/wiki/Forth_(programming_language)">stack-based</a> languages, <a href="https://9p.io/plan9/">vicious space bunnies</a>, <a href="https://kisslinux.org">minimalism</a>, and <a href="https://github.com/kiedtl/roguelike">roguelikes</a>.
 
-Hey! I'm a hobbyist Rust and C developer, as well as being yet another <a href="https://www.removeddit.com/r/linux/comments/eqllsf/_/feusx3x/">outspoken anti-<code>systemd</code> FUD spreader</a>. I've created dozens of completely pointless utilities of which I am the sole user. I love <a href="https://en.wikipedia.org/wiki/Joy_(programming_language)">concatenative</a> <a href="https://en.wikipedia.org/wiki/Forth_(programming_language)">stack-based</a> languages, <a href="https://9p.io/plan9/">vicious space bunnies</a>, <a href="https://kisslinux.org">minimalism</a>, and <a href="https://github.com/kiedtl/roguelike">roguelikes</a>.
-
-<p>
-	<h5>email</h5>
-	<code>a2llZHRsIO+8oCB0aWxkZSBbZG90XSB0ZWFtCg==</code>
+[email](data:,a2llZHRsIO+8oCB0aWxkZSBbZG90XSB0ZWFtCg==) ·
+[github](https://github.com/kiedtl) ·
+[lobste.rs](https://lobste.rs/u/technetium) ·
+`cot` @ [libera.chat](https://libera.chat)
 </p>
 
-<p>
-	<h5>projects</h5>
-	<a href="https://github.com/kiedtl">github</a> and <a href="//git.sr.ht/~kiedtl/">sr.ht</a>
-</p>
-
-<p>
-	<h5>social</h5>
-	<a href="https://lobste.rs/u/technetium">lobste.rs</a> and <a href="https://reddit.com/u/kiedtl">reddit</a>
-</p>
-
-<p>
-	<h5>chat</h5>
-	<code>/msg kiedtl</code> on <a href="https://tilde.chat">tilde.chat</a><br>
-	<code>/msg cot</code> or <code>/msg kiedtl</code> on <a href="https://libera.chat">libera</a>
-</p>
-
-<p><h1>Projects</h1></p>
+<p><h3>Projects</h3></p>
 
 <table>
 <thead>

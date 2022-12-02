@@ -17,13 +17,15 @@
 -->
 
 <style>
+@import url('https://rsms.me/inter/inter.css');
 @import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@3/distr/fira_code.css);
-html{scroll-behavior:smooth;line-height:1.5;sans-serif;font-feature-settings:"ss01" 1,"kern" 1,"liga" 1,"zero" 1,"cv03" 1,"cv02" 1,"cv04" 1,"tnum" 1;font-size:12pt}
-body{overflow-y:scroll;font-family:monospace;background:#ffffff;font-color:#232323}
+html{scroll-behavior:smooth;line-height:1.5,sans-serif;font-size:12pt}
+body{overflow-y:scroll;font-family:Inter, sans-serif;background:#ffffff;font-color:#232323}
 img,main,pre>code{display:block;margin:25px auto}
-main{padding:20px;max-width:840px;line-height:1.5;word-wrap:break-word}
+main{padding:20px;max-width:750px;line-height:1.5;word-wrap:break-word}
 img{max-width:100%;display:block;padding-bottom:24px}
-img.inline{display:inline; padding:0px; margin:0px}
+img.inline{max-height: 1.0rem; display: inline-block; vertical-align: middle; image-orientation: from-image; padding:0px; margin:0px}
+img.footimgs{max-height: 0.7rem;display: inline-block; vertical-align: middle; image-orientation: from-image; cursor: pointer; box-shadow: none;}
 blockquote{border-left:7px solid #ddd;padding:0 14px;color:#444;margin:0}
 h1,h2,h3,h4{line-height:1.2}
 table{border-spacing:1px;display:table;width:100%;border-collapse:separate}
@@ -32,13 +34,13 @@ td:first-child{width:70%;max-width:1px;white-space:nowrap;text-overflow:ellipsis
 td{display:table-cell;vertical-align:inherit;}
 a,a:active,a:hover,a:visited{transition:ease .2s;color:#232323}
 a#homelink{text-decoration:none}
-code,pre{font-family:fira code vf,monospace;color:#000}
+code,pre{font-family:fira code vf,monospace;color:#000;font-feature-settings:"ss01" 1,"kern" 1,"liga" 1,"zero" 1,"cv03" 1,"cv02" 1,"cv04" 1,"tnum" 1}
 code{white-space:pre-wrap;padding:0.2rem;color:#d344e2;}
-pre{overflow:auto!important;padding:14px;border:2px solid #666;border-radius:15px;padding-top:0px;padding-bottom:0px;margin-bottom:24px}
+pre{overflow:auto!important;padding:12px;border:2px solid #666;border-radius:15px;padding-top:0px;padding-bottom:0px;margin-bottom:24px}
 pre>code{display:block;white-space:pre!important;color:#000;border:none;white-space:pre-wrap}
-.sidenote{padding:14px;border:2px dashed #666;border-radius:15px;margin-top:24px;margin-bottom:24px}
+.sidenote{padding:12px;border:2px dashed #666;border-radius:15px;margin-top:24px;margin-bottom:24px}
 .sidenote-icon{display:inline-block;float:left;position:relative;left:-10px;top:5px;font-size:16pt;background-color:#fff}
-hr{margin:0;margin-bottom:1.5rem;margin-top:1.5rem;border:2px solid #cacbca}
+hr{margin:0;margin-bottom:1.0rem;margin-top:1.0rem;border:2px solid #dddddd}
 h1,h2,h3,h4{line-height:1.2}
 h1{font-size:28pt}
 h2{font-size:21pt}
@@ -58,7 +60,7 @@ h4,h5,h6{margin-bottom:1.5rem;margin-top:2rem}
 {% endblock content %}
 
 {% block posts %}
-<p><h1>Blag</h1></p>
+<h3>Blag</h3>
 <table>
 <thead></thead>
 <tbody>

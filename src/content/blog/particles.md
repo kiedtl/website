@@ -1,11 +1,8 @@
 +++
 title = "Building an ASCII Particle Engine in Janet"
 draft = false
-date = 2020-03-12
+date = 2022-12-02
 template = "blog.html"
-
-[extra]
-unlisted = true
 +++
 
 # Building an ASCII Particle Engine in Janet
@@ -16,29 +13,38 @@ mainly to provide some visual effects to go alongside usage of monster or player
 abilities, reducing dependence on the message log to notify the player in such
 cases.
 
-<Image of flamethrower or something>
+![](//tilde.team/~kiedtl/images/rl/particles/particle-condense.gif)
+![](//tilde.team/~kiedtl/images/rl/particles/flamethrower.gif)
 
-Many of the effects are modelled after [Cogmind's](TODO) particle effects, and
-the similarities are especially pronounced in, for example, the explosion
-animations. However, since Oathbreaker does not revolve around big shooty guns
-firing shiny projectiles in a single direction, most of the later effects
-necessarily took a more original turn.
+Many of the effects are modelled after
+[Cogmind's](https://www.gridsagegames.com/blog/2014/04/making-particles/)
+particle effects, and the similarities are especially pronounced in, for
+example, the explosion animations. However, since Oathbreaker does not revolve
+around big shooty guns firing shiny projectiles in a single direction, most of
+the later effects necessarily took a more original turn.
 
-<Image of sweeping beams, either ro-distraction or call undead>
+![](//tilde.team/~kiedtl/images/rl/particles/call-undead.gif)
+![](//tilde.team/~kiedtl/images/rl/particles/particle-beams2.gif)
 
-The engine, implemented in the [Janet](TODO) scripting language, is quite small
-at about 450 of code, not including effect templates or FFI glue code in the
-main game engine. The remaining 400 lines of code is mostly effects definitions
-and effect templates. If you like, you can view the entire thing [here](TODO).
 
-My implementation is as follows: each effect definition is defined simply as a
-list of emitters which are spawned in the `origin` coordinate, passed to the
-animation engine alongside a `target` coordinate at the start of the effect.
-Each emitter has a specific particle that it creates at its location (or any
-other arbitrary location) at set intervals, before aging out and being
-deactivated. Particles, in their turn, move at a set speed towards the target
-coordinate (which may be the same as the initial `target` coordinate, but more
-often is modified by the emitter), before dying.
+The engine, implemented in the [Janet](https://janet-lang.org/) scripting
+language, is quite small at about 450 of code, not including effect templates or
+FFI glue code in the main game engine. The remaining 400 lines of code is mostly
+effects definitions and effect templates. If you like, you can view the entire
+thing
+[here](https://github.com/kiedtl/roguelike/blob/master/data/scripts/particles.janet).
+
+![](//tilde.team/~kiedtl/images/rl/particles/death-explosion.gif)
+
+My implementation is as follows: The game engine first calls the Janet particle
+engine, which grabs the effect definition from a table and passes an `origin`
+and a `target` coordinate. Each effect definition is defined simply as a list of
+emitters which are spawned in the `origin` coordinate, and each emitter has a
+specific particle that it creates at its location (or any other arbitrary
+location) at set intervals, before aging out and being deactivated. Particles,
+in their turn, move at a set speed towards its target (which may be the same as
+the initial `target` coordinate, but is usually modified by the emitter), before
+dying.
 
 This architecture would be quite inflexible, but each particle (and emitter)
 also possesses a set of *triggers* that can be conditionally executed. In this
@@ -49,7 +55,7 @@ chained together.
 
 Let's take a tour of one of the first implemented effects, the explosion.
 
-<Image of explosion, just grab it from mastodon or whatever.>
+![](//tilde.team/~kiedtl/images/rl/particles/particle-explosions.gif)
 
 ```
 (new-emitter @{
@@ -272,8 +278,8 @@ animations. This approach has both advantages and drawbacks.
 Being my first particle engine, I was at first unsure whether writing a particle
 engine in a scripting language would not incur a significant performance
 penalty. My fears were unfounded, of course, since due to the nature of ASCII
-even the largest of effects only need a maximum <TODO> particles, not the
-thousands that might be otherwise required in a 3D game.
+even ridiculously large effects only need about 800 particles, not the thousands
+that might be otherwise required in a 3D game.
 
 But that doesn't really answer the question, after all, I could have easily have
 just picked Lua, Gluon, Wren, or other ones of the vigintillions of scripting
@@ -325,17 +331,16 @@ And this isn't a contrived example -- it's straight from the
 `pulse-twice-explosion` animation. Feast your eyes on the air pouring out
 scalding bolts of electricity into a helpless adventurer's veins:
 
-<image>
+![](//tilde.team/~kiedtl/images/rl/particles/elec-explosion.gif)
 
 This isn't to say that I ever intend to rewrite the particle engine in any other
 language. It works good enough, despite its flaws, and most of the effects are
 write-only anyway. If I had to write it again, though, I would seriously
 consider simply doing it in Lua.
 
-But, hey, I like prototypes.
+But, hey, I like Janet prototypes.
 
-<image>
-
-<image>
-
-<image>
+![](//tilde.team/~kiedtl/images/rl/particles/statues.gif)
+![](//tilde.team/~kiedtl/images/rl/particles/elec-swirly.gif)
+![](//tilde.team/~kiedtl/images/rl/particles/airblast.gif)
+![](//tilde.team/~kiedtl/images/rl/particles/elec-bolt.gif)

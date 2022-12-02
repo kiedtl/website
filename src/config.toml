@@ -12,9 +12,9 @@ default_language = "en"
 generate_feed = true
 
 [extra]
-headers = "<meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'>"
+headers = "<meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'> <link rel='icon' type='image/x-icon' href='//github.com/kiedtl.png'>"
 
-footer = "<hr> <table> <thead></thead> <tbody> <tr> <td align='left'><p>Kiëd Llaentenn © 2019-2022 — <a rel='license' href='http://creativecommons.org/licenses/by-nc-nd/4.0/'>CC BY-NC-ND 4.0</a></p></td> <td align='right'><img class=inline src='/~kiedtl/images/badges/netscape/dark.gif' /></td> </tr> </tbody> </table>"
+footer = "<hr> <table> <thead></thead> <tbody> <tr> <td align='left'><p>Kiëd Llaentenn © 2019-2022 — <a rel='license' href='http://creativecommons.org/licenses/by-nc-nd/4.0/'><img class=inline src='//tilde.team/~kiedtl/images/cc.svg' /></a></p></td> <td align='right'><a href='https://github.com/kiedtl/badges'><img class=inline src='/~kiedtl/images/badges/netscape/dark.gif' /></a></td> </tr> </tbody> </table>"
 
 # to be alongside footer
 footer_blog = "<hr><script src=\"https://utteranc.es/client.js\" repo=\"kiedtl/website\" issue-term=\"pathname\" label=\"comment\" theme=\"github-light\" crossorigin=\"anonymous\" async></script><noscript>Javascript is required for comments.</noscript>"
