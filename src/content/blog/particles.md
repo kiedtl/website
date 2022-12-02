@@ -9,14 +9,14 @@ template = "blog.html"
 
 Over the past month, I've been busy adding a set of simple particle effects to
 my hobby roguelike, [Oathbreaker](https://github.com/kiedtl/roguelike). This was
-mainly to provide some visual effects to go alongside usage of monster or player
-abilities, reducing dependence on the message log to notify the player in such
-cases.
+mainly intended to provide some visual effects to go alongside the usage of
+monster or player abilities, reducing dependence on the message log to notify
+the player in such cases.
 
-![](//tilde.team/~kiedtl/images/rl/particles/particle-condense.gif)
+![](//tilde.team/~kiedtl/images/rl/particles/condense.gif)
 ![](//tilde.team/~kiedtl/images/rl/particles/flamethrower.gif)
 
-Many of the effects are modelled after
+Many of the effects are modeled after
 [Cogmind's](https://www.gridsagegames.com/blog/2014/04/making-particles/)
 particle effects, and the similarities are especially pronounced in, for
 example, the explosion animations. However, since Oathbreaker does not revolve
@@ -29,7 +29,7 @@ the later effects necessarily took a more original turn.
 
 The engine, implemented in the [Janet](https://janet-lang.org/) scripting
 language, is quite small at about 450 of code, not including effect templates or
-FFI glue code in the main game engine. The remaining 400 lines of code is mostly
+FFI glue code in the main game engine. The remaining 400 lines are mostly
 effects definitions and effect templates. If you like, you can view the entire
 thing
 [here](https://github.com/kiedtl/roguelike/blob/master/data/scripts/particles.janet).
@@ -37,14 +37,14 @@ thing
 ![](//tilde.team/~kiedtl/images/rl/particles/death-explosion.gif)
 
 My implementation is as follows: The game engine first calls the Janet particle
-engine, which grabs the effect definition from a table and passes an `origin`
-and a `target` coordinate. Each effect definition is defined simply as a list of
-emitters which are spawned in the `origin` coordinate, and each emitter has a
-specific particle that it creates at its location (or any other arbitrary
-location) at set intervals, before aging out and being deactivated. Particles,
-in their turn, move at a set speed towards its target (which may be the same as
-the initial `target` coordinate, but is usually modified by the emitter), before
-dying.
+engine, which grabs the effect definition from a global table and passes an
+`origin` and a `target` coordinate. Each effect definition is defined simply as
+a list of emitters which are spawned in the `origin` coordinate, and each
+emitter has a specific particle that it creates at its location (or any other
+arbitrary location) at set intervals, before aging out and being deactivated.
+Particles, in their turn, move at a set speed towards its target (which may be
+the same as the initial `target` coordinate, but is usually modified by the
+emitter), before dying.
 
 This architecture would be quite inflexible, but each particle (and emitter)
 also possesses a set of *triggers* that can be conditionally executed. In this
@@ -97,13 +97,12 @@ Let's take a tour of one of the first implemented effects, the explosion.
 In case you're unfamiliar with Janet's syntax, here's a quick rundown:
 
 - `@{ :foo "bar" }` creates a mutable table with a `:foo` field set to `"bar"`.
-- `{ :foo "bar" }` is the same, but the table is immutable (notice the missing
-  `@`).
+- `{ :foo "bar" }` is the same, but the table is immutable.
 - `@[] and []` create arrays and tuples (immutable arrays), respectively.
-- `:foo` creates an "identifier", which is basically a fancy immutable
-  created-at-compile-time-only string.
-- `(fn [foo bar baz &])` specifies creates a function which takes `foo`, `bar`,
-  and `baz`, and then ignores any additional arguments (due to the `&`).
+- `:foo` creates an "identifier" (which is, simply put, a fancy immutable
+  string).
+- `(fn [foo bar baz &])` creates a function which takes `foo`, `bar`, and `baz`,
+  and then ignores any additional arguments (due to the `&`).
 - `(bar :foo)` is the same as `bar.foo`.
 - `(:foo bar)` is the same as `bar.foo()`.
 {% end %}
@@ -123,12 +122,12 @@ Let's get some of the basic emitter stuff out of the way.
   arbitrary point some distance away.
 - `:get-spawn-speed (Emitter :SSPD-min-sin-ticks)` sets the `:get-spawn-speed`
   callback (which is used to modify the speed of particles) to the
-  `SSPD-min-sin-ticks` preset callback. Basically, this preset causes each
+  `SSPD-min-sin-ticks` preset callback. This preset causes each
   particle to be varied slightly according to `(sin(current_frame_number) + 1) /
-  2`, to avoid the explosion appearing too even.
+  2`, preventing the explosion from appearing too even.
 
 Following that, we have our particle definition which the emitter will use when
-spawning new particles. It starts off by specifying an appearance (blank, with a
+spawning new particles. It starts by specifying an appearance (blank, with a
 background of `0xffff00`, mixing with the original in-game tile's background
 with a factor of 0.8) and a speed (2 tiles per turn, further modified by the
 emitters `:get-spawn-speed` callback covered earlier).
@@ -248,30 +247,44 @@ over the colors to get it to look just right (and realize the need for the
 "embers").
 
 Notice in particular that the effect is completely decoupled from the game
-effects: in the explosion, for example, particle are not responsible for doing
-the job of destroying mobs or eviscerating helpless goblins (which is done
-separately, right before the particle effect), only for creating the visual
-animations. This approach has both advantages and drawbacks.
+effects: in the explosion, for example, particles are not responsible for doing
+the job of destroying objects or eviscerating helpless goblins, only for
+creating the visual animations. The changes made to the game world are always
+executed separately, right before (or, occasionally, after) the animation is
+called.
 
-- Pro: It vastly simplifies the FFI glue code (the *only* thing the FFI does
-  right now is call the animation function with a string argument (specifying
-  the effect to use) and a few coordinates), negating the need to allow Janet
-  code to check if a certain tile is a wall, if there's a monster at a
-  particular coordinate, if there are objects in the explosion which should
-  create secondary explosions, etc.
-- Pro: it ensures that animations are completely decoupled from gameplay, which
-  is a huge help if the game allows the player to have *allies* that could
-  potentially walk out of the player's line-of-sight and start fighting. If the
-  particle engine were responsible for modifying game state, it would be
-  necessary for the animation to play *out of the player's line-of-sight* and
-  could introduce unnecessary lag.
-- Con: the effects of an particular ability in-game won't match perfectly with
-  the ability's animation. This is a non-issue for a simple damage-dealing bolt
-  animation, but becomes extremely apparent for explosions, as you have the
-  explosion expanding in *empty space* (since the explosion's radius was already
-  carved out prior to running the animation). (Just as I wrote this it occurred
-  to me that I could remove the "expanding" component of the explosion and
-  potentially negate this issue, but I have yet to explore that possibility.)
+One benefit of this approach is that it vastly simplifies the FFI glue code (the
+only thing the FFI does right now is call the animation function with a string
+argument (specifying the effect to use) and a few coordinates), negating the
+need to allow Janet code to check if a certain tile is a wall, if there's a
+monster at a particular coordinate, if there are objects in the explosion which
+should create secondary explosions, etc.
+
+Another advantage is that animations are completely decoupled from gameplay,
+which is highly desirable if the game allows the player to have *allies* that
+could potentially walk out of the player's line-of-sight and start fighting. If
+the particle engine were responsible for modifying game state, it would be
+necessary for the animation to play *out of the player's line-of-sight* and
+could introduce unnecessary lag. Cogmind's developer, Josh Ge,
+[repeatedly](https://old.reddit.com/r/roguelikedev/comments/3ueyqp/faq_friday_26_animation/cxeaih8/)
+[mentioned](https://old.reddit.com/r/roguelikedev/comments/3ueyqp/faq_friday_26_animation/cxfkray/)
+this issue while discussing his particle engine implementation:
+> On the technical side, my implementation is pretty terrible. As is I just sort
+> of made it all up as I went along (but the results are satisfactory =p). I
+> can't even decouple the animations from the game logic; they're one in the
+> same, which is a big no-no in the world of "real programming," and also the
+> sole reason I have difficulty implementing a recording and playback feature.
+
+Of course, I also made up my implementation as I went along, with the result
+that while I managed to avoid the mentioned drawback, I introduced my own: the
+effects of an particular ability in-game won't match perfectly with the
+ability's animation. This is a non-issue for a simple damage-dealing bolt
+animation, but becomes extremely apparent for explosions, as you have the
+explosion expanding in *empty space* (since the explosion's area-of-effect was
+already carved out and destroyed prior to running the animation). (Just as I was
+writing this it occurred to me that I could remove the "expanding" component of
+the explosion and potentially paper over this design flaw, but I have yet to
+explore that possibility.)
 
 ## Why Janet?
 
@@ -282,20 +295,20 @@ even ridiculously large effects only need about 800 particles, not the thousands
 that might be otherwise required in a 3D game.
 
 But that doesn't really answer the question, after all, I could have easily have
-just picked Lua, Gluon, Wren, or other ones of the vigintillions of scripting
+picked Lua, Gluon, Wren, or other ones of the vigintillions of scripting
 languages in existence. My choice of Janet boiled down to a few reasons:
 - I was already familiar with embedding Janet in a C program from
-  [cel7ce](TODO), and felt it at the time to be more ergonomic than Lua (in
-  hindsight, I was wrong, and the "ergonomics" of embedding Lua vs. Janet are
-  essentially the same).
+  [cel7ce](https://github.com/kiedtl/cel7ce), and felt it at the time to be more
+  ergonomic than Lua (in hindsight, I was wrong, and the "ergonomics" of
+  embedding Lua vs. Janet are essentially the same).
 - I felt (and still do!) that Janet's prototypes are far more intuitive and less
   clumsy than Lua's metatables and whatever framework one must use in order to
   get them to work right. Janet's prototypes happen to be a massive boon where
   most of the particle engine revolves around just a few classes (`Rect`,
   `Coord`, `Emitter`, and `Particle`), at least for me. I'm sure someone learned
-  in the ways of Lua could just as easily write a particle engine in that
-  language, but I don't want to have to learn a new OOP framework just for a
-  one-month project that I'll only touch occasionally afterwards.
+  in the ways of Lua could as easily write a particle engine in Lua, but I don't
+  want to have to learn a new OOP framework just for a one-month project that
+  I'll only touch occasionally afterwards.
 
 So, was Janet the right choice?
 
@@ -305,11 +318,11 @@ previous C project.
 
 On the other hand, it took some work to ensure Janet could be cross-compiled to
 Windows with Zig, involving some trial and error in messing with arcane
-`#ifdefs` in Janet's build system. And Janet's prototypes are not perfect, and
-have some sharp corners that one must be aware of.
+`#ifdefs` in Janet's build system. And Janet's prototypes are not perfect,
+having some sharp corners that one must be aware of.
 
-But more importantly, I'm not entirely sure that writing a particle engine in a
-postfixed language was an especially bright idea.
+Also, I'm not entirely sure that writing a particle engine in a postfixed
+language was an especially bright idea.
 
 To illustrate my point: which is easier to read?
 
@@ -336,7 +349,7 @@ scalding bolts of electricity into a helpless adventurer's veins:
 This isn't to say that I ever intend to rewrite the particle engine in any other
 language. It works good enough, despite its flaws, and most of the effects are
 write-only anyway. If I had to write it again, though, I would seriously
-consider simply doing it in Lua.
+consider doing it in Lua.
 
 But, hey, I like Janet prototypes.
 
