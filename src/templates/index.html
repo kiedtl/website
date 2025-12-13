@@ -14,6 +14,7 @@
         - https://icyphox.sh
         - https://peppe.rs
         - https://blckk.me (defunct)
+        - http://tilde.town/~jay-invariant/ (<code> elements)
 -->
 
 <style>
@@ -28,10 +29,11 @@
 <!-- } -->
 html{scroll-behavior:smooth;line-height:1.5,sans-serif;font-size:12pt}
 body{overflow-y:scroll;font-family:Inter, sans-serif;background:#ffffff;font-color:#232323}
-img,main,pre>code{display:block;margin:25px auto;width:90%}
-main{padding:20px;max-width:750px;line-height:1.5;word-wrap:break-word}
-img{max-width:100%;display:block;padding-bottom:24px}
-img.inline{width: auto; max-height: fit-content; display: inline-block; vertical-align: middle; image-orientation: from-image; padding:0px; margin:0px}
+img, main{display:block;margin:1rem auto;width:90%}
+main{padding:1rem;max-width:800px;line-height:1.5;word-wrap:break-word}
+main>*{margin-right:1rem;margin-left:1rem}
+img{max-width:100%;display:block;/*! padding-bottom:0.rem; */}
+img.inline{width: auto; max-height: fit-content; display: inline-block; vertical-align: middle; image-orientation: from-image; padding:0px; margin:0px;max-height: 1.2rem;}
 img.footimgs{width: auto; max-height: 0.7rem;display: inline-block; vertical-align: middle; image-orientation: from-image; cursor: pointer; box-shadow: none;}
 blockquote{border-left:7px solid #ddd;padding:0 14px;color:#444;margin:0}
 h1,h2,h3,h4{line-height:1.2}
@@ -42,8 +44,8 @@ td{display:table-cell;vertical-align:inherit;}
 a,a:active,a:hover,a:visited{transition:ease .2s;color:#232323}
 a#homelink{text-decoration:none}
 code,pre{font-family:fira code vf,monospace;color:#000;font-feature-settings:"ss01" 1,"kern" 1,"liga" 1,"zero" 1,"cv03" 1,"cv02" 1,"cv04" 1,"tnum" 1}
-code{white-space:pre-wrap;padding:0.2rem;color:#d344e2;}
-pre{overflow:auto!important;padding:12px;border:2px solid #666;border-radius:15px;padding-top:0px;padding-bottom:0px;margin-bottom:24px}
+code{white-space:pre-wrap;padding:0 0.2rem 0 0.2rem;border:1px #b324c2 dotted;color: #503;}
+pre{overflow:auto!important;padding:1rem 1rem 1rem 1rem;border:2px solid #a69;border-radius:0.4rem;/*! padding-top:0px; *//*! padding-bottom:0px; *//*! margin-bottom:1.5rem; */overflow: scroll;/*! width: 100%; */display: block;margin: 0 0 1.5rem 0 !important;}
 pre>code{display:block;white-space:pre!important;color:#000;border:none;white-space:pre-wrap}
 .sidenote{padding:12px;border:2px dashed #666;border-radius:15px;margin-top:24px;margin-bottom:24px}
 .sidenote-icon{display:inline-block;float:left;position:relative;left:-10px;top:5px;font-size:16pt;background-color:#fff}
